@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {}
+    "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {
+    "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\AirBNB\\AirBNB.csproj",
+        "projectUniqueName": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "E:\\Projects\\AirBNB\\AirBNB.csproj",
-        "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\AirBNB\\obj\\",
+        "projectPath": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj",
+        "packagesPath": "C:\\Users\\shrei\\.nuget\\packages\\",
+        "outputPath": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
