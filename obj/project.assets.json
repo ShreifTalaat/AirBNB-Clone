@@ -11153,19 +11153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kimo Store\\.nuget\\packages\\": {}
+    "C:\\Users\\a7med\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kimo Store\\source\\repos\\AirBNB\\AirBNB.csproj",
+      "projectUniqueName": "E:\\Projects\\AirBNB\\AirBNB.csproj",
       "projectName": "AirBNB",
-      "projectPath": "C:\\Users\\Kimo Store\\source\\repos\\AirBNB\\AirBNB.csproj",
-      "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kimo Store\\source\\repos\\AirBNB\\obj\\",
+      "projectPath": "E:\\Projects\\AirBNB\\AirBNB.csproj",
+      "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
+      "outputPath": "E:\\Projects\\AirBNB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
