@@ -1,0 +1,171 @@
+﻿@model IEnumerable<UserViewModel>
+@{
+    ViewData["Title"] = "Users/Manage";
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/AdminMange/Account-Settings.css" />
+    <!-- to implement the intl-tel-input. into html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+
+    <title>Account Settings</title>
+</head>
+
+<body>
+    <div style="min-height: 100vh;  display: flex; flex-direction: column;">
+        <!-- Start Nav -->
+        <nav class="navbar navbar-expand-lg bg-white sticky-top  ">
+            <!-- Start div tha t contain the items in nav -->
+            <div class="container-lg   d-flex flex-row justify-content-between ">
+                <!-- Start Logo -->
+                <div class="d-flex align-items-center desktop">
+                    <img src="~/AdminMange/SVG/logo.svg">
+                </div>
+                <!-- End Logo -->
+                <!-- Start Search -->
+                <div class="d-flex align-items-center desktop">
+                    <div class="container-fluid ">
+
+                        <div href="#"
+                             class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
+                            <div>Any where |</div>
+                            <div>Any Week |</div>
+                            <div>Add Guest </div>
+                            <div>
+                                <img src="~/AdminMange/SVG/Frame 2.svg" alt="search" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div d-flex>
+                        <img src="~/AdminMange/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
+                    </div>
+
+                </div>
+                <!-- End Search -->
+                <!-- Start Search for small screens -->
+                <div class=" mobile ">
+                    <div class="container-fluid ">
+                        <div href="#"
+                             class="bg-white  d-flex align-items-center  rounded-pill  justify-content-end navigation_btn_mobile">
+                            <div class="text-end">
+                                <img src="~/AdminMange/SVG/Frame 2.svg" alt="search" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="small-mobile">
+                        <img src="~/AdminMange/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
+                    </div>
+
+                </div>
+                <!-- Start person -->
+                <div class="small-mobile">
+                    <div class="d-flex justify-content-between align-items-center right_section_nav ">
+                        <span>Airbnb Your Home</span>
+                        <div>
+                            <img src="~/AdminMange/SVG/middle.svg">
+                        </div>
+                    </div>
+
+                    <!-- End person -->
+                </div>
+            </div>
+            <!-- End div tha t contain the items in nav -->
+        </nav>
+        <!-- End Nav -->
+        <!-- Start body -->
+        <div style="margin: auto 0;">
+          
+            <table class="table">
+                <thead class="table-danger">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                    <th scope="col">Roles</th>
+                    <th scope="col">Profile</th>
+                        <th scope="col">Actions</th>
+
+                    
+                </tr>
+                </thead>
+                <tbody>
+                @foreach(var user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.FirstName</td>
+                        <td>@user.lastName</td>
+                        <td>@string.Join(",",user.Roles.ToList())</td>
+                            <td scope="col"><a class="btn btn-outline-danger" asp-controller="Profile" asp-action="Index" asp-route-UserId="@user.Id">Go to Profile</a></td>
+                        <td scope="col"><a class="btn btn-outline-danger" asp-controller="Admin" asp-action="ManageRole" asp-route-UserId="@user.Id">Add/Remove Roles</a></td>
+
+
+                    </tr>
+                }
+            </tbody>
+            </table>
+            </div>
+   
+        <!-- Start footer -->
+        <footer class="bg-white border-top py-3 ">
+            <div class="container-lg ">
+                <div class="row d-flex height-footer">
+                    <div class="   d-flex  col-lg-6 main-footer  ">
+                        <ul class="list-inline d-flex justify-content-start ">
+                            <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
+                            <li class=" d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
+                            </li>
+                            <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end desktop col-md-auto ">
+                        <ul class="list-inline d-flex">
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    <img src="~/AdminMange/SVG/globe.svg">English (IN)
+                                </a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#"
+                                   class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    Support&
+                                    resources <img src="~/AdminMange/SVG/Group.svg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- End footer -->
+    </div>
+    <script src="~/AdminMange/Account-Settings.js"></script>
+</body>
+<!-- Implementing the js file -->

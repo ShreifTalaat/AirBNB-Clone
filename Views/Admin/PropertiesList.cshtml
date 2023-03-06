@@ -1,0 +1,224 @@
+﻿@model IEnumerable<Property>
+@{
+    ViewData["Title"] = "Users/Manage";
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/AdminMange/Account-Settings.css" />
+    <!-- to implement the intl-tel-input. into html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+
+    <title>Account Settings</title>
+</head>
+
+<body>
+    <div style="min-height: 100vh;  display: flex; flex-direction: column;">
+        <!-- Start Nav -->
+        <nav class="navbar navbar-expand-lg bg-white sticky-top  ">
+            <!-- Start div tha t contain the items in nav -->
+            <div class="container-lg   d-flex flex-row justify-content-between ">
+                <!-- Start Logo -->
+                <div class="d-flex align-items-center desktop">
+                    <img src="~/AdminMange/SVG/logo.svg">
+                </div>
+                <!-- End Logo -->
+                <!-- Start Search -->
+                <div class="d-flex align-items-center desktop">
+                    <div class="container-fluid ">
+
+                        <div href="#"
+                             class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
+                            <div>Any where |</div>
+                            <div>Any Week |</div>
+                            <div>Add Guest </div>
+                            <div>
+                                <img src="~/AdminMange/SVG/Frame 2.svg" alt="search" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div d-flex>
+                        <img src="~/AdminMange/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
+                    </div>
+
+                </div>
+                <!-- End Search -->
+                <!-- Start Search for small screens -->
+                <div class=" mobile ">
+                    <div class="container-fluid ">
+                        <div href="#"
+                             class="bg-white  d-flex align-items-center  rounded-pill  justify-content-end navigation_btn_mobile">
+                            <div class="text-end">
+                                <img src="~/AdminMange/SVG/Frame 2.svg" alt="search" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="small-mobile">
+                        <img src="~/AdminMange/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
+                    </div>
+
+                </div>
+                <!-- Start person -->
+                <div class="small-mobile">
+                    <div class="d-flex justify-content-between align-items-center right_section_nav ">
+                        <span>Airbnb Your Home</span>
+                        <div>
+                            <img src="~/AdminMange/SVG/middle.svg">
+                        </div>
+                    </div>
+
+                    <!-- End person -->
+                </div>
+            </div>
+            <!-- End div tha t contain the items in nav -->
+        </nav>
+        <!-- End Nav -->
+        <!-- Start body -->
+        <div style="margin: auto 0;">
+
+            <div class="container-lg">
+                <!-- start Property cards -->
+                <!-- 1st row -->
+                <div class="mt-5">
+                    <div class="row">
+                        @foreach (var prop in Model)
+                        {
+                            if (!prop.Accepted)
+                            {
+
+
+                                <div class="col-sm-6 col-lg-3 mb-4">
+                                    <a href="first property" class="text-decoration-none text-black">
+                                        <div class="card">
+                                            <div id="carouselExampleIndicator1"
+                                                 class="carousel slide"
+                                                 data-bs-interval="false">
+                                                <div class="carousel-indicators">
+                                                    <button type="button"
+                                                            data-bs-target="#carouselExampleIndicator1"
+                                                            data-bs-slide-to="0"
+                                                            class="active"
+                                                            aria-current="true"
+                                                            aria-label="Slide 1"></button>
+                                                    <button type="button"
+                                                            data-bs-target="#carouselExampleIndicator1"
+                                                            data-bs-slide-to="1"
+                                                            aria-label="Slide 2"></button>
+                                                    <button type="button"
+                                                            data-bs-target="#carouselExampleIndicator1"
+                                                            data-bs-slide-to="2"
+                                                            aria-label="Slide 3"></button>
+                                                </div>
+                                                <div class="carousel-inner">
+                                                    @foreach (var img in prop.PropertyImages)
+                                                    {
+                                                        <div class="carousel-item active">
+                                                            <img class="card-img-top mb-3 rounded w-100"
+                                                                 src="~/Prop.Image/Prop1/@img.URL"
+                                                                 alt="Property image" style="aspect-ratio:1/1;" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <button class="carousel-control-prev"
+                                                        type="button"
+                                                        data-bs-target="#carouselExampleIndicator1"
+                                                        data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon"
+                                                          aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next"
+                                                        type="button"
+                                                        data-bs-target="#carouselExampleIndicator1"
+                                                        data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon"
+                                                          aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                         
+                                            <div>
+                                                <h5 class="card-title mb-0 d-flex">
+                                                    @prop.Region.Name , @prop.Region.City.Name
+                                               
+                                                </h5>
+                                                <p class="card-text mb-0">@prop.Title</p>
+                                                <p class="card-text mb-0">@prop.Date</p>
+                                                <p class="card-text mb-0">@prop.Price</p>
+                                            </div>
+                                            <a class="btn btn-outline-danger" asp-route-propId="@prop.ID" asp-route-state="1" asp-action="PropAccepted">Accept</a>
+                                            <a class="btn btn-outline-danger" asp-route-propId="@prop.ID" asp-route-state="0" asp-action="PropAccepted">Decline</a>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+                <!-- end property cards -->
+            </div>
+        </div>
+        <!-- Start footer -->
+        <footer class="bg-white border-top py-3 ">
+            <div class="container-lg ">
+                <div class="row d-flex height-footer">
+                    <div class="   d-flex  col-lg-6 main-footer  ">
+                        <ul class="list-inline d-flex justify-content-start ">
+                            <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
+                            <li class=" d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
+                            </li>
+                            <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end desktop col-md-auto ">
+                        <ul class="list-inline d-flex">
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    <img src="~/AdminMange/SVG/globe.svg">English (IN)
+                                </a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#"
+                                   class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    Support&
+                                    resources <img src="~/AdminMange/SVG/Group.svg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- End footer -->
+    </div>
+    <script src="~/AdminMange/Account-Settings.js"></script>
+</body>
+<!-- Implementing the js file -->

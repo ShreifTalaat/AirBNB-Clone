@@ -1,0 +1,240 @@
+﻿@model AplicationUser
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Profile</title>
+	<!-- Link to Bootstrap CSS file -->
+	<link rel="stylesheet" href="~/bootstrap.css" />
+	<!-- Link to custom CSS file -->
+	@* <link rel="stylesheet" href="~/Account/Account settings/Account-Settings.css" />*@
+
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<section class="sticky-top w-100 bg-white border-bottom">
+		<header class="site-header  py-1">
+			<nav class="navbar navbar-light ">
+				<div class="container d-inline-flex justify-content-between">
+					<a class="navbar-brand" href="#">
+						<img src="~/profile/Resources/logoLogo.svg" alt="logo">
+					</a>
+					<form role="search">
+						<div class="container-fluid justify-content-between ">
+						</div>
+
+					</form>
+
+					@*      <a href="#">
+					<img class="px-2" src="~/profile/Resources/miniworld.svg" alt="">
+					</a>*@
+					<div class="small-mobile">
+						<div class="align-items-center d-inline-flex p-2 ">
+							<a href="#" class="me-3 text-decoration-none text-black fw-semibold">
+								Become a host
+							</a>
+
+							<div>
+								<img src="~/Account/Account settings/SVG/middle.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+	</section>
+
+	<section>
+		<div class="container-lg p-lg-5">
+			<div class="row">
+				<!-- Profile card section -->
+				<div class="badge border rounded-3 col-md-3 pt-lg-4 pb-lg-4 ps-lg-4">
+					@if (Model.Email == ViewBag.Loggedid)
+					{
+						<form asp-action="index" enctype="multipart/form-data">
+							<div class="img ">
+								<img id="profile picture" src="data:image/*;base64,@(Convert.ToBase64String(Model.Profile_Picture))" alt="user profile" class="w-50 border-0 rounded-circle" style="aspect-ratio: 1/1;">
+							</div>
+							<label asp-for="Profile_Picture" class="btn-link">
+								Update photo
+							</label>
+							<input asp-for="Profile_Picture" type="file" accept="image/*" alt="profile image"
+							   onchange="document.getElementById('profile picture').src=window.URL.createObjectURL(this.files[0]);
+                                        document.getElementById('submitimage').click() ;"
+							   hidden />
+						     <button id="submitimage" type="submit" hidden></button>
+						</form>
+					}
+					else
+					{
+						<div class="img ">
+							<img src="data:image/*;base64,@(Convert.ToBase64String(Model.Profile_Picture))" alt="user profile" class="w-50 border-0 rounded-circle" style="aspect-ratio: 1/1;">
+						</div>
+					}
+					<div class="text-start pt-4">
+						<svg class="text-black d-inline" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:24px;width:24px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M14.998 1.032a2 2 0 0 0-.815.89l-3.606 7.766L1.951 10.8a2 2 0 0 0-1.728 2.24l.031.175A2 2 0 0 0 .87 14.27l6.36 5.726-1.716 8.608a2 2 0 0 0 1.57 2.352l.18.028a2 2 0 0 0 1.215-.259l7.519-4.358 7.52 4.358a2 2 0 0 0 2.734-.727l.084-.162a2 2 0 0 0 .147-1.232l-1.717-8.608 6.361-5.726a2 2 0 0 0 .148-2.825l-.125-.127a2 2 0 0 0-1.105-.518l-8.627-1.113-3.606-7.765a2 2 0 0 0-2.656-.971zm-3.07 10.499l4.07-8.766 4.07 8.766 9.72 1.252-7.206 6.489 1.938 9.723-8.523-4.94-8.522 4.94 1.939-9.723-7.207-6.489z">
+							</path>
+						</svg>
+						<div class="d-inline p-2"><span class="text-black align-middle fs-6 fw-semibold">423 reviews</span></div>
+					</div>
+					<div class="text-start pt-4">
+						<svg class="text-black d-inline" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:24px;width:24px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M16 .798l.555.37C20.398 3.73 24.208 5 28 5h1v12.5C29 25.574 23.21 31 16 31S3 25.574 3 17.5V5h1c3.792 0 7.602-1.27 11.445-3.832L16 .798zm0 2.394l-.337.213C12.245 5.52 8.805 6.706 5.352 6.952L5 6.972V17.5c0 6.831 4.716 11.357 10.713 11.497L16 29c6.133 0 11-4.56 11-11.5V6.972l-.352-.02c-3.453-.246-6.893-1.432-10.311-3.547L16 3.192zm7 7.394L24.414 12 13.5 22.914 7.586 17 9 15.586l4.5 4.499 9.5-9.5z">
+							</path>
+						</svg>
+						<div class="d-inline p-2 ">
+							<span class="text-black align-middle fs-6 fw-semibold ">Identity verified</span>
+						</div>
+					</div>
+					<!-- line -->
+					<div class="pt-4 pe-3">
+						<hr class="text-black-50">
+					</div>
+					<div class="text-start pt-4">
+						<p class="text-black align-middle fs-4 fw-semibold ">@Model.First_Name confirmed</p>
+					</div>
+					<div class="text-start pt-4">
+						<svg class="text-black d-inline" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:16px;width:16px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M13.102 2.537L15.365 4.8l-9.443 9.443L.057 8.378 2.32 6.115l3.602 3.602z"></path>
+						</svg>
+						<div class="d-inline p-2 "><span class="text-black align-middle fs-6 fw-lighter">Identity</span></div>
+					</div>
+					<div class="text-start pt-4">
+						<svg class="text-black d-inline" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:16px;width:16px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M13.102 2.537L15.365 4.8l-9.443 9.443L.057 8.378 2.32 6.115l3.602 3.602z"></path>
+						</svg>
+						<div class="d-inline p-2 "><span class="text-black align-middle fs-6 fw-lighter">Email address</span></div>
+					</div>
+					<div class="text-start pt-4">
+						<svg class="text-black d-inline" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:16px;width:16px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M13.102 2.537L15.365 4.8l-9.443 9.443L.057 8.378 2.32 6.115l3.602 3.602z"></path>
+						</svg>
+						<div class="d-inline p-2 "><span class="text-black align-middle fs-6 fw-lighter">Phone number</span></div>
+					</div>
+					<div class="text-start pt-4">
+						<p class="fw-light lh-sm text-black text-wrap">
+							<a href="" class="text-black text-decoration-underline">
+								Learn
+								more
+							</a> about how confirming account info helps keep the Airbnb community secure.
+						</p>
+					</div>
+				</div>
+				<!-- space -->
+				<div class="col-md-1"> </div>
+				<!-- Content  -->
+				<div class="col-md-7 text-start text-black p-lg-0 p-md-3">
+					<p class="fs-2 fw-semibold m-0">Hi, I’m @Model.First_Name</p>
+					<p class="fw-light text-black-50">Joined in @Model.Join_Date.Year</p>
+					@*  <p class="fs-4 fw-semibold m-0">About</p>
+					<p class="text-wrap">
+					Travel | Geography | History | Politics | Finance | Business | Architecture | Cities |
+					Skyscrapers | Beaches | Football | Great Food
+					</p>*@
+					<div class="pt-3">
+						<svg class="text-black d-inline" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+							 style="display:block;height:16px;width:16px;fill:currentColor" aria-hidden="true" role="presentation"
+							 focusable="false">
+							<path d="M8.602 1.147l.093.08 7.153 6.914-.696.718L14 7.745V14.5a.5.5 0 0 1-.41.492L13.5 15H10V9.5a.5.5 0 0 0-.41-.492L9.5 9h-3a.5.5 0 0 0-.492.41L6 9.5V15H2.5a.5.5 0 0 1-.492-.41L2 14.5V7.745L.847 8.86l-.696-.718 7.153-6.915a1 1 0 0 1 1.297-.08z">
+							</path>
+						</svg>
+						<div class="d-inline p-2">
+							<span class="text-black align-middle fs-6 fw-medium">
+								Lives in @Model.City
+							</span>
+						</div>
+					</div>
+					@*        <div class="pt-3">
+					<svg class="text-black d-inline" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+					style="display:block;height:16px;width:16px;fill:currentColor" aria-hidden="true" role="presentation"
+					focusable="false">
+					<path d="m26 2h-20a5 5 0 0 0 -5 5v14l.005.217a5 5 0 0 0 4.995 4.783h5.843l4.157 5.08 4.155-5.08h5.845a5 5 0 0 0 5-5v-14a5 5 0 0 0 -5-5z">
+					</path>
+					</svg>
+					<div class="d-inline p-2"><span class="text-black align-middle fs-6 fw-medium">Speaks English</span></div>
+					</div>*@
+					<!-- line -->
+					<div class="pt-3">
+						<hr class="text-black-50">
+					</div>
+					<!-- optionel panel -->
+					@if (Model.Properties.Count > 0)
+					{
+						<div id="optionel">
+							<p class="fs-4 fw-semibold">@Model.First_Name’s listings</p>
+							<div class="row">
+								<div class="col-lg-6 property-card">
+									<img src="/big image.png" alt="property image" class="rounded w-100">
+									<div class="pt-3">
+										<svg class="text-black d-inline" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:14px;width:14px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
+										<div class="d-inline"><span class="text-black align-middle fs-6 fw-medium">4.84<span class="text-black-50">(393)</span></span></div>
+									</div>
+									<div>
+										<p class="d-inline">Entire home/apt</p><span class="d-inline">.</span><p class="d-inline">Loft</p>
+									</div>
+									<p class="text-truncate">Chic Penthouse with Private Pool & Breathtaking Views</p>
+								</div>
+								<div class="col-lg-6 property-card">
+									<img src="/big image.png" alt="property image" class="rounded w-100">
+									<div class="pt-3">
+										<svg class="text-black d-inline" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:14px;width:14px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
+										<div class="d-inline"><span class="text-black align-middle fs-6 fw-medium">4.84<span class="text-black-50">(393)</span></span></div>
+									</div>
+									<div>
+										<p class="d-inline">Entire home/apt</p><span class="d-inline">.</span><p class="d-inline">Loft</p>
+									</div>
+									<p class="text-truncate">Chic Penthouse with Private Pool & Breathtaking Views</p>
+								</div>
+							</div>
+
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="bg-white border-top py-3 ">
+		<div class="container-lg ">
+			<div class="row d-flex height-footer">
+				<div class="   d-flex  col-lg main-footer  ">
+					<ul class="list-inline d-flex justify-content-start ">
+						<li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
+						<li class=" d-flex ">
+							<a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
+						</li>
+						<li class="d-flex ">
+							<a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
+						</li>
+						<li class="d-flex ">
+							<a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
+						</li>
+						<li class="d-flex ">
+							<a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
+						</li>
+						<li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
