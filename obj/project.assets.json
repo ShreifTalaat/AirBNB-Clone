@@ -11158,11 +11158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj",
+      "projectUniqueName": "C:\\Users\\a7med\\Desktop\\Airbnb\\AirBNB.csproj",
       "projectName": "AirBNB",
-      "projectPath": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj",
+      "projectPath": "C:\\Users\\a7med\\Desktop\\Airbnb\\AirBNB.csproj",
       "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\obj\\",
+      "outputPath": "C:\\Users\\a7med\\Desktop\\Airbnb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
