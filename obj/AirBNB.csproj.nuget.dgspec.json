@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {}
+    "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {
+    "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\AirBNB\\AirBNB.csproj",
+        "projectUniqueName": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "E:\\Projects\\AirBNB\\AirBNB.csproj",
+        "projectPath": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\AirBNB.csproj",
         "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\AirBNB\\obj\\",
+        "outputPath": "C:\\Users\\a7med\\Source\\Repos\\AirBNB-Clone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
