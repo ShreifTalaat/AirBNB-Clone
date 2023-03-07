@@ -104,6 +104,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0eURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/AirbnbGit/Views/Hosting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/AirbnbGit/Views/Hosting/Listing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xMaXN0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/AirbnbGit/Views/Hosting/Reservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/AirbnbGit/Views/Listing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Desktop/AirbnbGit/Views/payment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/AirbnbGit/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
