@@ -120,3 +120,8 @@ height: 45px;
     height: 48px;
   }
 }
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: -90px;
+    margin-top: var(--bs-dropdown-spacer);
+}
