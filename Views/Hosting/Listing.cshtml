@@ -1,0 +1,336 @@
+﻿@model IEnumerable<Property>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/Hosting/Listingstyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5b61638241.js" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+
+    <title>airbnb</title>
+</head>
+
+<body>
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border border-bottom" style="height: 70px;">
+        <!-- Start div tha t contain the items in nav -->
+        <div class="container-lg   d-flex flex-row justify-content-between ">
+            <!-- Start Logo -->
+            <div class="d-flex align-items-center">
+                <i class="fa-brands fa-airbnb air-logo"></i>
+            </div>
+            <!-- End Logo -->
+            <!-- Start Search -->
+            <div class="d-flex align-items-center ">
+                <div class="container-fluid ">
+
+                    <div href="#" class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
+
+                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Today</a>
+                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Inbox</a>
+                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Cleander</a>
+                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Insights</a>
+
+                    </div>
+                    </a>
+                </div>
+
+
+            </div>
+            <!-- End Search -->
+            <!-- Start person -->
+
+            <div class="d-flex">
+
+
+                <div class="ml-auto p-2">
+                    <img src="./SVG/middle.svg">
+                </div>
+            </div>
+
+            <!-- End person -->
+        </div>
+        <!-- End div tha t contain the items in nav -->
+    </nav>
+    <!-- End Nav -->
+    <!-- start page content -->
+
+    <div class="container">
+        <div class="d-flex flex-row justify-content-between listing-details">
+            <h4 class="col fw-bold">@Model.Count() listings</h4>
+            <div class="col col-lg-auto rounded border border-1 border-dark">
+                <button class="btn">
+                    <i class="fa-solid fa-plus"></i></i> Create List
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!--Start search bar and buttons-->
+    <div class="container">
+        <div class="topnav">
+
+            <input class="rounded border border-1 search-bar" type="text" placeholder=" Search Listing">
+        </div>
+    </div>
+    <!--end search bar and buttons-->
+    <!--Start Reservations Details-->
+    <div class="container">
+
+
+        <!--End Reservations Details-->
+        <!--start guests Details-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">LISTING</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">BEDROOMS</th>
+                    <th scope="col">BEDS</th>
+                    <th scope="col">BATHS</th>
+                    <th scope="col">LOCATION</th>
+                    <th scope="col">DATE POSTED</th>
+                </tr>
+            </thead>
+         
+             <tbody>
+                 @foreach (var item in Model)
+                {
+                <tr>
+                    <td class="d-flex" style="align-items: baseline;">
+                        <div>
+                                @foreach(var img in item.PropertyImages)
+                                {
+                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                    break;
+
+                                }
+                               
+                        </div>
+                        <div><p class="p-2">@item.Description</p></div>
+
+
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                                @if (item.Accepted == true)
+                                {
+                                    <i class="fa-solid fa-check"></i>
+                                    <p class="p-2">Accepted</p>
+                                }
+                                else{
+                                <i class="fa-regular fa-hourglass-half"></i>
+                                <p class="p-2"> In progress</p>
+                                }
+                            </div>
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                            <p class="p-2">@item.NumberOfBedRooms</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                            <p class="p-2"> @item.NumberOfBeds</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                            <p class="p-2">@item.NumberOfBathRooms</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                            <p class="p-2"> @item.Area</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex" style="align-items: baseline;">
+                                <p class="p-2"> @item.Date.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </td>
+                </tr>
+               
+               }
+            </tbody>
+        </table>
+
+        <!--end guests Details-->
+        <!-- <div class="container">
+        <div class="row">
+          <div class="reserv col">
+             <div class="res">
+              <div class="res-detail">
+                Checking out
+              </div>
+             </div>
+          </div>
+          <div class="reserv col">
+            <div class="res">
+             <div class="res-detail">
+               Hello
+             </div>
+            </div>
+         </div>
+         <div class="reserv col">
+          <div class="res">
+           <div class="res-detail">
+             Current
+           </div>
+          </div>
+        </div>
+        <div class="reserv col">
+          <div class="res">
+           <div class="res-detail">
+             Hello
+           </div>
+          </div>
+        </div>
+        <div class="reserv col">
+          <div class="res">
+           <div class="res-detail">
+             Hello
+           </div>
+          </div>
+        </div>
+        </div>
+        </div> -->
+        <!--end Reservations Details-->
+        <!-- <div class="container-lg">
+        <div class="modal-header">
+          <h4 class="modal-title">Write a Review</h4>
+
+        </div>
+        <div class="modal-body">
+          <form>
+            <textarea rows="5"
+                      class="form-control"
+                      placeholder="Write about your experience in this place"
+                      id="text"
+                      name="text"
+                      ></textarea>
+                      <div class="container d-flex justify-content-center mt-200">
+
+
+                        <div class="row">
+
+                          <div class="col-md-12">
+
+                            <div class="stars">
+
+                          <form action="">
+
+                            <input class="star star-5" id="star-5" type="radio" name="star"/>
+
+                            <label class="star star-5" for="star-5"></label>
+
+                            <input class="star star-4" id="star-4" type="radio" name="star"/>
+
+                            <label class="star star-4" for="star-4"></label>
+
+                            <input class="star star-3" id="star-3" type="radio" name="star"/>
+
+                            <label class="star star-3" for="star-3"></label>
+
+                            <input class="star star-2" id="star-2" type="radio" name="star"/>
+
+                            <label class="star star-2" for="star-2"></label>
+
+                            <input class="star star-1" id="star-1" type="radio" name="star"/>
+
+                            <label class="star star-1" for="star-1"></label>
+
+                          </form>
+
+                        </div>
+
+
+
+                          </div>
+
+
+                        </div>
+
+                        </div>
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-bwm">Confirm</button>
+          <button type="button" class="btn btn-bwm">Close</button>
+        </div>
+
+
+        </div> -->
+        <!-- end page content -->
+        <!-- Start footer -->
+        <footer class="footer bg-white border-top py-3 ">
+            <div class="container-lg ">
+
+                <div class="row d-flex  height-footer">
+                    <div class="   d-flex  col-lg-6 ">
+                        <ul class="list-inline d-flex justify-content-start ">
+                            <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
+                            <li class=" d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
+                            </li>
+                            <li class="d-flex ">
+                                <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
+                            </li>
+                            <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <ul class="list-inline d-flex">
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    <img src="./SVG/globe.svg">English (IN)
+                                </a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#"
+                                   class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
+                            </li>
+                            <li class="d-flex  ">
+                                <a href="#" class="d-flex align-items-center text-decoration-none text-black">
+                                    Support&
+                                    resources <img src="./SVG/Group.svg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- End footer -->
+</body>
+
+</html>
