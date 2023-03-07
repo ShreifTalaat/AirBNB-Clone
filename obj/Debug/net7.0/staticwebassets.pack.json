@@ -177,6 +177,22 @@
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg"
     },
     {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Resources\\AirBnbCover.webp",
+      "PackagePath": "staticwebassets\\Resources\\AirBnbCover.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Resources\\backarrow.svg",
+      "PackagePath": "staticwebassets\\Resources\\backarrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Resources\\logoLogo.svg",
+      "PackagePath": "staticwebassets\\Resources\\logoLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Resources\\thumbnail_home.jpeg",
+      "PackagePath": "staticwebassets\\Resources\\thumbnail_home.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Filter.svg"
     },
@@ -257,6 +273,14 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\paymentStyles.css",
+      "PackagePath": "staticwebassets\\css\\paymentStyles.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\rome.css",
+      "PackagePath": "staticwebassets\\css\\rome.css"
+    },
+    {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -267,6 +291,30 @@
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\paymentJavaScript.js",
+      "PackagePath": "staticwebassets\\js\\paymentJavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\rome.js",
+      "PackagePath": "staticwebassets\\js\\rome.js"
     },
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\site.js",
