@@ -137,6 +137,46 @@
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\middle.svg"
     },
     {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Homepage\\styles.css",
+      "PackagePath": "staticwebassets\\Homepage\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3139657-880fdo.jpg"
     },
@@ -175,6 +215,186 @@
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\JavaScript.js",
+      "PackagePath": "staticwebassets\\PropertDetails\\JavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\AirBnbCover.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\AirBnbCover.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Bed.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Bed.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\BreakFast.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\BreakFast.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Calender.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Calender.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Frame 2Search .svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Frame 2Search .svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Graduation Project.rar",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Graduation Project.rar"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\HairDry.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\HairDry.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Host-Img.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Host-Img.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Pool.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Pool.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Save.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Save.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Snow.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Snow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\TV.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\TV.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Wifi.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Wifi.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\big image.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\big image.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\copy.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\copy.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\facebook-logo.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\facebook-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\flag-icon-png-18.jpg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\flag-icon-png-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\footerIcon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\footerIcon.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\globe.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\hamburgerlines.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\hamburgerlines.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\icon-Adv (2).svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\icon-Adv (2).svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\instagram-icon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\instagram-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\logoLogo.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\logoLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\miniprofilelogog.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniprofilelogog.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\miniworld.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniworld.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\minus.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\minus.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\plus.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\plus.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\rightArrow.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\rightArrow.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\search.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\share.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\share.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\shield.jpg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\shield.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img2.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img2.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img3.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img3.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img4.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img4.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\star.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\twitter-icon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\twitter-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user1.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user2.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user3.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\verification-symbol.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\verification-symbol.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\x.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\x.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\bootstrap.css",
+      "PackagePath": "staticwebassets\\PropertDetails\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\PropertDetails\\styles.css",
+      "PackagePath": "staticwebassets\\PropertDetails\\styles.css"
     },
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Resources\\AirBnbCover.webp",
@@ -607,6 +827,10 @@
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\bootstrap.js",
       "PackagePath": "staticwebassets\\listing\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\main.css",
+      "PackagePath": "staticwebassets\\listing\\main.css"
     },
     {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\script.js",
