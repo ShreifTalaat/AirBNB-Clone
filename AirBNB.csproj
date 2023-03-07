@@ -33,4 +33,16 @@
     <Folder Include="wwwroot\proprty pics\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Homepage\SVG\fav.svg" />
+    <None Include="wwwroot\Homepage\SVG\Filter.svg" />
+    <None Include="wwwroot\Homepage\SVG\Frame 2.svg" />
+    <None Include="wwwroot\Homepage\SVG\globe.svg" />
+    <None Include="wwwroot\Homepage\SVG\Group.svg" />
+    <None Include="wwwroot\Homepage\SVG\Language.svg" />
+    <None Include="wwwroot\Homepage\SVG\logo.svg" />
+    <None Include="wwwroot\Homepage\SVG\middle.svg" />
+    <None Include="wwwroot\Homepage\SVG\star.svg" />
+  </ItemGroup>
+
 </Project>
