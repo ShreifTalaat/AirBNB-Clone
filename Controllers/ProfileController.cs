@@ -43,9 +43,10 @@ namespace AirBNB.Controllers
 				}
 				await _userManager.UpdateAsync(user);
 			}
+         
 		
 			return View(user);
         }
-
+        
 	}
 }
