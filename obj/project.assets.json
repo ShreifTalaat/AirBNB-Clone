@@ -11153,19 +11153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\Kimo Store\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\AirbnbGit\\AirBNB.csproj",
+      "projectUniqueName": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
       "projectName": "AirBNB",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\AirbnbGit\\AirBNB.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\AirbnbGit\\obj\\",
+      "projectPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
+      "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
