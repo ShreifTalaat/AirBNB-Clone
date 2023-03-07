@@ -227,7 +227,7 @@
                         <div class="text-center">
                             @foreach (var img in Model.PropertyImages)
                             {
-                                <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem"/>
+                                <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem" />
                             }
                         </div>
                     </div>
@@ -263,7 +263,6 @@
                     </div>
                 </div>
                 <!-- ------------------------------------------------------------End -->
-
                 <!-- AirBNB Cover -->
                 <div class="row mt-4 pb-4 ms-0 border-bottom">
                     <div class="ps-0">
@@ -378,7 +377,6 @@
                     </div>
                 </div>
                 <!-- ------------------------------------------------------------End -->
-                
                 <!-- What this place offers -->
                 <div class="row mt-5 pb-5 ms-0 border-bottom">
                     <h4 class="ps-0">
@@ -386,91 +384,49 @@
                     </h4>
                     <div class="d-flex ps-0 mt-3">
                         <div class="me-5">
-                            <ul type="none" class="ps-0">
-                                <li>
-                                    <img src="~/PropertDetails/Resources/Wifi.svg" alt="Wifi">
-                                    <span class="ms-2">Wifi</span>
-                                </li>
-                                <li class="mt-2">
-                                    <img src="~/PropertDetails/Resources/TV.svg" alt="TV">
-                                    <span class="ms-2">TV</span>
-                                </li>
-                                <li class="mt-2">
-                                    <img src="~/PropertDetails/Resources/HairDry.svg" alt="HairDryer">
-                                    <span class="ms-2">Hair Dryer</span>
-                                </li>
-                                <li class="mt-2">
-                                    <img src="~/PropertDetails/Resources/Calender.svg" alt="Calender">
-                                    <span class="ms-2">Long-term stays allowed</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="ms-5">
-                            <ul type="none" class="ps-0">
-                                <li>
-                                    <img src="~/PropertDetails/Resources/Pool.svg" alt="Pool">
-                                    <span class="ms-2">Pool</span>
-                                </li>
-                                <li class="mt-2">
-                                    <img src="~/PropertDetails/Resources/Snow.svg" alt="Air conditioning">
-                                    <span class="ms-2">Air conditioning</span>
-                                </li>
-                                <li class="mt-2">
-                                    <img src="~/PropertDetails/Resources/BreakFast.svg" alt="Breakfast">
-                                    <span class="ms-2">Breakfast</span>
-                                </li>
-                            </ul>
+                            <div class="row ps-0">
+                                @foreach (var ament in Model.Amentios)
+                                {
+                                    <div class="col-6 mt-2">
+                                        <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
+                                        <span class="ms-2">@ament.Name</span>
+                                    </div>
+                                }
+                            </div>
                         </div>
                     </div>
-                    <span class="ps-0 mt-2">
-                        <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
-                           data-bs-target="#offerModal">Show all 14 amenities</a>
-                    </span>
+                    @*<span class="ps-0 mt-2">
+                    <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
+                    data-bs-target="#offerModal">Show all 14 amenities</a>
+                    </span>*@
                 </div>
-                <!-- What place offer Modal -->
+                @*<!-- What place offer Modal -->
                 <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="ms-2">
-                                    <h5>What this place offers</h5>
-                                    <ul class="mt-3 ps-0" type="none">
-                                        <li>
-                                            <img src="~/PropertDetails/Resources/Wifi.svg" alt="Wifi"><span class="ms-2">Wifi</span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/TV.svg" alt="TV"><span class="ms-2">TV</span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/HairDry.svg" alt="HairDryer"><span class="ms-2">
-                                                Hair
-                                                Dryer
-                                            </span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/Calender.svg" alt="Calender"><span class="ms-2">Long-term stays allowed</span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/Pool.svg" alt="Pool"><span class="ms-2">Pool</span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/Snow.svg" alt="Air conditioning"><span class="ms-2">Air conditioning</span>
-                                        </li>
-                                        <li class="mt-3">
-                                            <img src="~/PropertDetails/Resources/BreakFast.svg" alt="Breakfast"><span class="ms-2">Breakfast</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
                 </div>
-                <!-- ------------------------------------------------------------End -->
+                <div class="modal-body">
+                <div class="ms-2">
+                <h5>What this place offers</h5>
+                <ul class="mt-3 ps-0" type="none">
+                @foreach (var ament in Model.Amentios)
+                {
+                <li class="mt-2">
+                <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
+                <span class="ms-2">@ament.Name</span>
+                </li>
+                }
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <!-- ------------------------------------------------------------End -->*@
             </div>
             <!-- Reserve Floating Card -->
             <div class="col-lg-5">
@@ -478,7 +434,7 @@
                     <div class="d-flex justify-content-end ms-5">
                         <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
                             <div>
-                                <span class="fs-6"><span class="fs-5 fw-bold">$42,000</span> night</span>
+                                <span class="fs-6"><span class="fs-5 fw-bold">$@Model.Price</span> night</span>
                             </div>
                             <div class="border rounded-5 mt-4 p-3">
                                 <!-- Check in & Check Out -->
@@ -546,7 +502,7 @@
                 <!-- Rating -->
                 <div class="d-flex align-items-center fs-4 fw-semibold">
                     <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1rem;">
-                    <span class="ms-2 me-2">5.0</span>·<span class="ms-2 me-2">6</span>reviews
+                    <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
                 </div>
                 <!-- Progress Bars -->
                 <div class="row mt-4">
@@ -626,143 +582,146 @@
                 </div>
                 <!-- Users Reviews -->
                 <div class="row mt-5">
-                    <!-- left -->
-                    <div class="col-5">
-                        <!-- 1 -->
-                        <div class="row">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user1.webp" class="rounded-circle object-fit-cover"
+                    @foreach (var review in Model.Reviews)
+                    {
+                        <div class="col-6">
+                            <div class="mt-5">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
                                          style="width: 40px; height: 40px;" alt="user">
+                                    </div>
+                                    <div class="ms-3">
+                                        <div class="fw-semibold">Victor</div>
+                                        <div class="smallTxt text-secondary mt-0 pt-0 ">@review.Date</div>
+                                    </div>
                                 </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Victor</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
+                                <div class="mt-2">
+                                    @review.Content
                                 </div>
-                            </div>
-                            <div class="mt-2">
-                                We're in love in this vila. Super comfortable and cozy. Perfect location 5 minutes drive
-                                to
-                                down town. Nazife is very friendly host always ready to help. Looking forward to come
-                                back.
-                            </div>
-                        </div>
-                        <!-- 2 -->
-                        <div class="row mt-5">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
-                                </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Denise</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
-                                location pin so travelling to the villa was easy. The communication stayed through out,
-                                answering.....
-                            </div>
-                            <a href="" class="text-dark fw-semibold mt-2">
-                                Show more
-                                <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                                <a href="" class="text-dark fw-semibold mt-2">
+                                    Show more
+                                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
                                      class="ms-1">
-                            </a>
+                                </a>
+                            </div>
+                            @*<!-- 2 -->
+                        <div class="row mt-5">
+                        <div class="d-flex">
+                        <div>
+                        <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="user">
+                        </div>
+                        <div class="ms-3">
+                        <div class="fw-semibold">Denise</div>
+                        <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
+                        </div>
+                        </div>
+                        <div class="mt-2">
+                        We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
+                        location pin so travelling to the villa was easy. The communication stayed through out,
+                        answering.....
+                        </div>
+                        <a href="" class="text-dark fw-semibold mt-2">
+                        Show more
+                        <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                        class="ms-1">
+                        </a>
                         </div>
                         <!-- 3 -->
                         <div class="row mt-5">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
-                                </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Mikhail</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                It's a lovely place and a lovely home. We saw many beautiful places, but this house and
-                                location is the highest level! We stayed in the house on New Year's Eve. The house
-                                has.....
-                            </div>
-                            <a href="" class="text-dark fw-semibold mt-2">
-                                Show more
-                                <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                                     class="ms-1">
-                            </a>
+                        <div class="d-flex">
+                        <div>
+                        <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="user">
                         </div>
-                    </div>
-                    <div class="col-1"></div>
+                        <div class="ms-3">
+                        <div class="fw-semibold">Mikhail</div>
+                        <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
+                        </div>
+                        </div>
+                        <div class="mt-2">
+                        It's a lovely place and a lovely home. We saw many beautiful places, but this house and
+                        location is the highest level! We stayed in the house on New Year's Eve. The house
+                        has.....
+                        </div>
+                        <a href="" class="text-dark fw-semibold mt-2">
+                        Show more
+                        <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                        class="ms-1">
+                        </a>
+                        </div>*@
+                        </div>
+                    }
+                    @*<div class="col-1"></div>
                     <!-- Right -->
                     <div class="col-5">
-                        <!-- 4 -->
-                        <div class="row">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user1.webp" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
-                                </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Victor</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                We're in love in this vila. Super comfortable and cozy. Perfect location 5 minutes drive
-                                to
-                                down town. Nazife is very friendly host always ready to help. Looking forward to come
-                                back.
-                            </div>
-                        </div>
-                        <!-- 5 -->
-                        <div class="row mt-5">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
-                                </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Denise</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
-                                location pin so travelling to the villa was easy. The communication stayed through out,
-                                answering.....
-                            </div>
-                            <a href="" class="text-dark fw-semibold mt-2">
-                                Show more
-                                <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                                     class="ms-1">
-                            </a>
-                        </div>
-                        <!-- 6 -->
-                        <div class="row mt-5">
-                            <div class="d-flex">
-                                <div>
-                                    <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
-                                </div>
-                                <div class="ms-3">
-                                    <div class="fw-semibold">Mikhail</div>
-                                    <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                It's a lovely place and a lovely home. We saw many beautiful places, but this house and
-                                location is the highest level! We stayed in the house on New Year's Eve. The house
-                                has.....
-                            </div>
-                            <a href="" class="text-dark fw-semibold mt-2">
-                                Show more
-                                <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                                     class="ms-1">
-                            </a>
-                        </div>
+                    <!-- 4 -->
+                    <div class="row">
+                    <div class="d-flex">
+                    <div>
+                    <img src="~/PropertDetails/Resources/user1.webp" class="rounded-circle object-fit-cover"
+                    style="width: 40px; height: 40px;" alt="user">
                     </div>
+                    <div class="ms-3">
+                    <div class="fw-semibold">Victor</div>
+                    <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
+                    </div>
+                    </div>
+                    <div class="mt-2">
+                    We're in love in this vila. Super comfortable and cozy. Perfect location 5 minutes drive
+                    to
+                    down town. Nazife is very friendly host always ready to help. Looking forward to come
+                    back.
+                    </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="row mt-5">
+                    <div class="d-flex">
+                    <div>
+                    <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
+                    style="width: 40px; height: 40px;" alt="user">
+                    </div>
+                    <div class="ms-3">
+                    <div class="fw-semibold">Denise</div>
+                    <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
+                    </div>
+                    </div>
+                    <div class="mt-2">
+                    We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
+                    location pin so travelling to the villa was easy. The communication stayed through out,
+                    answering.....
+                    </div>
+                    <a href="" class="text-dark fw-semibold mt-2">
+                    Show more
+                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                    class="ms-1">
+                    </a>
+                    </div>
+                    <!-- 6 -->
+                    <div class="row mt-5">
+                    <div class="d-flex">
+                    <div>
+                    <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
+                    style="width: 40px; height: 40px;" alt="user">
+                    </div>
+                    <div class="ms-3">
+                    <div class="fw-semibold">Mikhail</div>
+                    <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
+                    </div>
+                    </div>
+                    <div class="mt-2">
+                    It's a lovely place and a lovely home. We saw many beautiful places, but this house and
+                    location is the highest level! We stayed in the house on New Year's Eve. The house
+                    has.....
+                    </div>
+                    <a href="" class="text-dark fw-semibold mt-2">
+                    Show more
+                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                    class="ms-1">
+                    </a>
+                    </div>
+                    </div>*@
                 </div>
                 <div class="ms-0 ps-0 mt-4">
                     <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
