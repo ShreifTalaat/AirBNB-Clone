@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\PropertDetails\" />
     <Folder Include="wwwroot\profile pics\" />
     <Folder Include="wwwroot\proprty pics\" />
   </ItemGroup>

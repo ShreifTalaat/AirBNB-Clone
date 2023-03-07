@@ -29,7 +29,9 @@ namespace AirBNB.Controllers
         public string BuildingNumber { get; set; }
         public string Street { get; set; }
         public  IFormFile[] images { get; set; }
-            }
+        public string[] amenteis { get; set; }
+
+    }
     public class ListingController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -121,6 +123,13 @@ namespace AirBNB.Controllers
             };
                 _db.Properties.Add(prop);
                 _db.SaveChanges();
+
+                foreach (var item in model.amenteis)
+                {
+                    var amentt=_db.Amenities.FirstOrDefault(a => a.Name == item);
+                    prop.Amentios.Add(amentt);
+                    _db.SaveChanges();
+                }
 
                 for(int i = 0 ; i <model.images.Length;i++)
                 {
