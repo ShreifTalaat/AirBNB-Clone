@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5HFwBvFh0YpjpcAWqfGdxorVjk8PfbYnmk7h29LDsx4=",
+  "Hash": "5zV5vOkHcnylwGgtOXsYmeetZQWiTpcrv6cUC+GYUaA=",
   "Source": "AirBNB",
   "BasePath": "_content/AirBNB",
   "Mode": "Default",
@@ -2990,6 +2990,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\listing\\bootstrap.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\main.css",
+      "SourceId": "AirBNB",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\",
+      "BasePath": "_content/AirBNB",
+      "RelativePath": "listing/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\listing\\main.css"
     },
     {
       "Identity": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\script.js",

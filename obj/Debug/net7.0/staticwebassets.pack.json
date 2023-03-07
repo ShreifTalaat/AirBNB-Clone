@@ -609,6 +609,10 @@
       "PackagePath": "staticwebassets\\listing\\bootstrap.js"
     },
     {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\main.css",
+      "PackagePath": "staticwebassets\\listing\\main.css"
+    },
+    {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\script.js",
       "PackagePath": "staticwebassets\\listing\\script.js"
     },
