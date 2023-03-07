@@ -1,507 +1,595 @@
 {
   "Files": [
     {
-      "Id": "E:\\Projects\\AirBNB\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AirBNB.bundle.scp.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AirBNB.bundle.scp.css",
       "PackagePath": "staticwebassets\\AirBNB.bundle.scp.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\Account-Settings.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\Account-Settings.css",
       "PackagePath": "staticwebassets\\Account\\Account settings\\Account-Settings.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\Account-Settings.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\Account-Settings.js",
       "PackagePath": "staticwebassets\\Account\\Account settings\\Account-Settings.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Filter.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Filter.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Frame 2.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Group.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Group.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Loginandsecurity.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Notif.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Notif.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\Personalinfo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\globe.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\globe.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\logo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\logo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\Account settings\\SVG\\middle.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\middle.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\Personal info.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\Personal info.js",
       "PackagePath": "staticwebassets\\Account\\personal info\\Personal info.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Filter.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Filter.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Frame 2.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Group.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Group.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Loginandsecurity.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Notif.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Notif.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\Personalinfo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\globe.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\globe.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\logo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\logo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\SVG\\middle.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\middle.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Account\\personal info\\personal info.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Account\\personal info\\personal info.css",
       "PackagePath": "staticwebassets\\Account\\personal info\\personal info.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\Account-Settings.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\Account-Settings.css",
       "PackagePath": "staticwebassets\\AdminMange\\Account-Settings.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\Account-Settings.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\Account-Settings.js",
       "PackagePath": "staticwebassets\\AdminMange\\Account-Settings.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Filter.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Filter.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Frame 2.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Group.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Group.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Loginandsecurity.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Notif.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Notif.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\Personalinfo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\globe.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\globe.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\logo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\logo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\AdminMange\\SVG\\middle.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\AdminMange\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\middle.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3139657-880fdo.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_1.png",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_2.png",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_2.png"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_3.jfif",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_3.jfif"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_4.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_5.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\Filter.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Filter.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\Frame 2.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\Group.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Group.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\Language.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\Language.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Language.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\fav.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\fav.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\fav.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\logo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\logo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\middle.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\middle.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\SVG\\star.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\SVG\\star.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\star.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\sample properties images\\IMG-20221213-WA0119.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG-20221213-WA0119.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG-20221213-WA0119.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\sample properties images\\IMG-20221226-WA0105.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG-20221226-WA0105.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG-20221226-WA0105.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\Services\\sample properties images\\IMG_20230201_171425.jpg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG_20230201_171425.jpg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\bootstrap.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\bootstrap.css",
       "PackagePath": "staticwebassets\\bootstrap.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\css\\styles.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\profile\\Resources\\Frame 2Search .svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4",
+      "PackagePath": "staticwebassets\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\Step 1- Tell us about your place.mp4",
+      "PackagePath": "staticwebassets\\listing\\Step 1- Tell us about your place.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\bootstrap.css",
+      "PackagePath": "staticwebassets\\listing\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\bootstrap.js",
+      "PackagePath": "staticwebassets\\listing\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\script.js",
+      "PackagePath": "staticwebassets\\listing\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\listing\\style.css",
+      "PackagePath": "staticwebassets\\listing\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\profile\\Resources\\Frame 2Search .svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\Frame 2Search .svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\profile\\Resources\\hamburgerlines.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\profile\\Resources\\hamburgerlines.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\hamburgerlines.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\profile\\Resources\\logoLogo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\profile\\Resources\\logoLogo.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\logoLogo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\profile\\Resources\\miniprofilelogog.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\profile\\Resources\\miniprofilelogog.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\miniprofilelogog.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\profile\\Resources\\miniworld.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\profile\\Resources\\miniworld.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\miniworld.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\Filter.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Filter.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\Frame 2.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\Group.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Group.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\globe.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\globe.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\logo.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\logo.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\SVG\\middle.svg",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\middle.svg"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\signup.js",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\signup.js",
       "PackagePath": "staticwebassets\\signup\\signup.js"
     },
     {
-      "Id": "E:\\Projects\\AirBNB\\wwwroot\\signup\\signupstyle.css",
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\signup\\signupstyle.css",
       "PackagePath": "staticwebassets\\signup\\signupstyle.css"
     },
     {

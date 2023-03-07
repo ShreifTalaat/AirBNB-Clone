@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {}
+    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\AirBNB\\AirBNB.csproj": {
+    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\AirBNB\\AirBNB.csproj",
+        "projectUniqueName": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "E:\\Projects\\AirBNB\\AirBNB.csproj",
-        "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\AirBNB\\obj\\",
+        "projectPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
+        "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

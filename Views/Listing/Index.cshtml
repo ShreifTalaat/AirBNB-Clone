@@ -1,0 +1,782 @@
+﻿@model AirBNB.Controllers.CreatePropertyViewModel
+@{
+	Layout = null;
+}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Link to Bootstrap CSS file -->
+    <link rel="stylesheet" href="./listing/bootstrap.css">
+    <!-- Link to CSS files -->
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./listing/style.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    
+    <nav class="navbar navbar-expand-lg bg-white sticky-top  " style="height: 80px;">
+        <!-- Start div tha t contain the items in nav -->
+        <div class="container-lg   d-flex flex-row justify-content-between ">
+            <!-- Start Logo -->
+            <div class="d-flex align-items-center ">
+                <img style="width: 32px; height: 32px;" src="./listing/SVG/logo.svg">
+            </div>
+            <!-- End Logo -->
+            <!-- Start person -->
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn text-decoration-none rounded-pill"
+                            style="   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+                        Exit
+                    </button>
+                </div>
+                <!-- End person -->
+            </div>
+        </div>
+        <!-- End div tha t contain the items in nav -->
+    </nav>
+    <!-- slider -->
+    <form method="post" enctype="multipart/form-data">
+        
+    <div class="slider-container">
+        <!-- step 1 -->
+        <div class="step-container container">
+            <section class="h-75 d-flex align-self-lg-center ">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-md-6 mt-5 d-flex align-content-center flex-column justify-content-center">
+                        <p class="fw-semibold fs-4">Step 1</p>
+                        <h1>
+                            Tell us about your place
+                        </h1>
+                        <div class="fw-normal fs-6">
+                            In this step, we'll ask you which type of property you have and if guests will book the entire place or
+                            just a room. Then let us know the location and how many guests can stay.
+                        </div>
+                    </div>
+                    <div class="col-md-5 mt-5">
+
+                        <video class="h-75 align-self-lg-center" autoplay>
+                            <source src="./listing/Step 1- Tell us about your place.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <button type="button" class="btn btn-dark float-end step-next-btn">Next</button>
+        </div>
+        <div class="step-container d-none">
+           
+            <div class="col-md-7 m-auto">
+                <div class="p-2 mb-3">
+                    <h1 class="text-center">What type of place will guests have?</h1>
+                </div>
+               
+                <div class="d-grid gap-2 m-1">
+                        <input  type="radio" class="btn-check" name="Catogery" id="1" autocomplete="off" value="An apartment">
+                    <label class="btn  btn-outline-secondary" for="1">
+                        <div class="d-flex mb-3">
+                            <div class="me-auto p-2 text-start">
+                                <h2>An apartment</h2>
+                                <p>Guests have the whole place to themselves</p>
+                            </div>
+                            <div class="p-2 d-flex flex-column">
+                                <img src="https://a0.muscache.com/pictures/64b27fed-56a1-4f03-950a-d8da08efb428.jpg"
+                                     class="card-img-top cardimg rounded-circle"
+                                     alt="Property 2" />
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="d-grid gap-2 m-1">
+                    <input type="radio" class="btn-check" name="Catogery" id="2" autocomplete="off" value="An Villa">
+                    <label class="btn btn-outline-secondary" for="2">
+                        <div class="d-flex mb-3">
+                            <div class="me-auto p-2 text-start">
+                                <h2>An Villa</h2>
+                                <p>Guests have the whole place to themselves</p>
+                            </div>
+
+                            <div class="p-2 d-flex flex-column">
+                                <img src="https://a0.muscache.com/pictures/4d7580e1-4ab2-4d26-a3d6-97f9555ba8f9.jpg"
+                                     class="card-img-top cardimg"
+                                     alt="Property 1" />
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+                <div class="d-grid gap-2 m-1">
+                        <input type="radio" class="btn-check" name="Catogery" id="3" autocomplete="off" value="A Room">
+                    <label class="btn btn-outline-secondary" for="3">
+                        <div class="d-flex mb-3">
+                            <div class="me-auto p-2 text-start">
+                                <h2>A Room</h2>
+                                <p>Guests have the whole place to themselves</p>
+                            </div>
+
+                            <div class="p-2 d-flex flex-column">
+                                <img src="https://a0.muscache.com/pictures/4d7580e1-4ab2-4d26-a3d6-97f9555ba8f9.jpg"
+                                     class="card-img-top cardimg"
+                                     alt="Property 1" />
+                            </div>
+                        </div>
+
+                </div>
+                </label>
+              
+            </div>
+
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button type="button" name="catId" id="categorycheck" class="btn btn-dark  step-next-btn fw-semibold" disabled onclick="catpass(this)">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+    
+        <div class="step-container d-none">
+            <div class="col-lg-7 d-flex flex-column m-auto">
+                <div class="p-2 mb-3 text-start">
+                    <h1>Share some basics about your place</h1>
+                    <p class="fw-semibold text-muted">
+                        You'll add more details later, like bed types.
+                    </p>
+                </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                    <div class="d-flex">
+                        <div class="me-auto">Guests</div>
+                        <div class="p-2">
+                            <button id="btn1" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="Counertfunc()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                              stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-2 d-flex"><span class="p-2 counter">1</span>
+                                <input id="geust" type="hidden" value="1" asp-for="Capacity" />
+                            </div>
+                        <div class="p-2">
+                            <button id="btn2" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="CounertfuncDown()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                    <div class="d-flex">
+                        <div class="me-auto">Bedrooms</div>
+                        <div class="p-2">
+                            <button id="btn3" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="Counertfunc1()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                              stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-2 d-flex"><span class="p-2 counter">1</span>
+                            <input id="bedroom" type="hidden" value="1" asp-for="NumberOfBedRooms" />
+                        </div>
+                        <div class="p-2">
+                            <button id="btn4" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="CounertfuncDown1()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                    <div class="d-flex">
+                        <div class="me-auto">Beds</div>
+                        <div class="p-2">
+                            <button id="btn5" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="Counertfunc2()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                              stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-2 d-flex"><span class="p-2 counter">1</span>
+                            <input id="beds" type="hidden" value="1" asp-for="NumberOfBeds" />
+                        </div>
+                        <div class="p-2">
+                            <button id="btn6" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="CounertfuncDown2()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                    <div class="d-flex">
+                        <div class="me-auto">Bathrooms</div>
+                        <div class="p-2">
+                            <button id="btn7" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="Counertfunc3()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                              stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-2 d-flex"><span class="p-2 counter">1</span>
+                            <input id="bathrooms" type="hidden" value="1" asp-for="NumberOfBathRooms" />
+                        </div>
+                        <div class="p-2">
+                            <button id="btn8" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                    onclick="CounertfuncDown3()">
+                                <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                        <div class="d-flex">
+                            <div class="me-auto">Minimum Stay</div>
+                            <div class="p-2">
+                                <button id="btn9" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                        onclick="Counertfunc4()">
+                                    <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-2 d-flex">
+                                <span class="p-2 counter">1</span>
+                                <input id="minstay" type="hidden" value="1" asp-for="MinStay" />
+                            </div>
+                            <div class="p-2">
+                                <button id="btn10" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                        onclick="CounertfuncDown4()">
+                                    <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+                        <div class="d-flex">
+                            <div class="me-auto">Maximum Stay</div>
+                            <div class="p-2">
+                                <button id="btn11" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                        onclick="Counertfunc5()">
+                                    <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M12 5L12 19" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-2 d-flex">
+                                <span class="p-2 counter">2</span>
+                                <input id="maxstay" type="hidden" value="2" asp-for="MaxStay" />
+                            </div>
+                            <div class="p-2">
+                                <button id="btn12" type="button" class="btn btn-light border border-dark-subtle rounded-5"
+                                        onclick="CounertfuncDown5()">
+                                    <svg width="15px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M5 12H19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="GetMap()">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        <div class="step-container d-none">
+            <div class="container h-75">
+                <div class="pt-3 my-2">
+                    Language:
+                    <select id="langOptions" onchange="updateLanguage()">
+                        <option value="ar">Arabic (ar)</option>
+                        <option value="en-US" selected="selected">English (United States) (en-US)</option>
+                    </select>
+                </div>
+                <div id="myMap" class="col-md-7 m-auto" style="position:relative;aspect-ratio: 2/1;"></div>
+                <div class=" container row">
+                    <div class="col d-none">
+                        <label for="longitude">Longitude:</label>
+                        <input class="form-control" type="text" id="lon" name="longitude" value="" readonly hidden />
+                    </div>
+                    <div class="col d-none">
+                        <label for="latitude">Latitude:</label>
+                        <input class="form-control" type="text" id="lat" name="latitude" value="" readonly hidden />
+                    </div>
+                    <div class="col ">
+                        <label for="latitude">Address:</label>
+                            <input class="form-control" type="text" id="addr" name="Location" value="" readonly /></div>
+                     <div class="col ">
+                        <label for="latitude">Building Number:</label>
+                                <input class="form-control " type="text" id="bnum" name="BuildingNumber" value="" onchange="buttondis()" disabled/></div>
+                             <div class="col ">
+                        <label for="latitude">Street Name:</label>
+                                    <input class="form-control " type="text" id="sname" name="Street" value="" onchange="buttondis()" disabled /></div>
+                    </div>
+                </div>
+        
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button id="mapchecking" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="pass(this)" disabled>Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        <!-- step 2 -->
+        <div class="step-container d-none">
+            <section class="h-75 d-flex align-self-lg-center container ">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-md-6 mt-5 d-flex align-content-center flex-column justify-content-center">
+                        <p class="fw-semibold fs-4">Step 2</p>
+                        <h1>Make your place stand out</h1>
+                        <div class="fw-normal fs-6">
+                            In this step, you’ll add some of the amenities your place offers, plus 5 or more photos. Then, you’ll create a title and description.
+                        </div>
+                    </div>
+                    <div class="col-md-5 mt-5">
+
+                        <video class="h-75 align-self-lg-center" autoplay>
+                            <source src="./listing/Step 1- Tell us about your place.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        <div class="step-container d-none">
+            <section class="container">
+                <div class="row d-flex justify-content-center ">
+                    <div class="col-lg-7 text-start">
+
+                        <p class="fs-2 fw-semibold mb-2">Add some photos of your house</p>
+                        <p class="text-black-50">
+                            You'll need 5 photos to get started. You can make changes later.
+                        </p>
+                        <div id="image" class="align-items-center border d-flex justify-content-center flex-column">
+
+                            <button id="deleteimg" class="postion-edit btn btn-light rounded-4 position-absolute d-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                                     focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                    <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <img id="firstimage" src="" alt="">
+
+                            <div id="content" class=" d-flex justify-content-center flex-column align-items-center ">
+
+                                <svg class="text-black" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                     role="presentation" focusable="false"
+                                     style="display: block; height: 64px; width: 64px; fill: currentcolor;">
+                                    <path d="M41.636 8.404l1.017 7.237 17.579 4.71a5 5 0 0 1 3.587 5.914l-.051.21-6.73 25.114A5.002 5.002 0 0 1 53 55.233V56a5 5 0 0 1-4.783 4.995L48 61H16a5 5 0 0 1-4.995-4.783L11 56V44.013l-1.69.239a5 5 0 0 1-5.612-4.042l-.034-.214L.045 14.25a5 5 0 0 1 4.041-5.612l.215-.035 31.688-4.454a5 5 0 0 1 5.647 4.256zm-20.49 39.373l-.14.131L13 55.914V56a3 3 0 0 0 2.824 2.995L16 59h21.42L25.149 47.812a3 3 0 0 0-4.004-.035zm16.501-9.903l-.139.136-9.417 9.778L40.387 59H48a3 3 0 0 0 2.995-2.824L51 56v-9.561l-9.3-8.556a3 3 0 0 0-4.053-.009zM53 34.614V53.19a3.003 3.003 0 0 0 2.054-1.944l.052-.174 2.475-9.235L53 34.614zM48 27H31.991c-.283.031-.571.032-.862 0H16a3 3 0 0 0-2.995 2.824L13 30v23.084l6.592-6.59a5 5 0 0 1 6.722-.318l.182.159.117.105 9.455-9.817a5 5 0 0 1 6.802-.374l.184.162L51 43.721V30a3 3 0 0 0-2.824-2.995L48 27zm-37 5.548l-5.363 7.118.007.052a3 3 0 0 0 3.388 2.553L11 41.994v-9.446zM25.18 15.954l-.05.169-2.38 8.876h5.336a4 4 0 1 1 6.955 0L48 25.001a5 5 0 0 1 4.995 4.783L53 30v.88l5.284 8.331 3.552-13.253a3 3 0 0 0-1.953-3.624l-.169-.05L28.804 14a3 3 0 0 0-3.623 1.953zM21 31a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM36.443 6.11l-.175.019-31.69 4.453a3 3 0 0 0-2.572 3.214l.02.175 3.217 22.894 5.833-7.74a5.002 5.002 0 0 1 4.707-4.12L16 25h4.68l2.519-9.395a5 5 0 0 1 5.913-3.587l.21.051 11.232 3.01-.898-6.397a3 3 0 0 0-3.213-2.573zm-6.811 16.395a2 2 0 0 0 1.64 2.496h.593a2 2 0 1 0-2.233-2.496zM10 13a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                                          fill="#222"></path>
+                                </svg>
+                                <p class="fs-4 fw-semibold mb-1 mt-3">Update your photos here </p>
+                                <p class="mb-1">Choose 5 photos</p>
+                                <label for="delete" class="btn-link">Upload from your device</label>
+                                <input name="images" asp-for="images" type="file" accept="image/*" id="delete" class="text-center d-none">
+                            </div>
+                        </div>
+                        <!-- sub images -->
+                        <div id="sub" class="row pt-4 g-4 d-none">
+                            <div class="col-lg-6">
+                                <label class="sub-image align-items-center border d-flex justify-content-center flex-column" for="img1"
+                                       onmouseenter="show(this)" onmouseleave="hide(this)">
+                                    <img src="" alt="" class="d-none subimages">
+                                    <svg class="text-black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                         role="presentation" focusable="false"
+                                         style="display: block; height: 32px; width: 32px; fill: currentcolor;">
+                                        <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
+                                        </path>
+                                    </svg>
+                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                                             focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                            <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </label>
+                                    <input name="images" asp-for="images" type="file" accept="image/*" id="img1" class="d-none" onchange="upload(this.id)">
+                            </div>
+                            <div class="col-lg-6">
+
+                                <label class="sub-image align-items-center border d-flex justify-content-center flex-column" for="img2"
+                                       onmouseenter="show(this)" onmouseleave="hide(this)">
+                                    <img src="" alt="" class="d-none subimages">
+                                    <svg class="text-black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                         role="presentation" focusable="false"
+                                         style="display: block; height: 32px; width: 32px; fill: currentcolor;">
+                                        <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
+                                        </path>
+                                    </svg>
+                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                                             focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                            <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </label>
+                                    <input name="images" asp-for="images" type="file" accept="image/*" id="img2" class="d-none" onchange="upload(this.id)">
+
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="sub-image align-items-center border d-flex justify-content-center flex-column" for="img3"
+                                       onmouseenter="show(this)" onmouseleave="hide(this)">
+                                    <img src="" alt="" class="d-none subimages">
+                                    <svg class="text-black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                         role="presentation" focusable="false"
+                                         style="display: block; height: 32px; width: 32px; fill: currentcolor;">
+                                        <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
+                                        </path>
+                                    </svg>
+                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                                             focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                            <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </label>
+                                    <input name="images" asp-for="images" type="file" accept="image/*" id="img3" class="d-none" onchange="upload(this.id)">
+
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="sub-image align-items-center border d-flex justify-content-center flex-column" for="img4"
+                                       onmouseenter="show(this)" onmouseleave="hide(this)">
+                                    <img src="" alt="" class="d-none subimages">
+                                    <svg class="text-black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                         role="presentation" focusable="false"
+                                         style="display: block; height: 32px; width: 32px; fill: currentcolor;">
+                                        <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
+                                        </path>
+                                    </svg>
+                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                                             focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                                            <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </label>
+                                    <input name="images" asp-for="images" type="file" accept="image/*" id="img4" class="d-none" onchange="upload(this.id)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button id="uploadimg" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="passimage()" disabled>Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        <div class="step-container d-none">
+            <div>
+                <div class="col-sm-6 d-flex flex-column h-75 justify-content-center m-auto well">
+                    <p class="fs-2 fw-semibold mb-2">Now, let's give your house a title</p>
+                    <p class="text-black-50 fw-medium">
+                        Short titles work best. Have fun with it—you can always change it later.
+                            <textarea asp-for="Title" class="form-control mb-3 mt-4" id="text" name="Title" maxlength="32" rows="6"></textarea>
+                        <span class="text-black-50  fw-semibold" id="count_message"></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                <button id="titlecheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" disabled>Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+
+        </div>
+        <div class="step-container d-none">
+            <div>
+                <div class="col-sm-6 d-flex flex-column h-75 justify-content-center m-auto well">
+                    <p class="fs-2 fw-semibold mb-2">Create your description</p>
+                    <p class="text-black-50 fw-medium">Share what makes your place special. </p>
+                        <textarea asp-for="Description" class="form-control mb-3 mt-4" id="desctext" name="Description" maxlength="500" rows="8"></textarea>
+                    <span class="text-black-50  fw-semibold" id="desccount_message"></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button id="desccheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+
+        </div>
+        <!-- step 3 -->
+        <div class="step-container d-none">
+            <section class="h-75 d-flex align-self-lg-center container ">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-md-6 mt-5 d-flex align-content-center flex-column justify-content-center">
+                        <p class="fw-semibold fs-4">Step 3</p>
+                        <h1>Finish up and publish</h1>
+                        <div class="fw-normal fs-6">
+                            Finally, you’ll choose if you'd like to start with an experienced guest, then you'll set your nightly price. Answer a few quick questions and publish when you're ready.
+                        </div>
+                    </div>
+                    <div class="col-md-5 mt-5">
+
+                        <video class="h-75 align-self-lg-center" autoplay>
+                            <source src="/Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        <div class="step-container d-none">
+            <section style="max-width: 630px; margin-left: auto; margin-right: auto;" class="d-flex flex-column h-75 justify-content-center">
+                <!--  -->
+                <header class="mb-4">
+                    <h1 style="margin-bottom: 1rem;">Now,set your price</h1>
+                    <h6>You can change it anytime</h6>
+                </header>
+                <!-- Price box -->
+                <div class="price-box text-center ">
+                    <div>
+                        <div class="price-details d-flex justify-content-around">
+                            <button type="button" style=" border: none; padding: 0%; background-color:rgb(247, 247, 247);" class="rounded-circle">
+                                <img id="negative-sign" src="./listing/SVG/sign-minus-circle-svgrepo-com.svg" onclick="decrementPrice()">
+                            </button>
+                            <div class="d-flex align-items-center" style="position: relative;">
+                                <input asp-for="Price" type="text" class="EGP-price rounded" style="text-align: center;" id="price" value="50"
+                                       oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                       onblur="if(this.value > 500) this.value = 500;if(this.value<50)this.value=50;">
+                                <span class="egp-symbol">£</span>
+                            </div>
+                            <button type="button" style=" border: none; padding: 0%; background-color:rgb(247, 247, 247);">
+                                <img src="./listing/SVG/sign-plus-circle-svgrepo-com.svg" id="plus-sign" onclick="incrementPrice()">
+                            </button>
+                        </div>
+                        <div style="margin-top: 15px;">Per night</div>
+                    </div>
+                    <div style="margin-top:40px;">
+                        Places like yours in your area usually <br>range from EGP50 to EGP500
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                <button id="desccheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+
+        </div>
+        <div class="step-container d-none">
+            <section style="max-width: 850px; margin-left: auto; margin-right: auto;">
+                <!--  -->
+                <header style="margin-bottom: 32px;">
+                    <h1 style="margin-bottom: 16px;">Yay! It's time to publish.</h1>
+                    <h6>Here's what we'll show to guests. Before you publish, make sure to review the details.</h6>
+                </header>
+                <!-- Content -->
+                <div class="d-flex " style="height: 400px; margin-bottom: 300px;">
+                    <!-- card -->
+                    <div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Preview" class="text-decoration-none text-black ">
+                            <div class="card " style="width: 300px;height: 100%;border: none;">
+                                <img id="previewimg" class=" card-img-top mb-3 rounded" src=""
+                                     alt="Property image">
+                                <div>
+                                    <h5 class="card-title mb-0  d-flex">
+                                        Descrtiption <img class="ms-auto" src="./listing/SVG/star.svg">
+                                    </h5>
+                                    <p class="card-text mb-0 d-flex">Price</p>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Preview" data-bs-keyboard="false"
+                             tabindex="-1" aria-labelledby="Preview" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 " id="Preview">
+                                            Full Preview
+                                        </h1>
+                                    </div>
+                                    <div class="modal-body container-lg ">
+
+                                        <div class="d-flex ">
+                                            <img id="imagepreview" class=" mb-3 rounded" style="height: 500px; width: 600px;" src=""
+                                                 alt="Property image">
+                                            <div style="padding-left: 60px; ">
+                                                <h4>Description</h4>
+                                                <br>
+                                                <div class="d-flex border-bottom ">
+
+                                                    <div>
+                                                        <h4>Home hosted by sherif</h4>
+                                                        <p>4 guests . 1bedroom . 1 bed .1 bath</p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <img class="rounded rounded-circle" src="./listing/My personal photo.jpg" style="width: 40px; margin-right: 15px;">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div class=border-bottom>
+                                                    <div>
+                                                        <p>You’ll treasure your time at this memorable place.</p>
+                                                        <br>
+
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div>
+                                                    <div>
+                                                        <h6>Location</h6>
+                                                        <p>Smouha,Alexandria ,Egypt</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div style="padding-left: 50px; padding-top: 30px;">
+                        <h4>What's next?</h4>
+                        <br>
+                        <div class="d-flex ">
+                            <div>
+                                <img src="./listing/SVG/calendar.svg" style="width: 40px; margin-right: 15px;">
+                            </div>
+                            <div>
+                                <h4>Set up your calendar</h4>
+                                <p>Choose which dates are available. Guests can start booking 24 hours after you publish.</p>
+                            </div>
+
+                        </div>
+                        <div class="d-flex ">
+                            <div>
+                                <img src="./listing/SVG/Settings.svg" style="width: 40px; margin-right: 15px;">
+                            </div>
+                            <div>
+                                <h4>Adjust your settings</h4>
+                                <p>Set house rules, select a cancellation policy, choose how guests can book, and more.</p>
+                            </div>
+
+                        </div><div class="d-flex ">
+                            <div>
+                                <img src="./listing/SVG/guest.svg" style="width: 40px; margin-right: 15px;">
+                            </div>
+                            <div>
+                                <h4>Prepare for your first guest</h4>
+                                <p>Find tips in our Resource Center and access customer support.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between container flex-row-reverse pb-5">
+                    <button type="submit" class="btn btn-danger step-next-btn float-end fw-semibold">Submit</button>
+                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+            </div>
+        </div>
+        </div>
+        
+
+        </form>
+        <script src="./listing/bootstrap.js"></script>
+        <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <script src="./listing/script.js"></script>
+</body>
