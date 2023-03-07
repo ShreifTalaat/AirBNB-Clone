@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Property>
 @{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
 <body>
@@ -69,8 +70,53 @@
                             </a>
 
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink ">
-                                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Sign up</a></li>
-                                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                               
+                                @if (User.Identity.IsAuthenticated)
+                                {
+
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Become A Host </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Airbnb your home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Help</a>
+                                    </li>
+
+                                 
+                                    <li class="nav-item">
+                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                            <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                                        </form>
+                                    </li>
+                                   
+                                }
+                                else
+                                {
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Airbnb your home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Help</a>
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -120,8 +166,8 @@
                                                 {
                                                     <div class="carousel-item active">
                                                         <img class="card-img-top mb-3 rounded w-100"
-            src="~/Prop.Image/Prop1/@img.URL"
-            alt="Property image" style="aspect-ratio:1/1;"/>
+                                                         src="~/Prop.Image/Prop1/@img.URL"
+                                                         alt="Property image" style="aspect-ratio:1/1;"/>
                                                     </div>
                                                 }
                                             </div>
