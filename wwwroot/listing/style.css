@@ -1,0 +1,80 @@
+
+/* style of image uploader */
+#image{
+    /* height: 50vh; */
+    aspect-ratio: 5/3;
+}
+.postion-edit{
+    /* top: 15vh;
+    left: 65vw; */
+    top: 7rem;
+    left: 59rem;
+}
+.sub-image{
+    aspect-ratio: 5/3;
+}
+/* style of text area  */
+textarea {
+    resize: none;
+}
+/* style of price */
+.price-box {
+    animation-delay: 449.741ms;
+    width: 630px;
+    height: 280px;
+    padding: 32px;
+    background-color: rgb(247, 247, 247);
+  }
+  
+  @media (min-width: 744px) {
+    .price-box {
+      padding: 32px !important;
+    }
+  }
+  
+  .plus-sign {
+    color: rgb(247, 247, 247);
+    ;
+  }
+  
+  .EGP-price {
+    width: 412px;
+    height: 80px;
+    background-color: white;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: inherit;
+    line-height: 80px;
+  }
+  
+  .egp-symbol {
+    position: absolute;
+    right: 139px;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: inherit;
+    line-height: 80px;
+  }
+
+    /* weather styles start*/
+    .weather-icon {
+      float: left;
+      display: none;
+  }
+
+  .weather-content {
+      float: left;
+      margin: 0 10px;
+  }
+
+  .weather-temp {
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .weather-phrase {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  /* weather styles end */

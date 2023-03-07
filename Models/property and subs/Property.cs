@@ -18,11 +18,11 @@ public class Property
 	[Range(1, 60)]
 	public int Capacity { get; set; } = 1;
 	public bool Accepted { get; set; }=false;
-	[Required,MaxLength(32),MinLength(1)]
+	[Required,MaxLength(32)/*,MinLength(1)*/]
 	public string Title { get; set; }
-	[Required, MaxLength(500), MinLength(1)]
+	[Required, MaxLength(500)/*, MinLength(1)*/]
 	public string Description { get; set; }
-	[Required,MinLength(2)]
+	[Required/*,MinLength(2)*/]
 	public float Price { get; set; }
 	[Required]
 	public int MaxStay { get; set; }

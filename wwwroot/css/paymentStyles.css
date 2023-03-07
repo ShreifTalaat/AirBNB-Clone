@@ -1,0 +1,72 @@
+.Logo {
+    height: 30px;
+    width: auto;
+}
+
+.aircover{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.ConfirmationFloatCard {
+    position: sticky;
+    top: 2.5rem;
+}
+
+
+.footer{
+    background-color:rgb(238, 238, 238);
+}
+
+
+.form-control {
+    border-bottom: 2px solid #eee !important;
+    border: none !important;
+    font-weight: 600 !important
+}
+
+.form-control:focus {
+    color: #495057 !important;
+    background-color: #fff !important;
+    border-color: #8bbafe !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    border-bottom: 2px solid blue !important;
+}
+
+.inputbox {
+    position: relative !important;
+    margin-bottom: 20px !important;
+    width: 100% !important
+}
+.inputbox span {
+    position: absolute !important;
+    top: 7px !important;
+    left: 11px !important;
+    transition: 0.5s !important
+}
+.inputbox i {
+    position: absolute !important;
+    top: 13px !important;
+    right: 8px !important;
+    transition: 0.5s !important;
+    color: #3F51B5 !important
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important; 
+    margin: 0 !important
+}
+
+.inputbox input:focus~span {
+    transform: translateX(-0px) translateY(-15px) !important;
+    font-size: 12px !important
+}
+
+.inputbox input:valid~span {
+    transform: translateX(-0px) translateY(-15px) !important;
+    font-size: 12px !important
+}
+
