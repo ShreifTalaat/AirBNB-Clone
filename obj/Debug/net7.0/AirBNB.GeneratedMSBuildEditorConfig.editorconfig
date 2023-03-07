@@ -100,6 +100,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Listing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xMaXN0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Reservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kimo Store/source/Git-Clone/Views/Listing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
