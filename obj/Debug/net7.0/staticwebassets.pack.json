@@ -229,6 +229,34 @@
       "PackagePath": "staticwebassets\\bootstrap.css"
     },
     {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\Listingstyles.css",
+      "PackagePath": "staticwebassets\\css\\Hosting\\Listingstyles.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\Revstyles.css",
+      "PackagePath": "staticwebassets\\css\\Hosting\\Revstyles.css"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg",
+      "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221226-WA0105.jpg",
+      "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG-20221226-WA0105.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
+      "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG_20230114_123932 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230201_171425.jpg",
+      "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG_20230201_171425.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
       "Id": "C:\\Users\\Kimo Store\\source\\Git-Clone\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
