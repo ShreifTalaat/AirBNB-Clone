@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\Listing\**" />
+    <Content Remove="wwwroot\css\Listing\**" />
+    <EmbeddedResource Remove="wwwroot\css\Listing\**" />
+    <None Remove="wwwroot\css\Listing\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.3" />
@@ -24,6 +31,18 @@
   <ItemGroup>
     <Folder Include="wwwroot\profile pics\" />
     <Folder Include="wwwroot\proprty pics\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Homepage\SVG\fav.svg" />
+    <None Include="wwwroot\Homepage\SVG\Filter.svg" />
+    <None Include="wwwroot\Homepage\SVG\Frame 2.svg" />
+    <None Include="wwwroot\Homepage\SVG\globe.svg" />
+    <None Include="wwwroot\Homepage\SVG\Group.svg" />
+    <None Include="wwwroot\Homepage\SVG\Language.svg" />
+    <None Include="wwwroot\Homepage\SVG\logo.svg" />
+    <None Include="wwwroot\Homepage\SVG\middle.svg" />
+    <None Include="wwwroot\Homepage\SVG\star.svg" />
   </ItemGroup>
 
 </Project>
