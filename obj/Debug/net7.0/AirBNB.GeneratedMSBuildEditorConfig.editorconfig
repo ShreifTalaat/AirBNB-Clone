@@ -9,121 +9,145 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AirBNB
 build_property.RootNamespace = AirBNB
-build_property.ProjectDir = E:\Projects\AirBNB\
+build_property.ProjectDir = C:\Users\Kimo Store\source\Git-Clone\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Projects\AirBNB
+build_property.MSBuildProjectDirectory = C:\Users\Kimo Store\source\Git-Clone
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/Account settings.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/Account settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQWNjb3VudCBzZXR0aW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Admin/Index.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Admin/ManageRole.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Admin/ManageRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Admin/PropertiesList.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Admin/PropertiesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvcGVydGllc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Admin/USerMange.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Admin/USerMange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVVNlck1hbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Home/Index.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Home/Privacy.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Profile/Index.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Home/PropertyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0eURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Listing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xMaXN0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Hosting/Reservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zdGluZ1xSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Listing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/payment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kimo Store/source/Git-Clone/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Shared/Error.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/_ViewImports.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/_ViewStart.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projects/AirBNB/Views/Shared/_Layout.cshtml]
+[C:/Users/Kimo Store/source/Git-Clone/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w9b3yfy8al
