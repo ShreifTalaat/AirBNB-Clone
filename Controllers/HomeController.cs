@@ -42,6 +42,7 @@ namespace AirBNB.Controllers
             var PropertyUserName = db.Users.FirstOrDefault(a => a.Id == Property.UserId);
             ViewBag.PropertyUserName = PropertyUserName.First_Name;
             ViewBag.PropertyUserProfilePic = PropertyUserName.Profile_Picture;
+
             if (Property == null)
             {
                 return NotFound();
@@ -49,8 +50,9 @@ namespace AirBNB.Controllers
             var detailsandpayment = new DetailsPaymentViewModel
             {
                 property = db.Properties.Include(p => p.PropertyImages).Include(p => p.Amentios)
-                .Include(p => p.Reviews).Include(p => p.House_Rules).FirstOrDefault(p => p.ID == id),
+                .Include(p => p.Reviews).ThenInclude(a=>a.User).Include(p => p.House_Rules).FirstOrDefault(p => p.ID == id),
                 reservation = new Reservation()
+                
             };
             return View(detailsandpayment);
         }
