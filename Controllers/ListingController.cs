@@ -5,6 +5,7 @@ using AirBNB.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite.Geometries;
 
 namespace AirBNB.Controllers
 {
@@ -30,6 +31,7 @@ namespace AirBNB.Controllers
         public string Street { get; set; }
         public  IFormFile[] images { get; set; }
         public string[] amenteis { get; set; }
+        public Coordinate coordinate { get; set; }
 
     }
     public class ListingController : Controller
@@ -77,7 +79,7 @@ namespace AirBNB.Controllers
         {
             if (ModelState.IsValid) {
 
-             
+               ;
                 int regionid = 0;
                 string cityname = model.Location.Split(',').Last().TrimEnd().TrimStart();
                 string regionname = model.Location.Split(',').First().TrimEnd().TrimStart();
@@ -103,23 +105,24 @@ namespace AirBNB.Controllers
                 else
                 {
                     regionid = _regionexist.Id;
-                }   
+                }
 
 
-              var prop =  new Property
-            {
-                Capacity = model.Capacity,
-                NumberOfBeds = model.NumberOfBeds,
-                NumberOfBathRooms = model.NumberOfBathRooms,
-                NumberOfBedRooms = model.NumberOfBedRooms,
-                Title = model.Title,
-                Description = model.Description,
-                Price = model.Price,
-                RegionId= regionid,
-                BuildingNumber= model.BuildingNumber,
-                Street= model.Street,
-                CatogeryId = _db.Categories.FirstOrDefault(m => m.Name == model.Catogery).Id,
-                UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+                var prop = new Property
+                {
+                    Capacity = model.Capacity,
+                    NumberOfBeds = model.NumberOfBeds,
+                    NumberOfBathRooms = model.NumberOfBathRooms,
+                    NumberOfBedRooms = model.NumberOfBedRooms,
+                    Title = model.Title,
+                    Description = model.Description,
+                    Price = model.Price,
+                    RegionId = regionid,
+                    BuildingNumber = model.BuildingNumber,
+                    Street = model.Street,
+                    CatogeryId = _db.Categories.FirstOrDefault(m => m.Name == model.Catogery).Id,
+                    UserId = User.FindFirstValue(ClaimTypes.NameIdentifier),
+                    Cordinates = new NetTopologySuite.Geometries.Point(model.coordinate.Y, model.coordinate.X) { SRID = 4326 }
             };
                 _db.Properties.Add(prop);
                 _db.SaveChanges();

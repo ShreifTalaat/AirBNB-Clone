@@ -384,11 +384,11 @@
                 <div class=" container row">
                     <div class="col d-none">
                         <label for="longitude">Longitude:</label>
-                        <input class="form-control" type="text" id="lon" name="longitude" value="" readonly hidden />
+                        <input asp-for="coordinate.X" class="form-control" type="text" id="lon" name="coordinate.X" value="" readonly hidden />
                     </div>
                     <div class="col d-none">
                         <label for="latitude">Latitude:</label>
-                        <input class="form-control" type="text" id="lat" name="latitude" value="" readonly hidden />
+                        <input asp-for="coordinate.Y" class="form-control" type="text" id="lat" name="coordinate.Y" value="" readonly hidden />
                     </div>
                     <div class="col ">
                         <label for="latitude">Address:</label>
@@ -749,7 +749,7 @@
 
                 </div>
                 <div class="d-flex justify-content-between container flex-row-reverse pb-5">
-                    <button id="titlecheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" disabled>Next</button>
+                    <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold" >Next</button>
                     <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
                 </div>
 
