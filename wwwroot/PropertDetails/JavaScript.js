@@ -24,11 +24,11 @@ const totalCountSearch = document.getElementById("total-count-search");
 
 // Variable to track count
 var count = 1;
-var countSearch = 1;
+var countSearch = 0;
 
 // Display initial count value
 totalCount.innerHTML = count;
-totalCountSearch.innerHTML = count;
+totalCountSearch.innerHTML = countSearch;
 
 // Function to increment count
 const handleIncrement = () => {
@@ -93,7 +93,10 @@ smallSearchBar.addEventListener("click", () => {
 incrementCountSearch.addEventListener("click", () => {
     countSearch++;
     totalCountSearch.innerText = countSearch;
-    guestWordSearch.innerText = "guests"
+    if (countSearch == 1) {
+        guestWordSearch.innerText = "guest"
+    }
+    else { guestWordSearch.innerText = "guests" }
     whoText.innerText = totalCountSearch.innerText + " " + guestWordSearch.innerText;
     whoText.classList.add("fs-6", "fw-semibold");
     xBtnWho.classList.remove("d-none");
@@ -164,10 +167,11 @@ let xBtnWho = document.getElementById("xBtnWho");
 xBtnWho.addEventListener("click", () => {
     whoText.innerText = "Add Guests"
     whoText.classList.remove("fs-6", "fw-semibold");
-    totalCountSearch.innerText = "1";
+    totalCountSearch.innerText = "0";
     guestWordSearch.innerText = "guest"
     xBtnWho.classList.remove("d-block");
     xBtnWho.classList.add("d-none");
+    countSearch = 0;
 })
 
 //Share Button
@@ -178,6 +182,50 @@ function myFunction() {
     var copyText = window.location.href;
     // Copy the text inside the text field
     navigator.clipboard.writeText(copyText);
+}
+
+//ClearBtn
+var ClearBtn = document.getElementById("ClearBtn");
+ClearBtn.addEventListener("click", () => {
+    CheckIn_Input.value = "";
+    CheckIn_Output.value = "";
+    count = 1;
+    totalCount.innerHTML = "1";
+    reserve_btn.innerText = "Check availability"
+    reserve_btn.type = "button"
+    notChargeYetDiv.classList.remove("d-block");
+    notChargeYetDiv.classList.add("d-none");
+    CancellationAddDatesBtn.classList.remove("d-none");
+    CancellationAddDatesBtn.classList.add("d-block");
+
+})
+//CheckIn_Input Btn
+var CheckIn_Input = document.getElementById("CheckIn_Input");
+var reserve_btn = document.getElementById("reserve-btn");
+var notChargeYetDiv = document.getElementById("notChargeYetDiv");
+function ReserveBtn(e) {
+    reserve_btn.innerText = "Reserve"
+    reserve_btn.type = "submit"
+    notChargeYetDiv.classList.remove("d-none");
+    notChargeYetDiv.classList.add("d-block");
+}
+
+//CheckIn_Output
+var CheckIn_Output = document.getElementById("CheckIn_Output");
+var CancellationText = document.getElementById("CancellationText");
+var CancellationAddDatesBtn = document.getElementById("CancellationAddDatesBtn");
+function CheckOutChange(e) {
+    CancellationText.innerText = "Free cancellation for 48 hours."
+    CancellationAddDatesBtn.classList.remove("d-block");
+    CancellationAddDatesBtn.classList.add("d-none");
+}
+
+//ReportBtn
+/*var ReportRadios = document.getElementsByClassName("form-check-input");*/
+var flexRadioDefault1 = document.getElementById("flexRadioDefault1");
+var ReportBtn = document.getElementById("ReportBtn");
+function radio() {
+    ReportBtn.disabled = false;
 }
 
 
