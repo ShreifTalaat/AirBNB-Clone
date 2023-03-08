@@ -2,6 +2,7 @@
 using AirBNB.Classes;
 using AirBNB.Data;
 using AirBNB.Models;
+using AirBNB.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -45,7 +46,13 @@ namespace AirBNB.Controllers
             {
                 return NotFound();
             }
-            return View(Property);
+            var detailsandpayment = new DetailsPaymentViewModel
+            {
+                property = db.Properties.Include(p => p.PropertyImages).Include(p => p.Amentios)
+                .Include(p => p.Reviews).Include(p => p.House_Rules).FirstOrDefault(p => p.ID == id),
+                reservation = new Reservation()
+            };
+            return View(detailsandpayment);
         }
 
     }

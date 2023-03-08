@@ -1,4 +1,4 @@
-﻿@model Property
+﻿@model AirBNB.ViewModels.DetailsPaymentViewModel
 @{
     Layout = null;
 }
@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-    <title>@Model.Title</title>
+    <title>@Model.property.Title</title>
 </head>
 
 <body>
@@ -152,7 +152,7 @@
     <section>
         <div class="container py-4">
             <div>
-                <h3>@Model.Title</h3>
+                <h3>@Model.property.Title</h3>
             </div>
             <div class="d-flex justify-content-between">
                 <div class="">
@@ -197,17 +197,17 @@
             <div class="row g-2 h-100">
                 <div class="col-lg-6 h-100" style="aspect-ratio: 1.47/1; ">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
-                        <img src="~/Services/sample properties images/@ViewBag.PropertyLgImg" class="w-100 h-100 shadow-1-strong rounded-start-3" />
+                        <img src="~/Prop.Image/Prop1/@ViewBag.PropertyLgImg" class="w-100 h-100 shadow-1-strong rounded-start-3" />
                     </a>
                 </div>
                 <div class="col-lg-6 h-100">
                     <div class="row g-2">
-                        @foreach (var img in Model.PropertyImages)
+                        @foreach (var img in Model.property.PropertyImages)
                         {
                             if (img.URL == ViewBag.PropertyLgImg) { continue; }
                             <div class="col-lg-6" style="aspect-ratio: 1.5/1;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
-                                    <img src="~/Services/sample properties images/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
+                                    <img src="~/Prop.Image/Prop1/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
                                 </a>
                             </div>
                         }
@@ -225,7 +225,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="text-center">
-                            @foreach (var img in Model.PropertyImages)
+                            @foreach (var img in Model.property.PropertyImages)
                             {
                                 <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem"/>
                             }
@@ -246,13 +246,13 @@
                             <span>@ViewBag.PropertyCatagory</span> hosted by <span>@ViewBag.PropertyUserName</span>
                         </h4>
                         <ul class="list-group list-group-horizontal">
-                            <li type="none"><span id="NOGuests">@Model.Capacity</span> guests</li>
+                            <li type="none"><span id="NOGuests">@Model.property.Capacity</span> guests</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBedRooms</span> bedrooms</li>
+                            <li type="none"><span>@Model.property.NumberOfBedRooms</span> bedrooms</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBeds</span> beds</li>
+                            <li type="none"><span>@Model.property.NumberOfBeds</span> beds</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBathRooms</span> baths</li>
+                            <li type="none"><span>@Model.property.NumberOfBathRooms</span> baths</li>
                         </ul>
                     </div>
                     <div class="col-lg-1">
@@ -349,7 +349,7 @@
                 <!-- Description -->
                 <div class="row mt-4 pb-4 ms-0 border-bottom">
                     <div class="ps-0">
-                        @Model.Description
+                        @Model.property.Description
                     </div>
                     <a href="" class="mt-3 ps-0 fs-6 text-dark fw-semibold" data-bs-toggle="modal"
                        data-bs-target="#DescripModal">
@@ -370,7 +370,7 @@
                                 <div class="ms-2">
                                     <h3 class="fw-bold">About this space</h3>
                                     <div class="mt-4">
-                                        @Model.Description
+                                        @Model.property.Description
                                     </div>
                                 </div>
                             </div>
@@ -473,70 +473,79 @@
                 <!-- ------------------------------------------------------------End -->
             </div>
             <!-- Reserve Floating Card -->
-            <div class="col-lg-5">
-                <div class="ReserveFloatCard mb-5">
-                    <div class="d-flex justify-content-end ms-5">
-                        <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
-                            <div>
-                                <span class="fs-6"><span class="fs-5 fw-bold">$42,000</span> night</span>
-                            </div>
-                            <div class="border rounded-5 mt-4 p-3">
-                                <!-- Check in & Check Out -->
-                                <div class="d-flex ">
-                                    <div class="fw-semibold">
-                                        <div>Check-in</div>
-                                        <div class="input-group date" data-provide="datepicker">
-                                            <input type="text" class="form-control rounded">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
+            
+
+     
+         
+                <div class="col-lg-5">
+                    <div class="ReserveFloatCard mb-5">
+                    <form method="post" asp-action="Index" asp-controller="payment">
+                        <div class="d-flex justify-content-end ms-5">
+                            <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
+                                <div>
+                                    <span class="fs-6"><span class="fs-5 fw-bold">$42,000</span> night</span>
+                                </div>
+                                <div class="border rounded-5 mt-4 p-3">
+                                    <!-- Check in & Check Out -->
+                                    <div class="d-flex ">
+                                        <div class="fw-semibold">
+                                            <div>Check-in</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input asp-for="@Model.reservation.CheckIn" type="text" class="form-control rounded">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2">
+                                            <div class="fw-semibold">Check-out</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input asp-for="@Model.reservation.CheckOut" type="text" class="form-control rounded">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ms-2">
-                                        <div class="fw-semibold">Check-out</div>
-                                        <div class="input-group date" data-provide="datepicker">
-                                            <input type="text" class="form-control rounded">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
+                                    <!-- Number of Guests -->
+                                    <div class="d-flex mt-2">
+                                        <div class="fw-semibold">Guests</div>
+                                        <div class="d-flex">
+                                            <div id="increment-count" class="d-flex align-items-center">
+                                                <input  type="image" id="up-arrow" src="/Resources/plus.svg" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
+                                            </div>
+                                            <div id="decrement-count" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="/Resources/minus.svg" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Number of Guests -->
-                                <div class="d-flex mt-2">
-                                    <div class="fw-semibold">Guests</div>
-                                    <div class="d-flex">
-                                        <div id="increment-count" class="d-flex align-items-center">
-                                            <input type="image" id="up-arrow" src="/Resources/plus.svg" />
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
-                                        </div>
-                                        <div id="decrement-count" class="d-flex align-items-center">
-                                            <input type="image" id="down-arrow" src="/Resources/minus.svg" />
-                                        </div>
-                                    </div>
+                                <div>
+                                    <input type="hidden" value="@Model.property.ID" asp-for="property.ID" />
+                                    <button type="submit" class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
+                                        Check
+                                        availability
+                                    </button>
                                 </div>
                             </div>
-                            <div>
-                                <button class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
-                                    Check
-                                    availability
-                                </button>
+                     
+                       </div>
+                       </form>
+                        <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
+                            <div class="me-2">
+                                <img src="/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
                             </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
-                        <div class="me-2">
-                            <img src="/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
-                        </div>
-                        <div>
-                            <a href="" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                            <div>
+                                <a href="" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
+          
         <!-- ------------------------------------------------------------End -->
     </section>
     <section>
