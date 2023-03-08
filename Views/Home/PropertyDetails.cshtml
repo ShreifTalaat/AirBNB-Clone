@@ -1,6 +1,8 @@
 ﻿@model Property
 @{
     Layout = null;
+    var ReviewCount = 0;
+    var RulesCount = 0;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -139,8 +141,8 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item whereItem smallTxt" href="#">Airbnb your home</a></li>
-                                <li><a class="dropdown-item whereItem smallTxt" href="#">Help</a></li>
+                                <li><a class="dropdown-item whereItem smallTxt" href="">Airbnb your home</a></li>
+                                <li><a class="dropdown-item whereItem smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
                             </ul>
                         </button>
                     </div>
@@ -432,62 +434,164 @@
             <div class="col-lg-5">
                 <div class="ReserveFloatCard mb-5">
                     <div class="d-flex justify-content-end ms-5">
-                        <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
-                            <div>
-                                <span class="fs-6"><span class="fs-5 fw-bold">$@Model.Price</span> night</span>
-                            </div>
-                            <div class="border rounded-5 mt-4 p-3">
-                                <!-- Check in & Check Out -->
-                                <div class="d-flex ">
-                                    <div class="fw-semibold">
-                                        <div>Check-in</div>
-                                        <div class="input-group date" data-provide="datepicker">
-                                            <input type="text" class="form-control rounded">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
+                        <a name="Floating Card">
+                            <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fs-6"><span class="fs-5 fw-bold">$@Model.Price</span> night</span>
+                                    </div>
+                                    <div class="d-flex align-items-center fs-6 fw-semibold ms-5">
+                                        <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 0.8rem;">
+                                        <span class="ms-1 me-1">@ViewBag.reviewRatings</span>.
+                                        <a href="#" class="ms-1 me-1 text-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal"><span>@ViewBag.reviewRatingsCount reviews</span> </a>
+                                    </div>
+                                </div>
+                                <div class="border rounded-5 mt-4 p-3">
+                                    <!-- Check in & Check Out -->
+                                    <div class="d-flex ">
+                                        <div class="fw-semibold">
+                                            <div>Check-in</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control rounded" id="CheckIn_Input"
+                                                       onchange="ReserveBtn(event)">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2">
+                                            <div class="fw-semibold">Check-out</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control rounded" id="CheckIn_Output"
+                                                       onchange="CheckOutChange(event)">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ms-2">
-                                        <div class="fw-semibold">Check-out</div>
-                                        <div class="input-group date" data-provide="datepicker">
-                                            <input type="text" class="form-control rounded">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
+                                    <!-- Number of Guests -->
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="fw-semibold">Guests</div>
+                                        <div class="d-flex me-5">
+                                            <div id="increment-count" class="d-flex align-items-center">
+                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
                                             </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
+                                            </div>
+                                            <div id="decrement-count" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                            </div>
+                                        </div>
+                                        <div class="ms-5">
+                                            <button class="border-0 bg-white text-decoration-underline"
+                                                    id="ClearBtn">
+                                                Clear
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Number of Guests -->
-                                <div class="d-flex mt-2">
-                                    <div class="fw-semibold">Guests</div>
-                                    <div class="d-flex">
-                                        <div id="increment-count" class="d-flex align-items-center">
-                                            <input type="image" id="up-arrow" src="/Resources/plus.svg" />
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
-                                        </div>
-                                        <div id="decrement-count" class="d-flex align-items-center">
-                                            <input type="image" id="down-arrow" src="/Resources/minus.svg" />
-                                        </div>
+                                <div>
+                                    <button class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
+                                        Check
+                                        availability
+                                    </button>
+                                </div>
+                                <div class="text-center text-secondary mt-3 d-none" id="notChargeYetDiv"> You won't be charged yet</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
+                        <div class="me-2">
+                            <img src="~/PropertDetails/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
+                        </div>
+                        <div>
+                            <a data-bs-toggle="modal" href="#ReportModalToggle" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ReportModalToggle" aria-hidden="true"
+                     aria-labelledby="ReportModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h4 class="fw-bold">Why are you reporting this listing?</h4>
+                                    <div>This won't be shared with the Host.</div>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="form-check py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault1" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            It's inaccurate or incorrect
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault2" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            It's not a real place to stay
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault3" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            It's a scam
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault4" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            It's offensive
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault5" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault5">
+                                            It's something else
+                                        </label>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <button class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
-                                    Check
-                                    availability
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-target="#ReportModalToggle2"
+                                        data-bs-toggle="modal" id="ReportBtn" disabled>
+                                    Report
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
-                        <div class="me-2">
-                            <img src="/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
-                        </div>
-                        <div>
-                            <a href="" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                </div>
+                <div class="modal fade" id="ReportModalToggle2" aria-hidden="true"
+                     aria-labelledby="ReportModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="fw-bold">We got your report</h4>
+                                <div class="mt-2">
+                                    Thanks for taking the time to let us know what's going on. Reports like yours help
+                                    keep the Airbnb community safe and secure.
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-lg btn-primary" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close">
+                                    Ok
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -584,6 +688,10 @@
                 <div class="row mt-5">
                     @foreach (var review in Model.Reviews)
                     {
+                        if (ReviewCount == 6)
+                        {
+                            break;
+                        }
                         <div class="col-6">
                             <div class="mt-5">
                                 <div class="d-flex">
@@ -592,7 +700,7 @@
                                          style="width: 40px; height: 40px;" alt="user">
                                     </div>
                                     <div class="ms-3">
-                                        <div class="fw-semibold">Victor</div>
+                                        <div class="fw-semibold">@review.User.First_Name</div>
                                         <div class="smallTxt text-secondary mt-0 pt-0 ">@review.Date</div>
                                     </div>
                                 </div>
@@ -605,123 +713,9 @@
                                      class="ms-1">
                                 </a>
                             </div>
-                            @*<!-- 2 -->
-                        <div class="row mt-5">
-                        <div class="d-flex">
-                        <div>
-                        <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
-                        style="width: 40px; height: 40px;" alt="user">
                         </div>
-                        <div class="ms-3">
-                        <div class="fw-semibold">Denise</div>
-                        <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
-                        </div>
-                        </div>
-                        <div class="mt-2">
-                        We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
-                        location pin so travelling to the villa was easy. The communication stayed through out,
-                        answering.....
-                        </div>
-                        <a href="" class="text-dark fw-semibold mt-2">
-                        Show more
-                        <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                        class="ms-1">
-                        </a>
-                        </div>
-                        <!-- 3 -->
-                        <div class="row mt-5">
-                        <div class="d-flex">
-                        <div>
-                        <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
-                        style="width: 40px; height: 40px;" alt="user">
-                        </div>
-                        <div class="ms-3">
-                        <div class="fw-semibold">Mikhail</div>
-                        <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                        </div>
-                        </div>
-                        <div class="mt-2">
-                        It's a lovely place and a lovely home. We saw many beautiful places, but this house and
-                        location is the highest level! We stayed in the house on New Year's Eve. The house
-                        has.....
-                        </div>
-                        <a href="" class="text-dark fw-semibold mt-2">
-                        Show more
-                        <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                        class="ms-1">
-                        </a>
-                        </div>*@
-                        </div>
+                        ReviewCount++;
                     }
-                    @*<div class="col-1"></div>
-                    <!-- Right -->
-                    <div class="col-5">
-                    <!-- 4 -->
-                    <div class="row">
-                    <div class="d-flex">
-                    <div>
-                    <img src="~/PropertDetails/Resources/user1.webp" class="rounded-circle object-fit-cover"
-                    style="width: 40px; height: 40px;" alt="user">
-                    </div>
-                    <div class="ms-3">
-                    <div class="fw-semibold">Victor</div>
-                    <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
-                    </div>
-                    </div>
-                    <div class="mt-2">
-                    We're in love in this vila. Super comfortable and cozy. Perfect location 5 minutes drive
-                    to
-                    down town. Nazife is very friendly host always ready to help. Looking forward to come
-                    back.
-                    </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="row mt-5">
-                    <div class="d-flex">
-                    <div>
-                    <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
-                    style="width: 40px; height: 40px;" alt="user">
-                    </div>
-                    <div class="ms-3">
-                    <div class="fw-semibold">Denise</div>
-                    <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
-                    </div>
-                    </div>
-                    <div class="mt-2">
-                    We had a wonderful week in this villa. Nazife was in contact from the get go, sending a
-                    location pin so travelling to the villa was easy. The communication stayed through out,
-                    answering.....
-                    </div>
-                    <a href="" class="text-dark fw-semibold mt-2">
-                    Show more
-                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                    class="ms-1">
-                    </a>
-                    </div>
-                    <!-- 6 -->
-                    <div class="row mt-5">
-                    <div class="d-flex">
-                    <div>
-                    <img src="~/PropertDetails/Resources/user3.webp" class="rounded-circle object-fit-cover"
-                    style="width: 40px; height: 40px;" alt="user">
-                    </div>
-                    <div class="ms-3">
-                    <div class="fw-semibold">Mikhail</div>
-                    <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                    </div>
-                    </div>
-                    <div class="mt-2">
-                    It's a lovely place and a lovely home. We saw many beautiful places, but this house and
-                    location is the highest level! We stayed in the house on New Year's Eve. The house
-                    has.....
-                    </div>
-                    <a href="" class="text-dark fw-semibold mt-2">
-                    Show more
-                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                    class="ms-1">
-                    </a>
-                    </div>
-                    </div>*@
                 </div>
                 <div class="ms-0 ps-0 mt-4">
                     <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
@@ -744,7 +738,7 @@
                                         <!-- Rating -->
                                         <div class="d-flex align-items-center fs-2 fw-bold">
                                             <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1.4rem;">
-                                            <span class="ms-2 me-2">5.0</span>·<span class="ms-2 me-2">6</span>reviews
+                                            <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
                                         </div>
                                         <!-- Progress Bars -->
                                         <div class="mt-4">
@@ -826,134 +820,24 @@
                                 <div class="col-1"></div>
                                 <!-- Right  -->
                                 <div class="col-6 mt-2 mb-2">
-                                    <!-- 1 -->
-                                    <div class="row">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user1.webp"
-                                                     class="rounded-circle object-fit-cover"
+                                    @foreach (var review in Model.Reviews)
+                                    {
+                                        <div class="row mt-5">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
                                                      style="width: 40px; height: 40px;" alt="user">
+                                                </div>
+                                                <div class="ms-3">
+                                                    <div class="fw-semibold">@review.User.First_Name</div>
+                                                    <div class="smallTxt text-secondary mt-0 pt-0 ">@review.Date</div>
+                                                </div>
                                             </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Victor</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            We're in love in this vila. Super comfortable and cozy. Perfect location 5
-                                            minutes drive
-                                            to
-                                            down town. Nazife is very friendly host always ready to help. Looking
-                                            forward to come
-                                            back.
-                                        </div>
-                                    </div>
-                                    <!-- 2 -->
-                                    <div class="row mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user2.webp"
-                                                     class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
-                                            </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Denise</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
+                                            <div class="mt-2">
+                                                @review.Content
                                             </div>
                                         </div>
-                                        <div class="mt-2">
-                                            We had a wonderful week in this villa. Nazife was in contact from the get
-                                            go, sending a
-                                            location pin so travelling to the villa was easy. The communication stayed
-                                            through out,
-                                            answering.....
-                                        </div>
-                                    </div>
-                                    <!-- 3 -->
-                                    <div class="row mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user3.webp"
-                                                     class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
-                                            </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Mikhail</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            It's a lovely place and a lovely home. We saw many beautiful places, but
-                                            this house and
-                                            location is the highest level! We stayed in the house on New Year's Eve. The
-                                            house
-                                            has.....
-                                        </div>
-                                    </div>
-                                    <!-- 4 -->
-                                    <div class="row mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user1.webp"
-                                                     class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
-                                            </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Victor</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">November 2022</div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            We're in love in this vila. Super comfortable and cozy. Perfect location 5
-                                            minutes drive
-                                            to
-                                            down town. Nazife is very friendly host always ready to help. Looking
-                                            forward to come
-                                            back.
-                                        </div>
-                                    </div>
-                                    <!-- 5 -->
-                                    <div class="row mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user2.webp"
-                                                     class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
-                                            </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Denise</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">October 2022</div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            We had a wonderful week in this villa. Nazife was in contact from the get
-                                            go, sending a
-                                            location pin so travelling to the villa was easy. The communication stayed
-                                            through out,
-                                            answering.....
-                                        </div>
-                                    </div>
-                                    <!-- 6 -->
-                                    <div class="row mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <img src="~/PropertDetails/Resources/user3.webp"
-                                                     class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
-                                            </div>
-                                            <div class="ms-3">
-                                                <div class="fw-semibold">Mikhail</div>
-                                                <div class="smallTxt text-secondary mt-0 pt-0 ">January 2023</div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-2">
-                                            It's a lovely place and a lovely home. We saw many beautiful places, but
-                                            this house and
-                                            location is the highest level! We stayed in the house on New Year's Eve. The
-                                            house
-                                            has.....
-                                        </div>
-                                    </div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -969,7 +853,7 @@
                 <h4 class="ps-0 pb-1">
                     Where you'll be
                 </h4>
-                <div class="pb-3">Maldives</div>
+                <div class="pb-3">@Model.Title</div>
                 <div id="map" class="w-100 mb-5"></div>
             </div>
         </div>
@@ -982,49 +866,35 @@
                 <div class="d-flex">
                     <div>
                         <a href="">
-                            <img src="~/PropertDetails/Resources/user2.webp" class="rounded-circle object-fit-cover"
+                            <img src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))" class="rounded-circle object-fit-cover"
                                  style="width: 65px; height: 65px;" alt="user">
                         </a>
                     </div>
                     <div class="ms-3">
-                        <h4 class="fw-semibold">Hosted by <span>Nazife</span></h4>
-                        <div class="smallTxt text-secondary mt-0 pt-0 ">Joined in April 2018</div>
+                        <h4 class="fw-semibold">Hosted by <span>@ViewBag.PropertyUserName</span></h4>
+                        <div class="smallTxt text-secondary mt-0 pt-0 ">Joined in @ViewBag.PropertyUserJoinedDate</div>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <!-- Left -->
-                    <div class="col-5">
+                <div class="mb-3">
+                    <div>
                         <div class="d-flex mt-3">
                             <div class="d-flex align-items-center">
                                 <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1rem;">
-                                <span class="ms-2 me-2">1,106</span>Reviews
+                                <span class="ms-2 me-1">@ViewBag.reviewRatingsCount</span>Reviews
                             </div>
                             <div class="d-flex align-items-center ms-4">
                                 <img src="~/PropertDetails/Resources/verification-symbol.svg" alt="verfication" style="width: 1rem;">
                                 <span class="ms-2 me-2">Identity verified</span>
                             </div>
                         </div>
-                        <div class="mt-3">
-                            A company focused on hosting tourists especially in the city of Medellin, reliable and
-                            responsible.
-                        </div>
-                    </div>
-                    <div class="col-1"></div>
-                    <!-- Right -->
-                    <div class="col-5">
-                        <div class="mt-3">
-                            <div>Languages: English, Türkçe</div>
-                            <div class="mt-2">Response rate: 100%</div>
-                            <div class="mt-2">Response time: within an hour</div>
-                        </div>
                         <div class="mt-4">
-                            <a href="" class="btn btn-outline-dark btn-lg fs-6 fw-semibold">Contact Host</a>
+                            <a href="mailto:@ViewBag.PropertyUserEmail" class="btn btn-outline-dark btn-lg fs-6 fw-semibold">Contact Host</a>
                         </div>
                         <div class="d-flex mt-4">
                             <div class="d-flex align-items-center">
-                                <img src="~/PropertDetails/Resources/shield.jpg" class="" style="width: 2rem;" alt="shield">
+                                <img src="~/PropertDetails/Resources/shield.jpg" class="" style="width: 1.5rem;" alt="shield">
                             </div>
-                            <div class="ms-2 w-50 Protection-txt">
+                            <div class="ms-2 w-50 smallTxt">
                                 <div>
                                     To protect your payment, never transfer money or communicate outside of the Airbnb
                                     website or app.
@@ -1049,9 +919,15 @@
                     <h6>House rules</h6>
                     <div>
                         <ul type="none" class="ps-0">
-                            <li>Check-in after 3:00 PM</li>
-                            <li class="mt-2">Checkout before 10:00 AM</li>
-                            <li class="mt-2"><span>4</span> guests maximum</li>
+                            @foreach (var rule in Model.House_Rules)
+                            {
+                                if (RulesCount == 3)
+                                {
+                                    break;
+                                }
+                                <li class="mt-2">@rule.Name</li>
+                                RulesCount++;
+                            }
                             <li class="mt-4">
                                 <a href="" class="text-dark fw-semibold" data-bs-toggle="modal"
                                    data-bs-target="#RulesModal">
@@ -1079,9 +955,10 @@
                                         Follow these rules to be a considerate guest and avoid any issues during your stay.
                                     </div>
                                     <ul class="mt-3 ms-3 ps-0" type="square">
-                                        <li class="fw-semibold"> Check-in after 3:00 PM</li>
-                                        <li class="fw-semibold mt-2"> Checkout before 10:00 AM</li>
-                                        <li class="fw-semibold mt-2"> 4 guests maximum</li>
+                                        @foreach (var rule in Model.House_Rules)
+                                        {
+                                            <li class="fw-semibold mt-2">@rule.Name</li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
@@ -1089,59 +966,15 @@
                     </div>
                 </div>
                 <div class="col-1"></div>
-                <!-- Safety & property -->
-                <div class="col-3">
-                    <h6>Safety & property</h6>
-                    <div>
-                        <ul type="none" class="ps-0">
-                            <li>Carbon monoxide alarm not reported</li>
-                            <li class="mt-2">Security camera/recording device</li>
-                            <li class="mt-2">Smoke alarm</li>
-                            <li class="mt-4">
-                                <a href="" class="text-dark fw-semibold" data-bs-toggle="modal"
-                                   data-bs-target="#SafetyModal">
-                                    Show more
-                                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                                         class="ms-1">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Safety Modal -->
-                <div class="modal fade" id="SafetyModal" tabindex="-1" aria-labelledby="SafetyModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="ms-2">
-                                    <h3>Safety & property</h3>
-                                    <div class="mt-3">
-                                        Avoid surprises by looking over these important details about your Host's property.
-                                    </div>
-                                    <ul class="mt-3 ms-3 ps-0" type="square">
-                                        <li class="fw-semibold"> Carbon monoxide alarm not reported  </li>
-                                        <li class="fw-semibold mt-2"> Security camera/recording device</li>
-                                        <li class="fw-semibold mt-2"> Smoke alarm</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-1"></div>
                 <!-- Cancellation policy -->
                 <div class="col-4">
                     <h6>Cancellation policy</h6>
                     <div>
                         <ul type="none" class="ps-0">
-                            <li>Add your trip dates to get the cancellation details for this stay.</li>
-                            <li class="mt-4">
-                                <a href="" class="text-dark fw-semibold">
+                            <li id="CancellationText">Add your trip dates to get the cancellation details for this stay.</li>
+                            <li id="CancellationAddDatesBtn" class="mt-4">
+                                <a href="#Floating Card" class="text-dark fw-semibold">
                                     Add dates
                                     <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
                                          class="ms-1">
@@ -1162,23 +995,27 @@
                     <ul class="list-group list-group-horizontal">
                         <li type="none">© 2023 Airbnb, Inc.</li>
                         <span class="ms-2 me-2">·</span>
-                        <li type="none">Terms</li>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                            <li type="none">Terms</li>
+                        </a>
                         <span class="ms-2 me-2">·</span>
-                        <li type="none">Sitemap</li>
-                        <span class="ms-2 me-2">·</span>
-                        <li type="none">Privacy</li>
-                        <span class="ms-2 me-2">·</span>
-                        <li type="none">
-                            Your Privacy Choices
-                        </li>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                            <li type="none">Privacy</li>
+                        </a>
                     </ul>
                 </div>
                 <div class="col-2"></div>
                 <div class="col-4">
                     <div>
-                        <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
                         <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
                         <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
 
                     </div>
                 </div>

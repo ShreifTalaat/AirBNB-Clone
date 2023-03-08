@@ -47,12 +47,13 @@ namespace AirBNB.Controllers
             var PropertyUserName = db.Users.FirstOrDefault(a => a.Id == Property.UserId);
             ViewBag.PropertyUserName = PropertyUserName.First_Name;
             ViewBag.PropertyUserProfilePic = PropertyUserName.Profile_Picture;
+            ViewBag.PropertyUserJoinedDate = PropertyUserName.Join_Date.Year;
+            ViewBag.PropertyUserEmail = PropertyUserName.Email;
             //Property Review
             var reviewRatings = db.Reviews.Where(r => r.PropertyId == Property.ID).Select(r => r.Rating).Average();
-            ViewBag.reviewRatings = reviewRatings;
+            ViewBag.reviewRatings = reviewRatings.ToString("0.00");
             var reviewRatingsCount = db.Reviews.Where(r => r.PropertyId == Property.ID).Select(r => r.Rating).Count();
             ViewBag.reviewRatingsCount = reviewRatingsCount;
-
             return View(Property);
         }
 
