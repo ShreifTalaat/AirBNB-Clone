@@ -1,0 +1,1195 @@
+﻿@model Property
+@{
+    Layout = null;
+    var ReviewCount = 0;
+    var RulesCount = 0;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/PropertDetails/bootstrap.css" rel="stylesheet">
+    <link href="~/PropertDetails/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <title>@Model.Title</title>
+</head>
+
+<body>
+    <div id="fade"></div>
+    <!-- Navigation Bar -->
+    <section id="navBarSection" class="border-bottom">
+        <header class="py-1">
+            <nav class="navbar navbar-light">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a asp-action="Index" class="navbar-brand">
+                        <img src="~/PropertDetails/Resources/logoLogo.svg" alt="logo">
+                    </a>
+                    <!-- Small Search Bar -->
+                    <div class="justify-content-between" id="smallSearchBar">
+                        <button class="btn border rounded-5 d-inline-flex shadow py-2" type="submit">
+                            <div class="ps-2 me-5 align-self-center fw-semibold">
+                                Start your search
+                            </div>
+                            <span class="ms-4 me-4"></span>
+                            <span class="ms-5 me-4"></span>
+                            <div>
+                                <a>
+                                    <img class="Logo" src="~/PropertDetails/Resources/Frame 2Search .svg" alt="Search">
+                                </a>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Large Search Div -->
+                    <div class="d-none justify-content-center" id="largeSearchBar">
+                        <button class="btn d-flex border rounded-5 row shadow p-0" type="submit"
+                                style="width:50rem; height: 4rem;" id="LargeSearchBtn">
+                            <!-- Where -->
+                            <div class="col-4 rounded-5 border-end dropdown d-flex align-items-center hoverStyle"
+                                 data-bs-toggle="dropdown" aria-expanded="false" style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Where</h6>
+                                        <div class="smallTxt text-secondary WhereText">
+                                            Search Destinations
+                                        </div>
+                                    </div>
+                                    <div class="ms-5">
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnWhere">
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu rounded" style="width: 16.5rem;">
+                                    @foreach (var item in ViewBag.cities)
+                                    {
+                                        <li><a class="dropdown-item whereItem" href="#">@item.Name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            <!-- Date -->
+                            <div class="col-3 rounded-5 border-end d-flex align-items-center hoverStyle"
+                                 style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <input type="text" class="border-0 fw-semibold fs-6"
+                                           placeholder="Date:  - - - - - - - -" id="DateInput" onblur="(this.type='text')"
+                                           onfocus="(this.type='date')" onchange="handler(event)" style="width: 8rem;">
+                                    <div>
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Who -->
+                            <div class="col-5 rounded-5  hoverStyle" style="height: 4rem;">
+                                <div class="d-flex justify-content-between align-items-center dropdown"
+                                     style="height: 4rem;" data-bs-toggle="dropdown" aria-expanded="false" id="whoDiv">
+                                    <div class=" text-start p-2 d-flex justify-content-between align-items-center">
+                                        <div class="text-start p-2">
+                                            <h6 class="largeSearchBarTxt fw-bold mb-0">Who</h6>
+                                            <div class="smallTxt text-secondary" id="whoText">Add Guests</div>
+                                        </div>
+                                        <div class="ms-5">
+                                            <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                                 id="xBtnWho">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a class="btn btn-lg fs-6 fw-semibold rounded-5" id="search-btn">
+                                            <img class="Logo" src="~/PropertDetails/Resources/search.svg" alt="Search"
+                                                 style="width: 1rem;">
+                                            Search
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu" id="guestsDropDown">
+                                        <div class="d-flex">
+                                            <div id="increment-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count-search" class="fs-5 fw-semibold me-2"></span><span id="guest-word-search">guest</span>
+                                            </div>
+                                            <div id="decrement-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="align-items-center d-inline-flex p-2 ">
+                        <a href="#" class="text-decoration-none text-black fw-semibold">
+                            Airbnb your home
+                        </a>
+                        <button class="btn border rounded-5 ms-3 d-inline-flex align-items-center shadow p-2 dropdown-center"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>
+                                <img class="px-2" src="~/PropertDetails/Resources/hamburgerlines.svg" />
+                            </span>
+                            <span>
+                                <img class="ps-1" src="~/PropertDetails/Resources/miniprofilelogog.svg" />
+                            </span>
+                            <ul class="dropdown-menu dropdown-menu-end rounded" style="width: 1rem;">
+                                <li><a class="dropdown-item whereItem fw-semibold smallTxt" href="#">Log in</a></li>
+                                <li><a class="dropdown-item whereItem smallTxt" href="#">Sign Up</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item whereItem smallTxt" href="">Airbnb your home</a></li>
+                                <li><a class="dropdown-item whereItem smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <!-- Header -->
+    <section>
+        <div class="container py-4">
+            <div>
+                <h3>@Model.Title</h3>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <a href="#WhereYouWillbe" class="text-black fw-medium ">
+                        @ViewBag.PropertyRegion
+                    </a>
+                </div>
+                <!-- Share Modal -->
+                <div class="">
+                    <a href="#" class="text-black fw-medium me-3" data-bs-toggle="modal" data-bs-target="#shareModal">
+                        <img src="~/PropertDetails/Resources/share.svg" style="padding-bottom: 2px;" />
+                        Share
+                    </a>
+                    <!-- Share Modal -->
+                    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="shareModalLabel">Share this place</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <button onclick="myFunction()"
+                                            class="btn btn-lg border rounded-3 bg-white container-fluid fw-semibold"
+                                            data-bs-toggle="popover" data-bs-content="Copied to clipboard">
+                                        <img src="~/PropertDetails/Resources/copy.png" alt="copy" style="width: 2rem;">
+                                        <span>Copy Link</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image Gallery Container -->
+    <section>
+        <div class="container h-100">
+            <div class="row g-2 h-100">
+                <div class="col-lg-6 h-100" style="aspect-ratio: 1.47/1; ">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
+                        <img src="~/Services/sample properties images/@ViewBag.PropertyLgImg" class="w-100 h-100 shadow-1-strong rounded-start-3" />
+                    </a>
+                </div>
+                <div class="col-lg-6 h-100">
+                    <div class="row g-2">
+                        @foreach (var img in Model.PropertyImages)
+                        {
+                            if (img.URL == ViewBag.PropertyLgImg) { continue; }
+                            <div class="col-lg-6" style="aspect-ratio: 1.5/1;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
+                                    <img src="~/Services/sample properties images/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Images Modal -->
+        <div class="modal fade" id="ImgModal" tabindex="-1" aria-labelledby="ImgModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ImgModalLabel">Place Images</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            @foreach (var img in Model.PropertyImages)
+                            {
+                                <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Property Host & Property Info Section -->
+    <section class="container">
+        <div class="row g-1 my-5 mx-0 border-bottom">
+            <!-- Host Name & Img -->
+            <div class="col-lg-7">
+                <div class="row pb-4 ms-0 border-bottom">
+                    <div class="col-lg-11 ps-0">
+                        <h4>
+                            <span>@ViewBag.PropertyCatagory</span> hosted by <span>@ViewBag.PropertyUserName</span>
+                        </h4>
+                        <ul class="list-group list-group-horizontal">
+                            <li type="none"><span id="NOGuests">@Model.Capacity</span> guests</li>
+                            <span class="ms-1 me-1">.</span>
+                            <li type="none"><span>@Model.NumberOfBedRooms</span> bedrooms</li>
+                            <span class="ms-1 me-1">.</span>
+                            <li type="none"><span>@Model.NumberOfBeds</span> beds</li>
+                            <span class="ms-1 me-1">.</span>
+                            <li type="none"><span>@Model.NumberOfBathRooms</span> baths</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="#Hostinfo">
+                            <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))"
+                                 style="width: 60px; height: 60px;" alt="Host_Img">
+                        </a>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------End -->
+                <!-- AirBNB Cover -->
+                <div class="row mt-4 pb-4 ms-0 border-bottom">
+                    <div class="ps-0">
+                        <img src="~/PropertDetails/Resources/AirBnbCover.webp" alt="AirCover" style="height: 26px;">
+                    </div>
+                    <div class="mt-4 ps-0">
+                        Every booking includes free protection from Host cancellations, listing inaccuracies, and other
+                        issues like trouble checking in.
+                    </div>
+                    <a href="" class="mt-3 ps-0 fs-6 fw-semibold text-dark" data-bs-toggle="modal"
+                       data-bs-target="#airCoverModal">Learn more</a>
+                </div>
+                <!-- AirCover Modal -->
+                <div class="modal fade" id="airCoverModal" tabindex="-1" aria-labelledby="airCoverModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ms-2 row">
+                                    <div class="border-bottom ps-0">
+                                        <div class="mt-2">
+                                            <img src="~/PropertDetails/Resources/AirBnbCover.webp" alt="AirCover"
+                                                 style="height: 2rem;">
+                                        </div>
+                                        <div class="mt-3 mb-4">
+                                            AirCover is comprehensive protection included for free with every booking.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 ms-2 mb-4">
+                                    <div class="col-5 ps-0">
+                                        <div>
+                                            <h6>Booking Protection Guarantee</h6>
+                                            <div class="mt-2">
+                                                In the unlikely event a Host needs to cancel your booking within 30 days
+                                                of check-in, we'll find you a similar or better home, or we'll refund
+                                                you.
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <h6>Get-What-You-Booked Guarantee</h6>
+                                            <div class="mt-2">
+                                                If at any time during your stay you find your listing isn't as
+                                                advertised—for example, the refrigerator stops working and your Host
+                                                can't easily fix it, or it has fewer bedrooms than listed—you'll have
+                                                three days to report it and we'll find you a similar or better home, or
+                                                we'll refund you.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-5 ps-0">
+                                        <div>
+                                            <h6>Check-In Guarantee</h6>
+                                            <div class="mt-2">
+                                                If you can't check into your home and the Host cannot resolve the issue,
+                                                we'll find you a similar or better home for the length of your original
+                                                stay, or we'll refund you.
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <h6>24-hour Safety Line</h6>
+                                            <div class="mt-2">
+                                                If you ever feel unsafe, you'll get priority access to specially-trained
+                                                safety agents, day or night.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    Find complete details on how AirCover protects your booking in our <a href="https://www.airbnb.com/help/article/3218"
+                                                                                                          class="text-dark fw-semibold">Help Center</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------End -->
+                <!-- Description -->
+                <div class="row mt-4 pb-4 ms-0 border-bottom">
+                    <div class="ps-0">
+                        @Model.Description
+                    </div>
+                    <a href="" class="mt-3 ps-0 fs-6 text-dark fw-semibold" data-bs-toggle="modal"
+                       data-bs-target="#DescripModal">
+                        Show more
+                        <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;" class="ms-1">
+                    </a>
+                </div>
+                <!-- Description Model -->
+                <div class="modal fade" id="DescripModal" tabindex="-1" aria-labelledby="DescripModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ms-2">
+                                    <h3 class="fw-bold">About this space</h3>
+                                    <div class="mt-4">
+                                        @Model.Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------End -->
+                <!-- What this place offers -->
+                <div class="row mt-5 pb-5 ms-0 border-bottom">
+                    <h4 class="ps-0">
+                        What this place offers
+                    </h4>
+                    <div class="d-flex ps-0 mt-3">
+                        <div class="me-5">
+                            <div class="row ps-0">
+                                @foreach (var ament in Model.Amentios)
+                                {
+                                    <div class="col-6 mt-2">
+                                        <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
+                                        <span class="ms-2">@ament.Name</span>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    @*<span class="ps-0 mt-2">
+                    <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
+                    data-bs-target="#offerModal">Show all 14 amenities</a>
+                    </span>*@
+                </div>
+                @*<!-- What place offer Modal -->
+                <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="ms-2">
+                <h5>What this place offers</h5>
+                <ul class="mt-3 ps-0" type="none">
+                @foreach (var ament in Model.Amentios)
+                {
+                <li class="mt-2">
+                <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
+                <span class="ms-2">@ament.Name</span>
+                </li>
+                }
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <!-- ------------------------------------------------------------End -->*@
+            </div>
+            <!-- Reserve Floating Card -->
+            <div class="col-lg-5">
+                <div class="ReserveFloatCard mb-5">
+                    <div class="d-flex justify-content-end ms-5">
+                        <a name="Floating Card">
+                            <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fs-6"><span class="fs-5 fw-bold">$@Model.Price</span> night</span>
+                                    </div>
+                                    <div class="d-flex align-items-center fs-6 fw-semibold ms-5">
+                                        <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 0.8rem;">
+                                        <span class="ms-1 me-1">@ViewBag.reviewRatings</span>.
+                                        <a href="#" class="ms-1 me-1 text-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal"><span>@ViewBag.reviewRatingsCount reviews</span> </a>
+                                    </div>
+                                </div>
+                                <div class="border rounded-5 mt-4 p-3">
+                                    <!-- Check in & Check Out -->
+                                    <div class="d-flex ">
+                                        <div class="fw-semibold">
+                                            <div>Check-in</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control rounded" id="CheckIn_Input"
+                                                       onchange="ReserveBtn(event)">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2">
+                                            <div class="fw-semibold">Check-out</div>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control rounded" id="CheckIn_Output"
+                                                       onchange="CheckOutChange(event)">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Number of Guests -->
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="fw-semibold">Guests</div>
+                                        <div class="d-flex me-5">
+                                            <div id="increment-count" class="d-flex align-items-center">
+                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
+                                            </div>
+                                            <div id="decrement-count" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                            </div>
+                                        </div>
+                                        <div class="ms-5">
+                                            <button class="border-0 bg-white text-decoration-underline"
+                                                    id="ClearBtn">
+                                                Clear
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
+                                        Check
+                                        availability
+                                    </button>
+                                </div>
+                                <div class="text-center text-secondary mt-3 d-none" id="notChargeYetDiv"> You won't be charged yet</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
+                        <div class="me-2">
+                            <img src="~/PropertDetails/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
+                        </div>
+                        <div>
+                            <a data-bs-toggle="modal" href="#ReportModalToggle" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ReportModalToggle" aria-hidden="true"
+                     aria-labelledby="ReportModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h4 class="fw-bold">Why are you reporting this listing?</h4>
+                                    <div>This won't be shared with the Host.</div>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="form-check py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault1" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            It's inaccurate or incorrect
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault2" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            It's not a real place to stay
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault3" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            It's a scam
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3 border-bottom">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault4" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            It's offensive
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 py-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                               id="flexRadioDefault5" onchange="radio()">
+                                        <label class="form-check-label" for="flexRadioDefault5">
+                                            It's something else
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-target="#ReportModalToggle2"
+                                        data-bs-toggle="modal" id="ReportBtn" disabled>
+                                    Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ReportModalToggle2" aria-hidden="true"
+                     aria-labelledby="ReportModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="fw-bold">We got your report</h4>
+                                <div class="mt-2">
+                                    Thanks for taking the time to let us know what's going on. Reports like yours help
+                                    keep the Airbnb community safe and secure.
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-lg btn-primary" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close">
+                                    Ok
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------End -->
+    </section>
+    <section>
+        <!-- Reviews -->
+        <div class="container">
+            <div class="pb-5 border-bottom">
+                <!-- Rating -->
+                <div class="d-flex align-items-center fs-4 fw-semibold">
+                    <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1rem;">
+                    <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
+                </div>
+                <!-- Progress Bars -->
+                <div class="row mt-4">
+                    <div class="col-5">
+                        <!-- Left -->
+                        <div class="row me-5 mb-2">
+                            <div class="col-4">Cleanliness</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">5.0</div>
+                            </div>
+                        </div>
+                        <div class="row me-5 mb-2">
+                            <div class="col-4">Communication</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">5.0</div>
+                            </div>
+                        </div>
+                        <div class="row me-5">
+                            <div class="col-4">Check-in</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">5.0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <!-- Right -->
+                    <div class="col-5">
+                        <div class="row me-5 mb-2">
+                            <div class="col-4">Accuracy</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">5.0</div>
+                            </div>
+                        </div>
+                        <div class="row me-5 mb-2">
+                            <div class="col-4">Location</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">4.8</div>
+                            </div>
+                        </div>
+                        <div class="row me-5">
+                            <div class="col-4">Value</div>
+                            <div class="col-3"></div>
+                            <div class="col-5 row">
+                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
+                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <div class="col-2 rating-tiny-numbers">5.0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Users Reviews -->
+                <div class="row mt-5">
+                    @foreach (var review in Model.Reviews)
+                    {
+                        if (ReviewCount == 6)
+                        {
+                            break;
+                        }
+                        <div class="col-6">
+                            <div class="mt-5">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
+                                         style="width: 40px; height: 40px;" alt="user">
+                                    </div>
+                                    <div class="ms-3">
+                                        <div class="fw-semibold">@review.User.First_Name</div>
+                                        <div class="smallTxt text-secondary mt-0 pt-0 ">@review.Date</div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    @review.Content
+                                </div>
+                                <a href="" class="text-dark fw-semibold mt-2">
+                                    Show more
+                                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                                     class="ms-1">
+                                </a>
+                            </div>
+                        </div>
+                        ReviewCount++;
+                    }
+                </div>
+                <div class="ms-0 ps-0 mt-4">
+                    <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
+                       data-bs-target="#reviewModal">Show all 12 reviews</a>
+                </div>
+            </div>
+            <!-- Review Modal -->
+            <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ms-2 row">
+                                <!-- left -->
+                                <div class="col-5">
+                                    <div class="position-fixed" style="width: 30rem;">
+                                        <!-- Rating -->
+                                        <div class="d-flex align-items-center fs-2 fw-bold">
+                                            <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1.4rem;">
+                                            <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
+                                        </div>
+                                        <!-- Progress Bars -->
+                                        <div class="mt-4">
+                                            <div class="row me-0 mb-2">
+                                                <div class="col-4">Cleanliness</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
+                                                </div>
+                                            </div>
+                                            <div class="row me-0 mb-2">
+                                                <div class="col-4">Communication</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
+                                                </div>
+                                            </div>
+                                            <div class="row me-0 mb-2">
+                                                <div class="col-4">Check-in</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
+                                                </div>
+                                            </div>
+                                            <div class="row me-0 mb-2">
+                                                <div class="col-4">Accuracy</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
+                                                </div>
+                                            </div>
+                                            <div class="row me-0 mb-2">
+                                                <div class="col-4">Location</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">4.8</div>
+                                                </div>
+                                            </div>
+                                            <div class="row me-0">
+                                                <div class="col-4">Value</div>
+                                                <div class="col-3"></div>
+                                                <div class="col-5 row">
+                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
+                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                         aria-valuemax="100" style="height: 0.25rem;">
+                                                        <div class="progress-bar"></div>
+                                                    </div>
+                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                                <!-- Right  -->
+                                <div class="col-6 mt-2 mb-2">
+                                    @foreach (var review in Model.Reviews)
+                                    {
+                                        <div class="row mt-5">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
+                                                     style="width: 40px; height: 40px;" alt="user">
+                                                </div>
+                                                <div class="ms-3">
+                                                    <div class="fw-semibold">@review.User.First_Name</div>
+                                                    <div class="smallTxt text-secondary mt-0 pt-0 ">@review.Date</div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2">
+                                                @review.Content
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- ------------------------------------------------------------End -->
+    <!-- Where you'll be -->
+    <a name="WhereYouWillbe">
+        <div class=" container mt-5">
+            <div class="pb-4 border-bottom">
+                <h4 class="ps-0 pb-1">
+                    Where you'll be
+                </h4>
+                <div class="pb-3">@Model.Title</div>
+                <div id="map" class="w-100 mb-5"></div>
+            </div>
+        </div>
+    </a>
+    <!-- ------------------------------------------------------------End -->
+    <!-- Host Info -->
+    <a name="Hostinfo">
+        <div class="container mt-5">
+            <div class="pb-4 border-bottom">
+                <div class="d-flex">
+                    <div>
+                        <a href="">
+                            <img src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))" class="rounded-circle object-fit-cover"
+                                 style="width: 65px; height: 65px;" alt="user">
+                        </a>
+                    </div>
+                    <div class="ms-3">
+                        <h4 class="fw-semibold">Hosted by <span>@ViewBag.PropertyUserName</span></h4>
+                        <div class="smallTxt text-secondary mt-0 pt-0 ">Joined in @ViewBag.PropertyUserJoinedDate</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div>
+                        <div class="d-flex mt-3">
+                            <div class="d-flex align-items-center">
+                                <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1rem;">
+                                <span class="ms-2 me-1">@ViewBag.reviewRatingsCount</span>Reviews
+                            </div>
+                            <div class="d-flex align-items-center ms-4">
+                                <img src="~/PropertDetails/Resources/verification-symbol.svg" alt="verfication" style="width: 1rem;">
+                                <span class="ms-2 me-2">Identity verified</span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="mailto:@ViewBag.PropertyUserEmail" class="btn btn-outline-dark btn-lg fs-6 fw-semibold">Contact Host</a>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <div class="d-flex align-items-center">
+                                <img src="~/PropertDetails/Resources/shield.jpg" class="" style="width: 1.5rem;" alt="shield">
+                            </div>
+                            <div class="ms-2 w-50 smallTxt">
+                                <div>
+                                    To protect your payment, never transfer money or communicate outside of the Airbnb
+                                    website or app.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <!-- ------------------------------------------------------------End -->
+    <!-- Things to know -->
+    <div class="container">
+        <div class="mt-5">
+            <h4 class="ps-0 pb-1">
+                Things to know
+            </h4>
+            <div class="row mt-4">
+                <!-- House rules -->
+                <div class="col-3">
+                    <h6>House rules</h6>
+                    <div>
+                        <ul type="none" class="ps-0">
+                            @foreach (var rule in Model.House_Rules)
+                            {
+                                if (RulesCount == 3)
+                                {
+                                    break;
+                                }
+                                <li class="mt-2">@rule.Name</li>
+                                RulesCount++;
+                            }
+                            <li class="mt-4">
+                                <a href="" class="text-dark fw-semibold" data-bs-toggle="modal"
+                                   data-bs-target="#RulesModal">
+                                    Show more
+                                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                                         class="ms-1">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HouseRules Modal -->
+                <div class="modal fade" id="RulesModal" tabindex="-1" aria-labelledby="RulesModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ms-2">
+                                    <h3>House rules</h3>
+                                    <div class="mt-3">
+                                        Follow these rules to be a considerate guest and avoid any issues during your stay.
+                                    </div>
+                                    <ul class="mt-3 ms-3 ps-0" type="square">
+                                        @foreach (var rule in Model.House_Rules)
+                                        {
+                                            <li class="fw-semibold mt-2">@rule.Name</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <!-- Cancellation policy -->
+                <div class="col-4">
+                    <h6>Cancellation policy</h6>
+                    <div>
+                        <ul type="none" class="ps-0">
+                            <li id="CancellationText">Add your trip dates to get the cancellation details for this stay.</li>
+                            <li id="CancellationAddDatesBtn" class="mt-4">
+                                <a href="#Floating Card" class="text-dark fw-semibold">
+                                    Add dates
+                                    <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
+                                         class="ms-1">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------End -->
+    <!-- Footer -->
+    <div class="footer pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal">
+                        <li type="none">© 2023 Airbnb, Inc.</li>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                        <li type="none">Terms</li>
+                        </a>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                        <li type="none">Privacy</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div>
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Bootstrap
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        type='text/css'>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js' type='text/javascript'></script> -->
+    <!-- Datepicker -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'
+          rel='stylesheet' type='text/css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'
+            type='text/javascript'></script>
+    <!-- Scripts -->
+    <script src="~/PropertDetails/JavaScript.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="~/PropertDetails/JavaScript.js"></script>
+ 
+    <script>
+        //weather
+        
+        var map, datasource, popup;
+        var currentConditionsUrl = 'https://{azMapsDomain}/weather/currentConditions/json?api-version=1.0&query={query}';
+        var weatherTemplate = {
+            //The title tag for the popup.
+            title: 'Current Conditions',
+            //HTML string template with placeholders for properties of the weather response.
+            content:
+                '<img class="weather-icon" src="/images/icons/weather-black/{iconCode}.png"/>' +
+                '<div class="weather-content">' +
+                '<div class="weather-temp">{temperature/value}&#176;</div>' +
+                'RealFeel®: {realFeelTemperature/value}&#176;C' +
+                '<div class="weather-phrase">{phrase}</div>' +
+                'Humidity: {relativeHumidity}&#37</div>',
+            //Format numbers with two decimal places.
+            numberFormat: {
+                maximumFractionDigits: 2
+            },
+            //Since we trust the data being retrieve, don't sandbox the content so that we can use CSS classes.
+            sandboxContent: false
+        };
+
+        ////////////////////////
+
+        function GetMap() {
+            map = new atlas.Map('map', {
+                center: [29.906334322129908, 31.19323103089259],
+                zoom: 8,
+                view: 'Auto',
+                authOptions: {
+                    authType: 'subscriptionKey',
+                    subscriptionKey: 'q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs',
+                    getToken: function (resolve, reject, map) {
+                        var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+                        fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                    }
+                }
+            });
+
+            //Wait until the map resources are ready.
+            map.events.add('ready', function () {
+                map.setStyle({
+                    showBuildingModels: true,
+                    showFeedbackLink: false,
+                    showLogo: false,
+                    style: "blue"
+                });
+                //Create a data source and add it to the map.
+                datasource = new atlas.source.DataSource();
+                map.sources.add(datasource);
+                //Create a popup but leave it closed so we can update it and display it later.
+                popup = new atlas.Popup();
+                //Add a click event to the map.
+                map.events.add('click', getWeatherForPoint);
+            });
+
+            map.events.add('click', function (e) {
+                var latt = document.getElementById('lat').value = e.position[1];
+                var lonn = document.getElementById('lon').value = e.position[0];
+
+                const api_key = "q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs";
+
+                const url = `https://atlas.microsoft.com/search/address/reverse/json?subscription-key=${api_key}&api-version=1.0&query=${latt},${lonn}`;
+                // $.get({ url: `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latt},${lonn}&sensor=false`, success(data) {
+                //     console.log(data.results[0]);
+                // }});
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.addresses[0].address)
+                        if (data.addresses[0].address.country == "Egypt" || data.addresses[0].address.country == "egypt")
+                            document.getElementById("addr").value = data.addresses[0].address.municipalitySubdivision + ' , ' + data.addresses[0].address.countrySubdivision;
+                        else
+                            document.getElementById("addr").value = "place must be inside egypt";
+                    })
+                    .catch(error => console.log(error));
+            });
+
+
+        }
+        window.GetMap = GetMap;
+        function updateLanguage() {
+            var langOptions = document.getElementById('langOptions');
+            var lang = langOptions.options[langOptions.selectedIndex].value;
+            //Update the language of the map instance.
+            map.setStyle({
+                language: lang,
+            });
+        }
+
+        //weather functions
+        function getWeatherForPoint(e) {
+            //Close the popup if it is open.
+            popup.close();
+
+            //Request the current conditions weather data and show it in the pop up.
+            var requestUrl = currentConditionsUrl.replace('{query}', e.position[1] + ',' + e.position[0]);
+
+            processRequest(requestUrl).then(response => {
+                var content;
+
+                if (response && response.results && response.results[0]) {
+                    //Use the weatherTemplate settings to create templated content for the popup.
+                    content = atlas.PopupTemplate.applyTemplate(response.results[0], weatherTemplate);
+                } else {
+                    content = '<div style="padding:10px;">Weather data not available for this location.</div>';
+                }
+
+                popup.setOptions({
+                    content: content,
+                    position: e.position
+                });
+
+                popup.open(map);
+            });
+        }
+
+        function processRequest(url) {
+            //This is a reusable function that sets the Azure Maps platform domain, sings the request, and makes use of any transformRequest set on the map.
+            return new Promise((resolve, reject) => {
+                //Replace the domain placeholder to ensure the same Azure Maps cloud is used throughout the app.
+                url = url.replace('{azMapsDomain}', atlas.getDomain());
+
+                //Get the authentication details from the map for use in the request.
+                var requestParams = map.authentication.signRequest({ url: url });
+
+                //Transform the request.
+                var transform = map.getServiceOptions().tranformRequest;
+                if (transform) {
+                    requestParams = transform(url);
+                }
+
+                fetch(requestParams.url, {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: new Headers(requestParams.headers)
+                })
+                    .then(r => r.json(), e => reject(e))
+                    .then(r => {
+                        resolve(r);
+                    }, e => reject(e));
+            });
+        }
+        /////////////////////////////////////////////////////////////////////////////////////
+
+    </script>
+</body>
+
+
+</html>

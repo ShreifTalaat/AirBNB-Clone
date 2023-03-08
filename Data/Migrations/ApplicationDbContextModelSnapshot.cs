@@ -632,7 +632,7 @@ namespace AirBNB.Data.Migrations
             modelBuilder.Entity("AirBNB.Models.PropertyImage", b =>
                 {
                     b.HasOne("AirBNB.Models.Property", "Property")
-                        .WithMany("PropertyImages")
+                        .WithMany()
                         .HasForeignKey("PropertyID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -809,8 +809,6 @@ namespace AirBNB.Data.Migrations
 
             modelBuilder.Entity("AirBNB.Models.Property", b =>
                 {
-                    b.Navigation("PropertyImages");
-
                     b.Navigation("Reviews");
                 });
 
