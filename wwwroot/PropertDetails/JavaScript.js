@@ -57,21 +57,22 @@ decrementCount.addEventListener("click", handleDecrement);
 
 //Map
 // Initialize and add the map
-function initMap() {
-    // The location of Address
-    const uluru = { lat: 1.924992, lng: 73.399658 };
-    // The map, centered at Address
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: uluru,
-    });
-    // The marker, positioned at Address
-    const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-    });
-}
-window.initMap = initMap;
+//function initMap() {
+//    map = new atlas.Map('map', {
+//        center: [29.906334322129908, 31.19323103089259],
+//        zoom: 8,
+//        view: 'Auto',
+//        authOptions: {
+//            authType: 'subscriptionKey',
+//            subscriptionKey: 'q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs',
+//            getToken: function (resolve, reject, map) {
+//                var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+//                fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+//            }
+//        }
+//    });
+//}
+//window.initMap = initMap;
 
 ///Small Search Bar
 let smallSearchBar = document.getElementById("smallSearchBar");

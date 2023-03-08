@@ -18,6 +18,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
     <title>@Model.Title</title>
 </head>
 
@@ -1038,7 +1040,156 @@
     <script src="~/PropertDetails/JavaScript.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="~/PropertDetails/JavaScript.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly" defer></script>
+ 
+    <script>
+        //weather
+        
+        var map, datasource, popup;
+        var currentConditionsUrl = 'https://{azMapsDomain}/weather/currentConditions/json?api-version=1.0&query={query}';
+        var weatherTemplate = {
+            //The title tag for the popup.
+            title: 'Current Conditions',
+            //HTML string template with placeholders for properties of the weather response.
+            content:
+                '<img class="weather-icon" src="/images/icons/weather-black/{iconCode}.png"/>' +
+                '<div class="weather-content">' +
+                '<div class="weather-temp">{temperature/value}&#176;</div>' +
+                'RealFeel®: {realFeelTemperature/value}&#176;C' +
+                '<div class="weather-phrase">{phrase}</div>' +
+                'Humidity: {relativeHumidity}&#37</div>',
+            //Format numbers with two decimal places.
+            numberFormat: {
+                maximumFractionDigits: 2
+            },
+            //Since we trust the data being retrieve, don't sandbox the content so that we can use CSS classes.
+            sandboxContent: false
+        };
+
+        ////////////////////////
+
+        function GetMap() {
+            map = new atlas.Map('map', {
+                center: [29.906334322129908, 31.19323103089259],
+                zoom: 8,
+                view: 'Auto',
+                authOptions: {
+                    authType: 'subscriptionKey',
+                    subscriptionKey: 'q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs',
+                    getToken: function (resolve, reject, map) {
+                        var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+                        fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                    }
+                }
+            });
+
+            //Wait until the map resources are ready.
+            map.events.add('ready', function () {
+                map.setStyle({
+                    showBuildingModels: true,
+                    showFeedbackLink: false,
+                    showLogo: false,
+                    style: "blue"
+                });
+                //Create a data source and add it to the map.
+                datasource = new atlas.source.DataSource();
+                map.sources.add(datasource);
+                //Create a popup but leave it closed so we can update it and display it later.
+                popup = new atlas.Popup();
+                //Add a click event to the map.
+                map.events.add('click', getWeatherForPoint);
+            });
+
+            map.events.add('click', function (e) {
+                var latt = document.getElementById('lat').value = e.position[1];
+                var lonn = document.getElementById('lon').value = e.position[0];
+
+                const api_key = "q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs";
+
+                const url = `https://atlas.microsoft.com/search/address/reverse/json?subscription-key=${api_key}&api-version=1.0&query=${latt},${lonn}`;
+                // $.get({ url: `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latt},${lonn}&sensor=false`, success(data) {
+                //     console.log(data.results[0]);
+                // }});
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.addresses[0].address)
+                        if (data.addresses[0].address.country == "Egypt" || data.addresses[0].address.country == "egypt")
+                            document.getElementById("addr").value = data.addresses[0].address.municipalitySubdivision + ' , ' + data.addresses[0].address.countrySubdivision;
+                        else
+                            document.getElementById("addr").value = "place must be inside egypt";
+                    })
+                    .catch(error => console.log(error));
+            });
+
+
+        }
+        window.GetMap = GetMap;
+        function updateLanguage() {
+            var langOptions = document.getElementById('langOptions');
+            var lang = langOptions.options[langOptions.selectedIndex].value;
+            //Update the language of the map instance.
+            map.setStyle({
+                language: lang,
+            });
+        }
+
+        //weather functions
+        function getWeatherForPoint(e) {
+            //Close the popup if it is open.
+            popup.close();
+
+            //Request the current conditions weather data and show it in the pop up.
+            var requestUrl = currentConditionsUrl.replace('{query}', e.position[1] + ',' + e.position[0]);
+
+            processRequest(requestUrl).then(response => {
+                var content;
+
+                if (response && response.results && response.results[0]) {
+                    //Use the weatherTemplate settings to create templated content for the popup.
+                    content = atlas.PopupTemplate.applyTemplate(response.results[0], weatherTemplate);
+                } else {
+                    content = '<div style="padding:10px;">Weather data not available for this location.</div>';
+                }
+
+                popup.setOptions({
+                    content: content,
+                    position: e.position
+                });
+
+                popup.open(map);
+            });
+        }
+
+        function processRequest(url) {
+            //This is a reusable function that sets the Azure Maps platform domain, sings the request, and makes use of any transformRequest set on the map.
+            return new Promise((resolve, reject) => {
+                //Replace the domain placeholder to ensure the same Azure Maps cloud is used throughout the app.
+                url = url.replace('{azMapsDomain}', atlas.getDomain());
+
+                //Get the authentication details from the map for use in the request.
+                var requestParams = map.authentication.signRequest({ url: url });
+
+                //Transform the request.
+                var transform = map.getServiceOptions().tranformRequest;
+                if (transform) {
+                    requestParams = transform(url);
+                }
+
+                fetch(requestParams.url, {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: new Headers(requestParams.headers)
+                })
+                    .then(r => r.json(), e => reject(e))
+                    .then(r => {
+                        resolve(r);
+                    }, e => reject(e));
+            });
+        }
+        /////////////////////////////////////////////////////////////////////////////////////
+
+    </script>
 </body>
+
 
 </html>
