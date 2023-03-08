@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {}
+    "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {
+    "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
+        "projectUniqueName": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
-        "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\obj\\",
+        "projectPath": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\AirBNB.csproj",
+        "packagesPath": "C:\\Users\\shrei\\.nuget\\packages\\",
+        "outputPath": "D:\\iti\\graduation project\\omar kotb\\Graduation Project\\Graduation Project\\MVC 6-3-2023\\git 2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
