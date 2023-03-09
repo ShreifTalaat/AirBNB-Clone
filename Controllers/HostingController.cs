@@ -34,8 +34,8 @@ namespace AirBNB.Controllers
         public IActionResult Reservations()
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var proprities = _dbcontext.Properties.Include(a => a.PropertyImages).Where(a => a.UserId == userid).ToList();
-            return View(proprities);
+            var reservations = _dbcontext.Reservations.Include(a=>a.Property).ThenInclude(a=>a.PropertyImages).Where(a=>a.UserId==userid).ToList();
+            return View(reservations);
         }
     }
 }

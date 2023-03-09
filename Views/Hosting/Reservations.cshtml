@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Reservation>
 @{
     Layout = null;
 }
@@ -111,8 +111,15 @@
 
     <div class="container">
         <h1 class="modal-title Welcome">Reservations</h1>
+        <nav>
+            <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                <button class="nav-link active text-black" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Upcoming</button>
+                <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Completed</button>
+                <button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">All</button>
+            </div>
+        </nav>
         <!--Start NavBar Details-->
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <!--nav class="navbar navbar-expand-lg navbar-light ">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,19 +140,27 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav-->
     </div>
     <!--End NavBar Details-->
     <!--End Reservations Details-->
-    <!--start guests Details-->
-    <div class="card text-center nav-body">
-        <div class="card-body">
-            <h3 class="fw-bold">You have no upcoming reservations</h3>
+    <!--start Reservations data Details-->
+    @if (Model.Count() == 0)
+    {
+        <div class="card text-center nav-body">
+            <div class="card-body">
+                <h3 class="fw-bold">You have no upcoming reservations</h3>
 
-            <a href="#" class="fw-bold">See all reservations</a>
+                <a href="#" class="fw-bold">See all reservations</a>
+            </div>
         </div>
-    </div>
-    <!--end guests Details-->
+    }
+    else
+    {
+        
+    }
+
+    <!--start Reservations data Details-->
     <!-- <div class="container">
     <div class="row">
       <div class="reserv col">
