@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ns7ofdaXLef57RbBSeCiReukhpX/dhOkSAFOM1buQT4=",
+  "Hash": "TfRL3Q6nKND921ZW4eNeajTUJdJrsGbBQtfVl8rC0EQ=",
   "Source": "AirBNB",
   "BasePath": "_content/AirBNB",
   "Mode": "Default",
@@ -1647,23 +1647,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap.css"
-    },
-    {
-      "Identity": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\active.css",
-      "SourceId": "AirBNB",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\",
-      "BasePath": "_content/AirBNB",
-      "RelativePath": "css/Hosting/active.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Hosting\\active.css"
     },
     {
       "Identity": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\Listingstyles.css",
