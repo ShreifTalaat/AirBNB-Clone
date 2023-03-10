@@ -267,6 +267,11 @@ search_btn.addEventListener("click", (event) => {
 
 
 
+//pass guest to payment
+function GeustNum() {
+    document.getElementById("guestes").value = document.getElementById("total-count").innerText;
+}
+
 
 
 
