@@ -1,15 +1,14 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Sign Up";
-    Layout = null;
+    ViewData ["Title"] = "Sign Up";
+    
 }
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
@@ -17,103 +16,35 @@
     <!-- to implement the intl-tel-input. into html -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
     <title>Sign Up</title>
 </head>
-<body>
-  <div style="min-height: 100vh;  display: flex; flex-direction: column;">
-    <!-- Start Nav -->
-    <nav class="navbar navbar-expand-lg bg-white sticky-top  ">
-      <!-- Start div tha t contain the items in nav -->
-      <div class="container-lg   d-flex flex-row justify-content-between ">
-        <!-- Start Logo -->
-        <div class="d-flex align-items-center desktop">
-          <img src="~/signup/SVG/logo.svg">
-        </div>
-        <!-- End Logo -->
-        <!-- Start Search -->
-        <div class="d-flex align-items-center desktop">
-          <div class="container-fluid ">
-
-            <div href="#"
-              class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
-              <div>Any where |</div>
-              <div>Any Week |</div>
-              <div>Add Guest </div>
-              <div>
-                <img src="~/signup/SVG/Frame 2.svg" alt="search" />
-              </div>
-            </div>
-
-          </div>
-          <div d-flex>
-            <img src="~/signup/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
-          </div>
-
-        </div>
-        <!-- End Search -->
-        <!-- Start Search for small screens -->
-        <div class=" mobile ">
-          <div class="container-fluid ">
-            <div href="#"
-              class="bg-white  d-flex align-items-center  rounded-pill  justify-content-end navigation_btn_mobile">
-              <div class="text-end">
-                <img src="~/signup/SVG/Frame 2.svg" alt="search" />
-              </div>
-            </div>
-
-          </div>
-          <div class="small-mobile">
-            <img src="~/signup/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
-          </div>
-
-        </div>
-        <!-- Start person -->
-        <div class="small-mobile">
-          <div class="d-flex justify-content-between align-items-center right_section_nav ">
-            <span>Airbnb Your Home</span>
-            <div>
-              <img src="~/signup/SVG/middle.svg">
-            </div>
-          </div>
-
-          <!-- End person -->
-        </div>
-      </div>
-      <!-- End div tha t contain the items in nav -->
-    </nav>
-    <!-- End Nav -->
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post"  enctype="multipart/form-data">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    <div class="container px-5">
+            <div class="container p-5 w-75">
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
+                    <h2>Create a new account.</h2>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                     <!-- Begin of username -->
-                      <div>
-                <input asp-for="Input.First_Name" class="form-control rounded" autocomplete="username" aria-required="true" placeholder="First name" />
-                       
-                <span asp-validation-for="Input.First_Name" class="text-danger"></span>
-              </div>
+                    <div class="mb-2">
+                        <input asp-for="Input.First_Name" class="form-control rounded" autocomplete="username" aria-required="true" placeholder="First name" />
+                        <span asp-validation-for="Input.First_Name" class="text-danger"></span>
+                    </div>
                     <div>
                         <input asp-for="Input.Last_Name" class="form-control rounded" autocomplete="username" aria-required="true" placeholder="Last name" />
-
                         <span asp-validation-for="Input.Last_Name" class="text-danger"></span>
                     </div>
                     <!-- end of username -->
-                     <br>
-                      <!-- Email -->
+                    <br>
+                    <!-- Email -->
                     <div>
-                        <input asp-for="Input.Email"  class="form-control rounded" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <br>
-              <!-- Phone number including country code option -->
-                   <div>
-
-                        <input asp-for="Input.Phone_Number" class="form-control rounded" id="phone" aria-required="true" placeholder="Phone number "  />
-
+                        <input asp-for="Input.Email" class="form-control rounded" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <!-- Phone number including country code option -->
+                    <div>
+                        <input asp-for="Input.Phone_Number" class="form-control rounded" id="phone" aria-required="true" placeholder="Phone number " />
                         <span asp-validation-for="Input.Phone_Number" class="text-danger"></span>
                     </div>
                     <br>
@@ -150,36 +81,38 @@
                         </select>
                     </div>
                     <br>
-
-                    <div>
+                    <div class="mb-2">
                         <input asp-for="Input.Password" class="form-control rounded" autocomplete="new-password" aria-required="true" placeholder="password" />
-              
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input asp-for="Input.ConfirmPassword" class="form-control rounded" autocomplete="new-password" aria-required="true" placeholder="confirm password" />
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
                     <div>
-                <input asp-for="Input.ConfirmPassword" class="form-control rounded" autocomplete="new-password" aria-required="true" placeholder="confirm password" />
-       
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    <label class="form-label" for="customFile">Profile Image : </label>
+                    <input type="file" class="form-control form-control-file" id="profile-image" accept="image/*" name="profile-image" />
+                    <br>
+                    <img class="profile-img rounded-circle" id="preview-image" src="" alt="Error"  style="border-radius: 50%;">
+                    <br>
+                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary bg-gradient airBnbButton">Register</button>
+                    </div>
+                </form>
             </div>
-            
-                    <label for="profile-image">Profile Image:</label>
-                    <input  type="file" id="profile-image" accept="image/*" name="profile-image" class="form-control-file ">
-                    <br>
-              
-                    <img class="profile-img rounded-circle" id="preview-image" src="#" alt="Error" 
-                         style="border-radius: 50%;">}
-                    <br>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
     </div>
-   
-</div>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-       
-    <partial name="_ValidationScriptsPartial" />
-        <script src="~/signup/signup.js"></script>
 
-</body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<partial name="_ValidationScriptsPartial" />
+<script src="~/signup/signup.js"></script>
+
+     @*   <script src="~/signup/signup.js"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <partial name="_ValidationScriptsPartial" />*@
+
+
 

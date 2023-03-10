@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.airBnbButton {
+    color: white !important;
+    background-color: #F32B57 !important;
+    border-color: #F32B57 !important;
+}

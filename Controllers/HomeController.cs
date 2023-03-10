@@ -2,6 +2,7 @@
 using AirBNB.Classes;
 using AirBNB.Data;
 using AirBNB.Models;
+using AirBNB.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,11 +24,14 @@ namespace AirBNB.Controllers
         public IActionResult Index()
         {
             var proprities = db.Properties.Include(a => a.PropertyImages).Include(a => a.Region).ThenInclude(a => a.City).ToList();
+
+            //ViewBag.PropertyLgImg = proprities.FirstOrDefault(a=>a.).PropertyImages.First().URL;
             return View(proprities);
         }
 
-        public IActionResult PropertyDetails(int id)
-        {
+        
+        public IActionResult PropertyDetails ( int id )
+            {
             //Propert
             var Property = db.Properties.Include(p => p.PropertyImages).Include(p => p.Amentios)
                 .Include(p => p.Reviews).ThenInclude(r => r.User).Include(p => p.House_Rules).FirstOrDefault(p => p.ID == id);
@@ -51,13 +55,19 @@ namespace AirBNB.Controllers
             ViewBag.PropertyUserEmail = PropertyUserName.Email;
             //Property Review
             //double? reviewRatings = db.Reviews.Where(r => r.PropertyId == Property.ID)?.Select(r => r.Rating).Average();
-            
+
             //ViewBag.reviewRatings = reviewRatings.Value.ToString("0.00");
             int? reviewRatingsCount = db.Reviews.Where(r => r.PropertyId == Property.ID).Select(r => r.Rating).Count();
-        
-             ViewBag.reviewRatingsCount = reviewRatingsCount;
-            return View(Property);
-        }
 
-    }
+            ViewBag.reviewRatingsCount = reviewRatingsCount;
+            var payment = new DetailsPaymentViewModel
+                {
+                property = db.Properties.Include(u => u.UnavailableDays).Include(p => p.PropertyImages).Include(p => p.Amentios)
+                .Include(p => p.Reviews).ThenInclude(r => r.User).Include(p => p.House_Rules).FirstOrDefault(p => p.ID == id),
+                reservation = new Reservation()
+                };
+            return View(payment);
+            }
+
+        }
 }

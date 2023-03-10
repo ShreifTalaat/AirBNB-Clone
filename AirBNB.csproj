@@ -35,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Hosting\Index.cshtml" />
+    <None Include="Views\Hosting\Listing.cshtml" />
+    <None Include="Views\Hosting\Reservations.cshtml" />
     <None Include="wwwroot\Homepage\SVG\fav.svg" />
     <None Include="wwwroot\Homepage\SVG\Filter.svg" />
     <None Include="wwwroot\Homepage\SVG\Frame 2.svg" />

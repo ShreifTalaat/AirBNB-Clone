@@ -1,10 +1,14 @@
 * {
-    font-family: Airbnb Cereal App Medium;
+    font-family: Airbnb Cereal App;
+}
+.view_bar {
+    color: #717171;
 }
 
 .text-area textarea {
     resize: none;
 }
+
 
 .search-nav {
     width: 20px;

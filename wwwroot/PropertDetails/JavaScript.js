@@ -31,16 +31,17 @@ totalCount.innerHTML = count;
 totalCountSearch.innerHTML = countSearch;
 
 // Function to increment count
-const handleIncrement = () => {
+function handleIncrement() {
     if (count < numberOfGuests) {
         count++;
         totalCount.innerText = count;
-        guestWord.innerText = "guests"
+        guestWord.innerText = "guests";
+        console.log(count);
     }
 };
 
 // Function to decrement count
-const handleDecrement = () => {
+function  handleDecrement() {
     if (count >= 2) {
         count--;
         if (count == 1) {
@@ -52,10 +53,14 @@ const handleDecrement = () => {
 
 
 // Add click event to buttons
-incrementCount.addEventListener("click", handleIncrement);
-decrementCount.addEventListener("click", handleDecrement);
+/*incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);*/
 
 //Map
+//weather
+
+
+        /////////////////////////////////////////////////////////////////////////////////////
 // Initialize and add the map
 //function initMap() {
 //    map = new atlas.Map('map', {
@@ -204,11 +209,13 @@ ClearBtn.addEventListener("click", () => {
 var CheckIn_Input = document.getElementById("CheckIn_Input");
 var reserve_btn = document.getElementById("reserve-btn");
 var notChargeYetDiv = document.getElementById("notChargeYetDiv");
-function ReserveBtn(e) {
-    reserve_btn.innerText = "Reserve"
-    reserve_btn.type = "submit"
-    notChargeYetDiv.classList.remove("d-none");
-    notChargeYetDiv.classList.add("d-block");
+function ReserveBtn() {
+    if (document.getElementById("check_out").value.trim()!='') {
+        reserve_btn.innerText = "Reserve"
+        reserve_btn.type = "submit"
+        notChargeYetDiv.classList.remove("d-none");
+        notChargeYetDiv.classList.add("d-block");
+    }
 }
 
 //CheckIn_Output
@@ -229,6 +236,11 @@ function radio() {
     ReportBtn.disabled = false;
 }
 
+
+//pass guest to payment
+function GeustNum() {
+    document.getElementById("guestes").value = document.getElementById("total-count").innerText;
+}
 
 
 

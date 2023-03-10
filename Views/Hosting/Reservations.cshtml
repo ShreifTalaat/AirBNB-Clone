@@ -1,6 +1,8 @@
-﻿
+﻿@model IEnumerable<Reservation>
 @{
     Layout = null;
+    bool flag = false;
+    bool flag2 = false;
 }
 
 <!DOCTYPE html>
@@ -21,8 +23,7 @@
     <script src="/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 
     <title>airbnb</title>
@@ -32,37 +33,58 @@
     <!-- Start Nav -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top border border-bottom" style="height: 70px;">
         <!-- Start div tha t contain the items in nav -->
-        <div class="container-lg   d-flex flex-row justify-content-between ">
+        <div class="container   d-flex flex-nowrap justify-content-between ">
             <!-- Start Logo -->
-            <div class="d-flex align-items-center">
-                <i class="fa-brands fa-airbnb air-logo"></i>
-            </div>
+            <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
+                <div class="d-flex align-items-center">
+                    <i class="fa-brands fa-airbnb air-logo"></i>
+                </div>
+            </a>
             <!-- End Logo -->
             <!-- Start Search -->
             <div class="d-flex align-items-center ">
                 <div class="container-fluid ">
 
-                    <div href="#" class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
+                    <div href="#" class="bg-white  d-flex align-items-center justify-content-between navigation_btn">
+                        <a asp-action="Index" class="view_bar text-decoration-none" id="todayLink" style="color: #808080;">Today</a>
+                        <a asp-action="Listing" class="view_bar text-decoration-none" id="listingLink" style="color: #808080;">Listing</a>
+                        <a asp-action="Reservations" class="view_bar text-decoration-none" id="reservationsLink" style="color: #060606;
+                                                                                                                  padding: 5px 0px;
+                                                                                                             border-bottom: solid;">Reservations</a>
 
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Today</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Inbox</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Cleander</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Insights</a>
 
                     </div>
-                    </a>
                 </div>
-
 
             </div>
             <!-- End Search -->
             <!-- Start person -->
 
             <div class="d-flex">
-
-
-                <div class="ml-auto p-2">
-                    <img src="./SVG/middle.svg">
+                <div class="btn rounded-5 ms-3 d-inline-flex align-items-center p-1 dropdown-center"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="ml-auto p-1  ms-2">
+                    <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))"
+                         style="width: 30px; height: 30px;" alt="Host_Img">
+                </div >
+                </div >
+                <div class="class=" dropdown"">
+                    <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                        <li class="nav-item">
+                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                        </li>
+                        <li>
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="smallTxt dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                        
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                        <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -80,23 +102,9 @@
 
         <!--start top bar Details-->
         <div class="d-flex flex-row justify-content-between top-bar">
-            <i class="fa-solid fa-chevron-left"></i>
+            <a asp-action="Index"> <i class="fa-solid fa-chevron-left"></i></a>
             <div class="row">
-                <div class="col col-lg-auto rounded border border-1 border-dark rev-card">
-                    <button class="btn">
-                        <i class="fa-solid fa-sliders"></i> Filter
-                    </button>
-                </div>
-                <div class="col col-lg-auto rounded border border-1 border-dark rev-card">
-                    <button class="btn">
-                        Export <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-                <div class="col col-lg-auto rounded border border-1 border-dark rev-card">
-                    <button class="btn">
-                        Print
-                    </button>
-                </div>
+                
 
 
 
@@ -106,13 +114,279 @@
 
         </div>
     </div>
+
     <!--end top bar Details-->
     <!--Start Reservations Details-->
+   
 
     <div class="container">
         <h1 class="modal-title Welcome">Reservations</h1>
+        <nav>
+            <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                <button class="nav-link active text-black" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Upcoming</button>
+                <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Completed</button>
+                <button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">All</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+             
+                @foreach (var item in Model) {
+                    if (DateTime.Now < item.CheckIn)
+
+                        flag = true;
+                    else
+                        flag2 = true;
+                            
+                    
+                }
+                <table class="table">
+                    @if (flag)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">LISTING</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">CANCEL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (DateTime.Now < item.CheckIn)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <form method="post" asp-action="Reservations" asp-route-id="@item.Id">
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <button type="submit" class="btn btn-danger rounded text-black" onclick="return confirm('Are you sure you want to cancel this reservation?')">Cancel</button>
+                                            </div>
+                                        </td>
+                                        </form>
+
+
+                                    </tr>
+
+                                }
+                              
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="text-center nav-body">
+                            <div class="">
+                                <h3 class="fw-bold">You have no upcoming reservations</h3>
+
+                                <a href="#" class="fw-bold">See all reservations</a>
+                            </div>
+                        </div>
+
+                    }
+                 
+                </table>
+    
+                
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <table class="table">
+                    @if (flag2)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">LISTING</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">REVIEW</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (DateTime.Now > item.CheckIn)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <form method="post" asp-controller="Review" asp-action="Index" asp-route-id="@item.PropertyId">
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <button  type="submit" class="btn btn-primary rounded text-black ">Review</button>
+                                            </div>
+                                        </td></form>
+
+
+                                    </tr>
+
+                                }
+
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="text-center nav-body">
+                            <div class="">
+                                <h3 class="fw-bold">You have no upcoming reservations</h3>
+
+                                <a href="#" class="fw-bold">See all reservations</a>
+                            </div>
+                        </div>
+
+                    }
+
+                </table>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                @if (Model.Count() == 0)
+                {
+                    <div class="text-center nav-body">
+                        <div class="">
+                            <h3 class="fw-bold">You have no upcoming reservations</h3>
+
+                            <a href="#" class="fw-bold">See all reservations</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">LISTING</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="d-flex" style="align-items: baseline;">
+                                        <div>
+                                            @foreach (var img in item.Property.PropertyImages)
+                                            {
+                                                <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                break;
+
+                                            }
+
+                                        </div>
+                                        <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex" style="align-items: baseline;">
+                                            <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex" style="align-items: baseline;">
+                                            <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex" style="align-items: baseline;">
+                                            <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                        </div>
+                                    </td>
+                                    @if (DateTime.Now > item.CheckIn){
+                                    <td>
+                                        <div class="d-flex" style="align-items: baseline; color:blue;">
+                                           Upcoming
+                                        </div>
+                                    </td>
+                                    }
+                                    else{
+                                    <td>
+                                            <div class="d-flex" style="align-items: baseline; ">
+                                            Completed
+                                        </div>
+                                    </td>
+                                    }
+                                  
+                                    
+
+
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
         <!--Start NavBar Details-->
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <!--nav class="navbar navbar-expand-lg navbar-light ">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,19 +407,14 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </nav-->
+    
     <!--End NavBar Details-->
     <!--End Reservations Details-->
-    <!--start guests Details-->
-    <div class="card text-center nav-body">
-        <div class="card-body">
-            <h3 class="fw-bold">You have no upcoming reservations</h3>
+    <!--start Reservations data Details-->
+    
 
-            <a href="#" class="fw-bold">See all reservations</a>
-        </div>
-    </div>
-    <!--end guests Details-->
+    <!--start Reservations data Details-->
     <!-- <div class="container">
     <div class="row">
       <div class="reserv col">
@@ -255,54 +524,73 @@
     </div> -->
     <!-- end page content -->
     <!-- Start footer -->
-    <footer class="footer bg-white border-top py-3 ">
-        <div class="container-lg ">
-
-            <div class="row d-flex  height-footer">
-                <div class="   d-flex  col-lg-6 ">
-                    <ul class="list-inline d-flex justify-content-start ">
-                        <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
-                        <li class=" d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
-                        </li>
-                        <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
-
+        </div>
+    <!-- Footer -->
+    <div class="footer pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal">
+                        <li type="none">© 2023 Airbnb, Inc.</li>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                        <li type="none">Terms</li>
+                        </a>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                        <li type="none">Privacy</li>
+                        </a>
                     </ul>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-end">
-                    <ul class="list-inline d-flex">
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                <img src="./SVG/globe.svg">English (IN)
-                            </a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#"
-                               class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                Support&
-                                resources <img src="./SVG/Group.svg">
-                            </a>
-                        </li>
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div>
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- End footer -->
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the current URL path and set the active link based on it
+                var url = window.location.pathname;
+                var page = url.substr(url.lastIndexOf('/') + 1);
+
+                if (page === "Index") {
+                    document.querySelector('#todayLink').classList.add('active-link');
+                } else if (page === "Listing") {
+                    document.querySelector('#listingLink').classList.add('active-link');
+                } else if (page === "Reservations") {
+                    document.querySelector('#reservationsLink').classList.add('active-link');
+                }
+
+                // Add click event on each navigation link
+                var links = document.querySelectorAll('#todayLink, #listingLink, #reservationsLink');
+                links.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        // Remove active class from all navigation links
+                        links.forEach(function (link) {
+                            link.classList.remove('active-link');
+                        });
+                        // Add active class to the clicked link
+                        this.classList.add('active-link');
+                    });
+                });
+            });
+
+    </script>
 </body>
 
 </html>
