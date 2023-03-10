@@ -1,959 +1,963 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AirBNB.bundle.scp.css",
+      "Id": "E:\\Git-Clone\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AirBNB.bundle.scp.css",
       "PackagePath": "staticwebassets\\AirBNB.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\Account-Settings.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\Account-Settings.css",
       "PackagePath": "staticwebassets\\Account\\Account settings\\Account-Settings.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\Account-Settings.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\Account-Settings.js",
       "PackagePath": "staticwebassets\\Account\\Account settings\\Account-Settings.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Loginandsecurity.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Notif.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Notif.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\Personalinfo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\Account settings\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\Account settings\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Account\\Account settings\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\Personal info.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\Personal info.js",
       "PackagePath": "staticwebassets\\Account\\personal info\\Personal info.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Loginandsecurity.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Notif.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Notif.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\Personalinfo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Account\\personal info\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Account\\personal info\\personal info.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\Account\\personal info\\personal info.css",
       "PackagePath": "staticwebassets\\Account\\personal info\\personal info.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\Account-Settings.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\Account-Settings.css",
       "PackagePath": "staticwebassets\\AdminMange\\Account-Settings.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\Account-Settings.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\Account-Settings.js",
       "PackagePath": "staticwebassets\\AdminMange\\Account-Settings.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Loginandsecurity.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Loginandsecurity.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Loginandsecurity.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Notif.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Notif.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Notif.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\Personalinfo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\Personalinfo.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\Personalinfo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\AdminMange\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\AdminMange\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\JavaScript.js",
+      "PackagePath": "staticwebassets\\Homepage\\JavaScript.js"
+    },
+    {
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Language.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\Language.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\Language.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\fav.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\fav.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\fav.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\star.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\SVG\\star.svg",
       "PackagePath": "staticwebassets\\Homepage\\SVG\\star.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\styles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\Homepage\\styles.css",
       "PackagePath": "staticwebassets\\Homepage\\styles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3139657-880fdo.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_1.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_1.png",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_1.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_2.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_2.png",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_2.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_3.jfif",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_3.jfif",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_3.jfif"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_4.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_4.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_4.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_5.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\3_5.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_5.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_1.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\4_1.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_1.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_2.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\4_2.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_2.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_3.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\4_3.png",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_3.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_4.jfif",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\4_4.jfif",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_4.jfif"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_5.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\4_5.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_5.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG-20221226-WA0105.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230114_123932 - Copy.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\JavaScript.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\JavaScript.js",
       "PackagePath": "staticwebassets\\PropertDetails\\JavaScript.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\AirBnbCover.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\AirBnbCover.webp",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\AirBnbCover.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Bed.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Bed.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Bed.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\BreakFast.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\BreakFast.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\BreakFast.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Calender.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Calender.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Calender.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Frame 2Search .svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Frame 2Search .svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Frame 2Search .svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Graduation Project.rar",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Graduation Project.rar",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Graduation Project.rar"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\HairDry.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\HairDry.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\HairDry.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Host-Img.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Host-Img.webp",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Host-Img.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Pool.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Pool.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Pool.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Save.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Save.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Save.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Snow.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Snow.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Snow.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\TV.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\TV.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\TV.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Wifi.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\Wifi.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Wifi.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\big image.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\big image.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\big image.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\copy.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\copy.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\copy.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\facebook-logo.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\facebook-logo.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\facebook-logo.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\flag-icon-png-18.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\flag-icon-png-18.jpg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\flag-icon-png-18.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\footerIcon.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\footerIcon.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\footerIcon.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\globe.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\hamburgerlines.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\hamburgerlines.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\hamburgerlines.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\icon-Adv (2).svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\icon-Adv (2).svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\icon-Adv (2).svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\instagram-icon.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\instagram-icon.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\instagram-icon.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\logoLogo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\logoLogo.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\logoLogo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\miniprofilelogog.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\miniprofilelogog.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniprofilelogog.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\miniworld.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\miniworld.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniworld.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\minus.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\minus.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\minus.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\plus.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\plus.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\plus.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\rightArrow.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\rightArrow.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\rightArrow.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\search.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\search.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\search.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\share.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\share.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\share.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\shield.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\shield.jpg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\shield.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img2.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img2.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img2.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img3.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img3.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img3.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img4.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\small img4.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img4.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\star.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\star.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\star.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\twitter-icon.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\twitter-icon.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\twitter-icon.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user1.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user1.webp",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user1.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user2.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user2.webp",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user2.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user3.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\user3.webp",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user3.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\verification-symbol.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\verification-symbol.svg",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\verification-symbol.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\x.png",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\Resources\\x.png",
       "PackagePath": "staticwebassets\\PropertDetails\\Resources\\x.png"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\bootstrap.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\bootstrap.css",
       "PackagePath": "staticwebassets\\PropertDetails\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\styles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\PropertDetails\\styles.css",
       "PackagePath": "staticwebassets\\PropertDetails\\styles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\AirBnbCover.webp",
+      "Id": "E:\\Git-Clone\\wwwroot\\Resources\\AirBnbCover.webp",
       "PackagePath": "staticwebassets\\Resources\\AirBnbCover.webp"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\backarrow.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Resources\\backarrow.svg",
       "PackagePath": "staticwebassets\\Resources\\backarrow.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\logoLogo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Resources\\logoLogo.svg",
       "PackagePath": "staticwebassets\\Resources\\logoLogo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\thumbnail_home.jpeg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Resources\\thumbnail_home.jpeg",
       "PackagePath": "staticwebassets\\Resources\\thumbnail_home.jpeg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Language.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\Language.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\Language.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\fav.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\fav.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\fav.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\star.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\SVG\\star.svg",
       "PackagePath": "staticwebassets\\Review\\SVG\\star.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\js.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\js.js",
       "PackagePath": "staticwebassets\\Review\\js.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\styles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\Review\\styles.css",
       "PackagePath": "staticwebassets\\Review\\styles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Language.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\Language.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Language.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\fav.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\fav.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\fav.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\star.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\SVG\\star.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\star.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\sample properties images\\IMG-20221213-WA0119.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG-20221213-WA0119.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG-20221213-WA0119.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\sample properties images\\IMG-20221226-WA0105.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG-20221226-WA0105.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG-20221226-WA0105.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG_20230114_123932 - Copy.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\sample properties images\\IMG_20230201_171425.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\Services\\sample properties images\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Services\\sample properties images\\IMG_20230201_171425.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\bootstrap.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\bootstrap.css",
       "PackagePath": "staticwebassets\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\Listingstyles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\Listingstyles.css",
       "PackagePath": "staticwebassets\\css\\Hosting\\Listingstyles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\Revstyles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\Revstyles.css",
       "PackagePath": "staticwebassets\\css\\Hosting\\Revstyles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg",
       "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221226-WA0105.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221226-WA0105.jpg",
       "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG-20221226-WA0105.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230114_123932 - Copy.jpg",
       "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG_20230114_123932 - Copy.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230201_171425.jpg",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Hosting\\sample properties images\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\css\\Hosting\\sample properties images\\IMG_20230201_171425.jpg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Index.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\paymentStyles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\paymentStyles.css",
       "PackagePath": "staticwebassets\\css\\paymentStyles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\rome.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\rome.css",
       "PackagePath": "staticwebassets\\css\\rome.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\site.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\styles.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\favicon.ico",
+      "Id": "E:\\Git-Clone\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\main.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\owl.carousel.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\paymentJavaScript.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\paymentJavaScript.js",
       "PackagePath": "staticwebassets\\js\\paymentJavaScript.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\popper.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\rome.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\rome.js",
       "PackagePath": "staticwebassets\\js\\rome.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\site.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "E:\\Git-Clone\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4",
       "PackagePath": "staticwebassets\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Language.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\Language.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\Language.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\fav.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\fav.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\fav.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\star.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\SVG\\star.svg",
       "PackagePath": "staticwebassets\\listing\\SVG\\star.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\Step 1- Tell us about your place.mp4",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\Step 1- Tell us about your place.mp4",
       "PackagePath": "staticwebassets\\listing\\Step 1- Tell us about your place.mp4"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\bootstrap.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\bootstrap.css",
       "PackagePath": "staticwebassets\\listing\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\bootstrap.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\bootstrap.js",
       "PackagePath": "staticwebassets\\listing\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\main.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\main.css",
       "PackagePath": "staticwebassets\\listing\\main.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\script.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\script.js",
       "PackagePath": "staticwebassets\\listing\\script.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\style.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\listing\\style.css",
       "PackagePath": "staticwebassets\\listing\\style.css"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\Frame 2Search .svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\profile\\Resources\\Frame 2Search .svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\Frame 2Search .svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\hamburgerlines.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\profile\\Resources\\hamburgerlines.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\hamburgerlines.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\logoLogo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\profile\\Resources\\logoLogo.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\logoLogo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\miniprofilelogog.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\profile\\Resources\\miniprofilelogog.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\miniprofilelogog.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\miniworld.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\profile\\Resources\\miniworld.svg",
       "PackagePath": "staticwebassets\\profile\\Resources\\miniworld.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\Filter.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Filter.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\Frame 2.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\Frame 2.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\Group.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\Group.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\Group.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\globe.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\globe.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\globe.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\logo.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\logo.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\SVG\\middle.svg",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\SVG\\middle.svg",
       "PackagePath": "staticwebassets\\signup\\SVG\\middle.svg"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\signup.js",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\signup.js",
       "PackagePath": "staticwebassets\\signup\\signup.js"
     },
     {
-      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\signup\\signupstyle.css",
+      "Id": "E:\\Git-Clone\\wwwroot\\signup\\signupstyle.css",
       "PackagePath": "staticwebassets\\signup\\signupstyle.css"
     },
     {

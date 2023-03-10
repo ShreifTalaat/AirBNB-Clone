@@ -1,6 +1,4 @@
-* {
-  font-family: Airbnb Cereal App Medium;
-}
+
 
 .container-lg {
   max-width: 94%;
@@ -117,4 +115,9 @@
   top: 100%;
   left: -90px;
   margin-top: var(--bs-dropdown-spacer);
+}
+.airBnbButton {
+    color: white !important;
+    background-color: #F32B57 !important;
+    border-color: #F32B57 !important;
 }

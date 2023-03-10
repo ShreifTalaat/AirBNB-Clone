@@ -4,28 +4,228 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AirBNB</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AirBNB.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/styles.css" />
+              <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+            @*    <link rel="stylesheet" href="~/AirBNB.styles.css" asp-append-version="true" />*@
+            @*    <link rel="stylesheet" href="~/css/styles.css" />*@
+            @* <link rel="stylesheet" href="~/Homepage/styles.css"/>*@
+            <!---------------------------------------------------------------------- Bootstrap ------------------------------------------------------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
 
+            <!---------------------------------------------------------------------- Register ------------------------------------------------------------------------>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+              <link rel="stylesheet" href="~/signup/signupstyle.css" />
+            <!-------------------------------------------------------------property details----------------------------------------------------------------------->
+             <link rel="stylesheet" href="~/PropertDetails/styles.css" />
 </head>
 <body>
-    
+    <div id="fade"></div>
+    <!-- Navigation Bar -->
+    <section id="navBarSection" class="border-bottom">
+        <header class="py-1">
+            <nav class="navbar navbar-light flex-xl-nowrap">
+                <div class="container d-flex justify-content-between align-items-center ">
+                    <a asp-action="Index" class="navbar-brand">
+                        <img src="~/PropertDetails/Resources/logoLogo.svg" alt="logo">
+                    </a>
+                    <!-- Small Search Bar -->
+                    <div class="justify-content-between" id="smallSearchBar">
+                        <button class="btn border rounded-5 d-inline-flex shadow py-2" type="submit">
+                            <div class="ps-2 me-5 align-self-center fw-semibold">
+                                Start your search
+                            </div>
+                            <span class="ms-4 me-4"></span>
+                            <span class="ms-5 me-4"></span>
+                            <div>
+                                <a>
+                                    <img class="Logo" src="~/PropertDetails/Resources/Frame 2Search .svg" alt="Search">
+                                </a>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Large Search Div -->
+                    <div class="d-none justify-content-center  " id="largeSearchBar">
+                        <form asp-action="Search" asp-controller="Home" method="post" class="btn d-flex border rounded-5 row shadow p-0  mx-4" type="submit"
+                              style="width:50rem; height: 4rem;" id="LargeSearchBtn">
+                            <!-- Where -->
+                            <div class="col-4 rounded-5 border-end dropdown d-flex align-items-center hoverStyle"
+                                 data-bs-toggle="dropdown" aria-expanded="false" style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Where</h6>
+                                        <input autocomplete="off" placeholder="Search Destinations" name="CityName" class="border-0 smallTxt text-secondary WhereText" style="width: 8rem;">
+                                    </div>
+                                    <div class="ms-5">
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnWhere">
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu rounded" style="width: 16.5rem;">
+                                   @* @foreach ( var item in ViewBag . cities )
+                                        {
+                                        <li><a class="dropdown-item whereItem" href="#">@item.Name</a></li>
+                                        }*@
+                                </ul>
+                            </div>
+                            <!-- Price -->
+                            <div class="col-3 rounded-5 border-end d-flex align-items-center hoverStyle"
+                                 style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Price (EGP)</h6>
+                                        <input type="number" max="500" class="border-0 fw-semibold fs-6" name="Price"
+                                               placeholder="Write a price" id="PriceInput"
+                                               onchange="handler(event)" style="width: 8rem;">
+                                    </div>
+                                    <div>
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Who -->
+                            <div class="col-5 d-flex justify-content-between align-items-center rounded-5  hoverStyle">
+                                <div class="d-flex justify-content-between align-items-center dropdown"
+                                     style="height: 4rem;" data-bs-toggle="dropdown" aria-expanded="false" id="whoDiv">
+                                    <div class=" text-start p-2 d-flex justify-content-between align-items-center">
+                                        <div class="text-start p-2">
+                                            <h6 class="largeSearchBarTxt fw-bold mb-0">Who</h6>
+                                            <div class="smallTxt text-secondary" id="whoText">Add Guests</div>
+                                            <input hidden type="number" placeholder="Add Guests" name="NumberOfGuests" class="border-0 smallTxt text-secondary d-none" id="whoinput">
+                                        </div>
+                                        <div class="ms-5">
+                                            <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                                 id="xBtnWho">
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu" id="guestsDropDown">
+                                        <div class="d-flex">
+                                            <div id="increment-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count-search" class="fs-5 fw-semibold me-2"></span><span id="guest-word-search">guest</span>
+                                            </div>
+                                            <div id="decrement-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-lg fs-6 fw-semibold rounded-5" id="search-btn">
+                                        <img class="Logo" src="~/PropertDetails/Resources/search.svg" alt="Search"
+                                             style="width: 1rem;">
+                                        Search
+                                    </button>
+                                </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="align-items-center d-inline-flex p-2 ">
+                    <div>
+                        <a href="#" class="text-decoration-none text-black fw-semibold d-flex incident-popup-content me-2">
+                            Airbnb your home
+                        </a>
+                    </div>
+                    <div class="btn border rounded-5  d-inline-flex align-items-center shadow p-2 dropdown-center"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>
+                            <img class="px-2" src="~/PropertDetails/Resources/hamburgerlines.svg" />
+                        </span>
+                        <span>
+                            @if ( User . Identity . IsAuthenticated )
+                                {
+                               @* <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag .UserProfilePic))"
+                                     style="width: 30px; height: 30px;" alt="Host_Img">*@
+                                }
+                            else
+                                {
+                                <img class="ps-1" src="~/PropertDetails/Resources/miniprofilelogog.svg" />
+                                }
+                        </span>
+                    </div>
+                    <div class="dropdown mt-5">
+                        <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                            @if ( User . Identity . IsAuthenticated )
+                                {
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Hosting" asp-action="Index">Hosting</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Listing" asp-action="Index">Become A Host </a>
+                                </li>
+                                @if ( User . IsInRole ( "Admin" ) )
+                                    {
+                                    <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item  smallTxt" asp-controller="Admin" asp-action="Index">Manage</a>
+                                    </li>
+                                    }
+                                <li class="nav-item">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="dropdown-item form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="dropdown-item nav-link btn btn-link text-dark">Logout</button>
+                                    </form>
+                                </li>
+                                }
+                            else
+                                {
+                                <li><a class="dropdown-item  fw-semibold smallTxt" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
+                                <li><a class="dropdown-item  smallTxt" asp-area="Identity" asp-page="/Account/Register">Sign Up</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                                <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                                }
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+    </section>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-    
-    <footer class="border-top footer text-muted">
+ 
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+@*    <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - AirBNB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    </footer>*@
+@*  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+
+
+<script src="~/Homepage/JavaScript.js"></script>
+
+
+
 </html>

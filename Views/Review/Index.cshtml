@@ -1,11 +1,17 @@
 ﻿@model AirBNB.Controllers.reviewModel
 @{
     Layout = null;
+    //bool buttonFlag = true;
 }
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    @*@if (ViewBag.flag)
+    {
+        buttonFlag = false;
+    }*@
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,44 +34,53 @@
 
 <body>
     <!-- Start Nav -->
-    <nav class="navbar navbar-expand-lg bg-white sticky-top  " style="height: 102px;">
-        <!-- Start div that contain the items in nav -->
-        <div class="container-lg   d-flex flex-row justify-content-between ">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border border-bottom" style="height: 70px;">
+        <!-- Start div tha t contain the items in nav -->
+        <div class="container   d-flex flex-nowrap justify-content-between ">
             <!-- Start Logo -->
-            <div class="d-flex align-items-center">
-                <img src="~/Review/SVG/logo.svg">
-            </div>
+            <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
+                <div class="d-flex align-items-center">
+                    <i class="fa-brands fa-airbnb air-logo"></i>
+                </div>
+            </a>
             <!-- End Logo -->
             <!-- Start Search -->
             <div class="d-flex align-items-center ">
                 <div class="container-fluid ">
 
-                    <div href="#" class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
 
-                        <div>Any where |</div>
-                        <div>Any Week |</div>
-                        <div>Add Guest </div>
-                        <div>
-                            <img src="~/Review/SVG/Frame 2.svg" alt="search" />
-                        </div>
-                    </div>
-                    </a>
                 </div>
-                <div d-flex>
-                    <img src="~/Review/SVG/Filter.svg" alt="filter" style="margin-top: 22px;" />
-                </div>
+
 
             </div>
             <!-- End Search -->
             <!-- Start person -->
 
-            <div class="d-flex justify-content-between align-items-center right_section_nav">
-                <span>Airbnb Your Home</span>
-                <div>
-                    <img src="~/Review/SVG/Language.svg">
-                </div>
-                <div>
-                    <img src="~/Review/SVG/middle.svg">
+            <div class="d-flex">
+                <div class="btn rounded-5 ms-3 d-inline-flex align-items-center p-1 dropdown-center "
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="ml-auto p-1 ms-2 ">
+                    <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))"
+                         style="width: 30px; height: 30px;" alt="Host_Img">
+                </div >
+                </div >
+                <div class="class=" dropdown"">
+                    <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                        <li class="nav-item">
+                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                        </li>
+                        <li>
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="smallTxt dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                        
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                        <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -79,12 +94,27 @@
     <div class="container">
         <div class="modal-header mb-2">
             <h4 class="modal-title">Write a Review</h4>
+            
+                    
         </div>
+        @if (ViewBag.flag == true)
+        {
+            <h3 class="alert-danger alert fs-3 fw-semibold">You already reviewed this place</h3>
+        }
         <form method="post" asp-controller="Review" asp-action="AddReview">
+            
             <div class="row pb-2 text-area">
                 <div class="col-md-12">
-                    <textarea asp-for="Content" class="form-control mb-3 mt-4" id="text" name="Content" maxlength="100" rows="6"></textarea>
-                    <span class="text-black-50  fw-semibold" id="count_message"></span>
+                    @if (ViewBag.flag == false)
+                    {
+                        <textarea asp-for="Content" class="form-control mb-3 mt-4" id="text" name="Content" maxlength="100" rows="6"></textarea>
+                        <span class="text-black-50  fw-semibold" id="count_message"></span>
+                    }
+                    else
+                    {
+                        <textarea asp-for="Content" class="form-control mb-3 mt-4" id="text" name="Content" maxlength="100" rows="6" disabled></textarea>
+                        <span class="text-black-50  fw-semibold" id="count_message"></span>
+                    }
                 </div>
 
             </div>
@@ -112,7 +142,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="Submit" class="btn btn-primary" onclick="setStarValue()">Confirm</button>
+                    @if (ViewBag.flag == false)
+                    {
+                        <button type="Submit" class="btn btn-primary" onclick="setStarValue()">Confirm</button>
+                    }
+                    else
+                    {
+                        <button disabled type="Submit" class="btn btn-primary" onclick="setStarValue()">Confirm</button>
+                    }
                     <button type="button" class="btn btn-bwm">Close</button>
                 </div>
             </div>
@@ -121,53 +158,41 @@
     </div>
 
 
-    <!-- Start footer -->
-    <footer class="footer bg-white border-top py-3 ">
-        <div class="container-lg ">
-
-            <div class="row d-flex  height-footer">
-                <div class="   d-flex  col-lg-6 ">
-                    <ul class="list-inline d-flex justify-content-start ">
-                        <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
-                        <li class=" d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
-                        </li>
-                        <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
-
+    <!-- Footer -->
+    <div class="footer pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal">
+                        <li type="none">© 2023 Airbnb, Inc.</li>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                        <li type="none">Terms</li>
+                        </a>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                        <li type="none">Privacy</li>
+                        </a>
                     </ul>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-end">
-                    <ul class="list-inline d-flex">
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                <img src="~/Review/SVG/globe.svg">English (IN)
-                            </a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#"
-                               class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                Support&
-                                resources <img src="~/Review/SVG/Group.svg">
-                            </a>
-                        </li>
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div>
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
     <!-- End footer -->
     <script src="~/Review/js.js"></script>

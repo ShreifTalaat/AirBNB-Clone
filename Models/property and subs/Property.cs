@@ -55,9 +55,7 @@ public class Property
 	public virtual ICollection<Review> Reviews { get; set; } = new HashSet<Review>();
 	//image relation
 	public virtual ICollection<PropertyImage> PropertyImages { get; set; }=new HashSet<PropertyImage>();
-
-	 
-
+    public virtual List<PropertyUnavailableDay> UnavailableDays { get; set; }
 
 
 
@@ -68,4 +66,7 @@ public class Property
 
 
 
-}
+
+
+
+    }

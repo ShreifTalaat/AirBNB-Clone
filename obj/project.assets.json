@@ -11159,11 +11159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a7med\\Desktop\\Airbnb\\AirBNB.csproj",
+      "projectUniqueName": "E:\\Git-Clone\\AirBNB.csproj",
       "projectName": "AirBNB",
-      "projectPath": "C:\\Users\\a7med\\Desktop\\Airbnb\\AirBNB.csproj",
+      "projectPath": "E:\\Git-Clone\\AirBNB.csproj",
       "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a7med\\Desktop\\Airbnb\\obj\\",
+      "outputPath": "E:\\Git-Clone\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"

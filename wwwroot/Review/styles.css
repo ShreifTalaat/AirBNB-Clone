@@ -20,7 +20,10 @@ div.stars {
 
 input.star { display: none; }
 
- 
+.air-logo {
+    color: #fd0b0b;
+    font-size: 35px;
+}
 
 label.star {
 

@@ -36,7 +36,7 @@
     <!-- Start Nav -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top border border-bottom" style="height: 70px;">
         <!-- Start div tha t contain the items in nav -->
-        <div class="container-lg   d-flex flex-row justify-content-between ">
+        <div class="container   d-flex flex-nowrap justify-content-between ">
             <!-- Start Logo -->
             <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
             <div class="d-flex align-items-center">
@@ -64,12 +64,31 @@
             <!-- End Search -->
             <!-- Start person -->
 
-            <div class="d-flex">
-
-
-                <div class="ml-auto p-2  border border-dark-subtle border-0">
+           <div class="d-flex">
+                <div class="btn rounded-5 ms-3 d-inline-flex align-items-center p-1 dropdown-center"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="ml-auto p-1 ms-2 ">
                     <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))"
                          style="width: 30px; height: 30px;" alt="Host_Img">
+                </div >
+                </div >
+                <div class="class=" dropdown"">
+                    <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                        <li class="nav-item">
+                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                        </li>
+                        <li>
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="smallTxt dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                        
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                        <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -464,53 +483,43 @@
     <!--end guests Details-->
   
     <!-- end page content -->
-    <!-- Start footer -->
-    <footer class="footer bg-white border-top py-3 ">
-        <div class="container-lg ">
-
-            <div class="row d-flex  height-footer">
-                <div class="   d-flex  col-lg-6 ">
-                    <ul class="list-inline d-flex justify-content-start ">
-                        <li class=" d-flex ">&copy;2023 Airbnb, Inc.<span class="footer-point">.</span></li>
-                        <li class=" d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
-                        </li>
-                        <li class="d-flex ">
-                            <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
-                        </li>
-                        <li class=" d-flex "><a href="#" class="text-decoration-none text-black">Destinations</a></li>
-
+        <!-- Start footer -->
+       </div>
+    <!-- Footer -->
+    <div class="footer pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal">
+                        <li type="none">© 2023 Airbnb, Inc.</li>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                        <li type="none">Terms</li>
+                        </a>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                        <li type="none">Privacy</li>
+                        </a>
                     </ul>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-end">
-                    <ul class="list-inline d-flex">
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                <img src="./SVG/globe.svg">English (IN)
-                            </a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#"
-                               class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
-                        </li>
-                        <li class="d-flex  ">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-black">
-                                Support&
-                                resources <img src="./SVG/Group.svg">
-                            </a>
-                        </li>
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div>
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
         <script>
             $(document).ready(function () {
                 // Get the current URL path and set the active link based on it
