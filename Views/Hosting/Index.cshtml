@@ -1,6 +1,10 @@
-﻿
+﻿@model IEnumerable<Reservation>
 @{
     Layout = null;
+    bool flagCheckingOut = false;
+    bool flagCurrentlyHosting = false;
+    bool flagArrivingSoon = false;
+    bool flagAllUpcoming = false;
 }
 
 <!DOCTYPE html>
@@ -34,26 +38,28 @@
         <!-- Start div tha t contain the items in nav -->
         <div class="container-lg   d-flex flex-row justify-content-between ">
             <!-- Start Logo -->
+            <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
             <div class="d-flex align-items-center">
                 <i class="fa-brands fa-airbnb air-logo"></i>
-            </div>
+            </div></a>
             <!-- End Logo -->
             <!-- Start Search -->
             <div class="d-flex align-items-center ">
                 <div class="container-fluid ">
 
                     <div href="#" class="bg-white  d-flex align-items-center justify-content-between rounded-pill navigation_btn">
+                        <a asp-action="Index" class="view_bar text-decoration-none active-btn" id="todayLink" style="color: #060606;
+                                                                                                                  padding: 5px 0px;
+                                                                                                             border-bottom: solid;">Today</a>
+                        <a asp-action="Listing" class="view_bar text-decoration-none not-active-btn" id="listingLink" style="color: #808080;">Listing</a>
+                        <a asp-action="Reservations" class="view_bar text-decoration-none not-active-btn" id="reservationsLink" style="color: #808080;">Reservations</a>
 
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Today</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Inbox</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Cleander</a>
-                        <a href="#" class="w3-bar-item w3-button w3-hover rounded-pill">Insights</a>
 
                     </div>
-                    </a>
+                    
                 </div>
 
-
+                
             </div>
             <!-- End Search -->
             <!-- Start person -->
@@ -61,8 +67,9 @@
             <div class="d-flex">
 
 
-                <div class="ml-auto p-2">
-                    <img src="./SVG/middle.svg">
+                <div class="ml-auto p-2  border border-dark-subtle border-0">
+                    <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))"
+                         style="width: 30px; height: 30px;" alt="Host_Img">
                 </div>
             </div>
 
@@ -76,19 +83,19 @@
     <div class="container">
 
 
-        <h1 class="modal-title Welcome">Welcome back, User</h1>
+        <h1 class="modal-title Welcome">Welcome back</h1>
 
 
         <div class="d-flex flex-row justify-content-between reservation-details">
             <h2 class="col">Your reservations</h2>
-            <a href="#"><h5 class="col">all reservations(0)</h5></a>
+            <a asp-action="Listing"><h5 class="col">all reservations(0)</h5></a>
 
         </div>
     </div>
 
 
     <!--Start Reservations Details-->
-    <div class="container">
+    @*<div class="container">
         <div class="row">
             <div class="col col-lg-auto rounded-pill border border-3 border-dark rev-card"><h6>Checking out(0)</h6></div>
             <div class="col col-lg-auto rounded-pill border border-1 rev-card"><h6>Currently hosting(0)</h6></div>
@@ -101,123 +108,361 @@
 
 
         </div>
-    </div>
+    </div>*@
+    <!--Start Reservations Details-->
+
+
+    <div class="container">
+      
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active text-black" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Checking Out</button>
+                <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Currently hosting</button>
+                <button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Arriving soon</button>
+                <button class="nav-link text-black" id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="false">Upcoming</button>
+            </div>
+        </nav>  
+        <div class="tab-content" id="nav-tabContent" >
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+                @foreach (var item in Model)
+                {
+
+                    if (item.CheckOut.DayOfYear - DateTime.Now.DayOfYear == 1 || item.CheckOut.DayOfYear - DateTime.Now.DayOfYear == 0)
+
+                        flagCheckingOut = true;
+                    else if (DateTime.Now >= item.CheckIn && DateTime.Now <= item.CheckOut)
+                        flagCurrentlyHosting = true;
+                    else if (DateTime.Now.DayOfYear - item.CheckOut.DayOfYear == 0 || DateTime.Now.DayOfYear - item.CheckOut.DayOfYear == 1)
+                        flagArrivingSoon = true;
+                    else if (DateTime.Now < item.CheckIn)
+                        flagAllUpcoming = true;
+
+                }
+                <div style="padding-top: 20px;">
+                <table class="table">
+                    @if (flagCheckingOut)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">LISTING</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">GUESTUS NUMBER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (item.CheckOut.DayOfYear - DateTime.Now.DayOfYear == 1 || item.CheckOut.DayOfYear - DateTime.Now.DayOfYear == 0)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.NOfGuests</p>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                }
+
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="container text-center guests-container">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h4>You don’t have any guests<br /> checking out today <br />or tomorrow.</h4>
+
+                        </div>
+
+                    }
+
+                </table></div>
+
+
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div style="padding-top: 20px;">
+                <table class="table">
+                    @if (flagCurrentlyHosting)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">RESERVATION</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">GUESTUS NUMBER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (DateTime.Now >= item.CheckIn && DateTime.Now <= item.CheckOut)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.NOfGuests</p>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                }
+
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="container text-center guests-container">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h4>You don’t have any guests<br /> staying with you right now.</h4>
+                           
+                        </div>
+
+                    }
+
+                </table></div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                <div style="padding-top: 20px;">
+                    <table class="table">
+                    @if (flagArrivingSoon)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">RESERVATION</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">GUESTUS NUMBER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (DateTime.Now.DayOfYear - item.CheckOut.DayOfYear == 0 || DateTime.Now.DayOfYear - item.CheckOut.DayOfYear == 1)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.NOfGuests</p>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                }
+
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="container text-center guests-container">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h4>You don’t have any guests<br /> arriving today or tomorrow.</h4>
+
+                        </div>
+
+                    }
+
+                </table></div>
+                
+            </div>
+            <div class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="nav-contacts-tab" tabindex="0">
+                <div style="padding-top: 20px;">
+                <table class="table">
+                    @if (flagAllUpcoming)
+                    {
+                        <thead>
+                            <tr>
+                                <th scope="col">RESERVATION</th>
+                                <th scope="col">CHECK IN</th>
+                                <th scope="col">CHECK OUT</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">GUESTUS NUMBER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (DateTime.Now < item.CheckIn)
+                                {
+                                    <tr>
+                                        <td class="d-flex" style="align-items: baseline;">
+                                            <div>
+                                                @foreach (var img in item.Property.PropertyImages)
+                                                {
+                                                    <img style="width: 70px;height: 40px;" src="~/Prop.Image/Prop1/@img.URL">
+                                                    break;
+
+                                                }
+
+                                            </div>
+                                            <div><p class="p-2">@item.Property.Description</p></div>
+
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.CheckIn.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2"> @item.CheckOut.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.Date.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </td>
+                                       
+                                        <td>
+                                            <div class="d-flex" style="align-items: baseline;">
+                                                <p class="p-2">@item.NOfGuests</p>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                }
+
+
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <div class="container text-center guests-container">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h4>You currently don’t have<br /> any upcoming guests.</h4>
+
+                        </div>
+
+                    }
+
+                </table>
+                </div>
+            </div>
+        </div>
     <!--End Reservations Details-->
     <!--start guests Details-->
-    <div class="container text-center guests-container">
-        <i class="fa-solid fa-user-check"></i>
-        <h4>You don’t have any guests<br /> checking out today <br />or tomorrow.</h4>
-
-    </div>
+    
 
     <!--end guests Details-->
-    <!-- <div class="container">
-    <div class="row">
-      <div class="reserv col">
-         <div class="res">
-          <div class="res-detail">
-            Checking out
-          </div>
-         </div>
-      </div>
-      <div class="reserv col">
-        <div class="res">
-         <div class="res-detail">
-           Hello
-         </div>
-        </div>
-     </div>
-     <div class="reserv col">
-      <div class="res">
-       <div class="res-detail">
-         Current
-       </div>
-      </div>
-    </div>
-    <div class="reserv col">
-      <div class="res">
-       <div class="res-detail">
-         Hello
-       </div>
-      </div>
-    </div>
-    <div class="reserv col">
-      <div class="res">
-       <div class="res-detail">
-         Hello
-       </div>
-      </div>
-    </div>
-    </div>
-    </div> -->
-    <!--end Reservations Details-->
-    <!-- <div class="container-lg">
-    <div class="modal-header">
-      <h4 class="modal-title">Write a Review</h4>
-
-    </div>
-    <div class="modal-body">
-      <form>
-        <textarea rows="5"
-                  class="form-control"
-                  placeholder="Write about your experience in this place"
-                  id="text"
-                  name="text"
-                  ></textarea>
-                  <div class="container d-flex justify-content-center mt-200">
-
-
-                    <div class="row">
-
-                      <div class="col-md-12">
-
-                        <div class="stars">
-
-                      <form action="">
-
-                        <input class="star star-5" id="star-5" type="radio" name="star"/>
-
-                        <label class="star star-5" for="star-5"></label>
-
-                        <input class="star star-4" id="star-4" type="radio" name="star"/>
-
-                        <label class="star star-4" for="star-4"></label>
-
-                        <input class="star star-3" id="star-3" type="radio" name="star"/>
-
-                        <label class="star star-3" for="star-3"></label>
-
-                        <input class="star star-2" id="star-2" type="radio" name="star"/>
-
-                        <label class="star star-2" for="star-2"></label>
-
-                        <input class="star star-1" id="star-1" type="radio" name="star"/>
-
-                        <label class="star star-1" for="star-1"></label>
-
-                      </form>
-
-                    </div>
-
-
-
-                      </div>
-
-
-                    </div>
-
-                    </div>
-
-
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-bwm">Confirm</button>
-      <button type="button" class="btn btn-bwm">Close</button>
-    </div>
-
-
-    </div> -->
+  
     <!-- end page content -->
     <!-- Start footer -->
     <footer class="footer bg-white border-top py-3 ">
@@ -266,6 +511,28 @@
             </div>
         </div>
     </footer>
+        <script>
+            $(document).ready(function () {
+                // Get the current URL path and set the active link based on it
+                var url = window.location.pathname;
+                var page = url.substr(url.lastIndexOf('/') + 1);
+                if (page === "Index") {
+                    $('#todayLink').addClass('active-link');
+                } else if (page === "Listing") {
+                    $('#listingLink').addClass('active-link');
+                } else if (page === "Reservations") {
+                    $('#reservationsLink').addClass('active-link');
+                }
+
+                // Add click event on each navigation link
+                $('#todayLink, #listingLink, #reservationsLink').click(function () {
+                    // Remove active class from all navigation links
+                    $('#todayLink, #listingLink, #reservationsLink').removeClass('active-link');
+                    // Add active class to the clicked link
+                    $(this).addClass('active-link');
+                });
+            });
+        </script>
 
     <!-- End footer -->
 </body>

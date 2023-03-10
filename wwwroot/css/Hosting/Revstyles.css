@@ -111,7 +111,12 @@ label.star:before {
   top: 15px;
 
 }
-
+.active-link {
+    color: #007bff;
+    background-color: #f8f9fa;
+    border-radius: 50px;
+    padding: 8px 16px;
+}
 .card {
   height: 100%;
   border: none;
@@ -134,18 +139,12 @@ label.star:before {
 
 
 }
-.nav-item.active {
-  border-bottom: 2px solid #f00;
-}
+
 .nav-link{
   font-size: large;
 }
-.active{
-  border-bottom: 2px solid rgb(17, 17, 17);;
-}
-.navbar-expand-lg {
-  border-bottom: 1px solid #ddd;
-}
+
+
 .nav-body{
   margin-top: 50px;
 }

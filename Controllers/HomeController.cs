@@ -51,7 +51,7 @@ namespace AirBNB.Controllers
             ViewBag.PropertyUserEmail = PropertyUserName.Email;
             //Property Review
             //double? reviewRatings = db.Reviews.Where(r => r.PropertyId == Property.ID)?.Select(r => r.Rating).Average();
-            
+
             //ViewBag.reviewRatings = reviewRatings.Value.ToString("0.00");
             int? reviewRatingsCount = db.Reviews.Where(r => r.PropertyId == Property.ID).Select(r => r.Rating).Count();
         

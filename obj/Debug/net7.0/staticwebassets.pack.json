@@ -433,6 +433,50 @@
       "PackagePath": "staticwebassets\\Resources\\thumbnail_home.jpeg"
     },
     {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\js.js",
+      "PackagePath": "staticwebassets\\Review\\js.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\styles.css",
+      "PackagePath": "staticwebassets\\Review\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Filter.svg",
       "PackagePath": "staticwebassets\\Services\\SVG\\Filter.svg"
     },
@@ -491,6 +535,10 @@
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\Revstyles.css",
       "PackagePath": "staticwebassets\\css\\Hosting\\Revstyles.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\active.css",
+      "PackagePath": "staticwebassets\\css\\Hosting\\active.css"
     },
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\Hosting\\sample properties images\\IMG-20221213-WA0119.jpg",
