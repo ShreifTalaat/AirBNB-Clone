@@ -137,8 +137,88 @@
       "PackagePath": "staticwebassets\\AdminMange\\SVG\\middle.svg"
     },
     {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\Homepage\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Homepage\\styles.css",
+      "PackagePath": "staticwebassets\\Homepage\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3139657-880fdo.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3139657-880fdo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_1.png",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_1.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_2.png",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_2.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_3.jfif",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_3.jfif"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_4.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\3_5.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\3_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_1.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_2.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_3.png",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_3.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_4.jfif",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_4.jfif"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\4_5.jpg",
+      "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\4_5.jpg"
     },
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG-20221213-WA0119.jpg",
@@ -155,6 +235,246 @@
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg",
       "PackagePath": "staticwebassets\\Prop.Image\\Prop1\\IMG_20230201_171425.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\JavaScript.js",
+      "PackagePath": "staticwebassets\\PropertDetails\\JavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\AirBnbCover.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\AirBnbCover.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Bed.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Bed.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\BreakFast.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\BreakFast.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Calender.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Calender.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Frame 2Search .svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Frame 2Search .svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Graduation Project.rar",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Graduation Project.rar"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\HairDry.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\HairDry.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Host-Img.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Host-Img.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Pool.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Pool.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Save.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Save.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Snow.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Snow.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\TV.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\TV.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\Wifi.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\Wifi.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\big image.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\big image.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\copy.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\copy.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\facebook-logo.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\facebook-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\flag-icon-png-18.jpg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\flag-icon-png-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\footerIcon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\footerIcon.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\globe.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\hamburgerlines.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\hamburgerlines.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\icon-Adv (2).svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\icon-Adv (2).svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\instagram-icon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\instagram-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\logoLogo.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\logoLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\miniprofilelogog.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniprofilelogog.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\miniworld.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\miniworld.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\minus.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\minus.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\plus.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\plus.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\rightArrow.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\rightArrow.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\search.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\share.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\share.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\shield.jpg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\shield.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img2.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img2.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img3.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img3.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\small img4.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\small img4.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\star.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\twitter-icon.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\twitter-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user1.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user1.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user2.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user2.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\user3.webp",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\user3.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\verification-symbol.svg",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\verification-symbol.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\Resources\\x.png",
+      "PackagePath": "staticwebassets\\PropertDetails\\Resources\\x.png"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\bootstrap.css",
+      "PackagePath": "staticwebassets\\PropertDetails\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\PropertDetails\\styles.css",
+      "PackagePath": "staticwebassets\\PropertDetails\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\AirBnbCover.webp",
+      "PackagePath": "staticwebassets\\Resources\\AirBnbCover.webp"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\backarrow.svg",
+      "PackagePath": "staticwebassets\\Resources\\backarrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\logoLogo.svg",
+      "PackagePath": "staticwebassets\\Resources\\logoLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Resources\\thumbnail_home.jpeg",
+      "PackagePath": "staticwebassets\\Resources\\thumbnail_home.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\Review\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\js.js",
+      "PackagePath": "staticwebassets\\Review\\js.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Review\\styles.css",
+      "PackagePath": "staticwebassets\\Review\\styles.css"
     },
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\Services\\SVG\\Filter.svg",
@@ -237,6 +557,14 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\paymentStyles.css",
+      "PackagePath": "staticwebassets\\css\\paymentStyles.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\rome.css",
+      "PackagePath": "staticwebassets\\css\\rome.css"
+    },
+    {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -247,6 +575,30 @@
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\paymentJavaScript.js",
+      "PackagePath": "staticwebassets\\js\\paymentJavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\rome.js",
+      "PackagePath": "staticwebassets\\js\\rome.js"
     },
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\js\\site.js",
@@ -479,6 +831,78 @@
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4",
+      "PackagePath": "staticwebassets\\listing\\Become a Host and Rent Out Your Room, House or Apartment on Airbnb.mp4"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Filter.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Filter.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Group.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Group.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\Language.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\Language.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\fav.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\globe.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\globe.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\logo.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\middle.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\middle.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\sign-minus-circle-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\sign-plus-circle-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\SVG\\star.svg",
+      "PackagePath": "staticwebassets\\listing\\SVG\\star.svg"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\Step 1- Tell us about your place.mp4",
+      "PackagePath": "staticwebassets\\listing\\Step 1- Tell us about your place.mp4"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\bootstrap.css",
+      "PackagePath": "staticwebassets\\listing\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\bootstrap.js",
+      "PackagePath": "staticwebassets\\listing\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\main.css",
+      "PackagePath": "staticwebassets\\listing\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\script.js",
+      "PackagePath": "staticwebassets\\listing\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\listing\\style.css",
+      "PackagePath": "staticwebassets\\listing\\style.css"
     },
     {
       "Id": "C:\\Users\\a7med\\Desktop\\Airbnb\\wwwroot\\profile\\Resources\\Frame 2Search .svg",

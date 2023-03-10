@@ -1,0 +1,83 @@
+#fade {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+.Logo {
+    height: 30px;
+    width: auto;
+}
+
+#largeSearchBar {
+    width: 0rem;
+    transition: width 0.05s;
+}
+
+.largeSearchBarTxt {
+    font-size: 14px;
+}
+
+#search-btn {
+    color: white;
+    background-color: #F32B57;
+    border-color: #F32B57;
+}
+::placeholder{
+    color: rgb(39, 38, 38) !important;
+    font-size: 14px;
+    font-weight: bold !important;
+}
+.hoverStyle:hover{
+    background-color: rgba(100, 100, 100, 0.1);
+}
+.ReserveFloatCard {
+    position: sticky;
+    top: 2.5rem;
+}
+
+#up-arrow,
+#down-arrow {
+    width: 50px;
+    height: 20px;
+}
+
+#total-count {
+    font-weight: 90;
+    font-size: 16px;
+}
+
+#reserve-btn {
+    color: white;
+    background-color: #F32B57;
+    border-color: #F32B57;
+}
+
+#flag-icon {
+    width: 1.5rem;
+}
+
+.rating-tiny-numbers {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.smallTxt {
+    font-size: 14px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 450px;
+    /* The height is 400 pixels */
+}
+
+.Protection-txt {
+    font-size: 12px;
+}
+
+.footer {
+    background-color: rgb(238, 238, 238);
+}
