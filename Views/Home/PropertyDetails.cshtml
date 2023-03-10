@@ -1,4 +1,4 @@
-﻿@model Property
+﻿@model AirBNB.ViewModels.DetailsPaymentViewModel
 @{
     Layout = null;
     var ReviewCount = 0;
@@ -8,9 +8,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="~/PropertDetails/bootstrap.css" rel="stylesheet">
     <link href="~/PropertDetails/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,18 +16,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
-    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
-    <title>@Model.Title</title>
+
+
+    <title>@Model.property.Title</title>
 </head>
 
-<body>
+<body onload="GetMap()">
     <div id="fade"></div>
     <!-- Navigation Bar -->
     <section id="navBarSection" class="border-bottom">
         <header class="py-1">
-            <nav class="navbar navbar-light">
-                <div class="container d-flex justify-content-between align-items-center">
+            <nav class="navbar navbar-light flex-xl-nowrap">
+                <div class="container d-flex justify-content-between align-items-center ">
                     <a asp-action="Index" class="navbar-brand">
                         <img src="~/PropertDetails/Resources/logoLogo.svg" alt="logo">
                     </a>
@@ -49,18 +47,16 @@
                         </button>
                     </div>
                     <!-- Large Search Div -->
-                    <div class="d-none justify-content-center" id="largeSearchBar">
-                        <button class="btn d-flex border rounded-5 row shadow p-0" type="submit"
-                                style="width:50rem; height: 4rem;" id="LargeSearchBtn">
+                    <div class="d-none justify-content-center  " id="largeSearchBar">
+                        <form asp-action="Search" asp-controller="Home" method="post" class="btn d-flex border rounded-5 row shadow p-0  mx-4" type="submit"
+                             style="width:50rem; height: 4rem;" id="LargeSearchBtn">
                             <!-- Where -->
                             <div class="col-4 rounded-5 border-end dropdown d-flex align-items-center hoverStyle"
                                  data-bs-toggle="dropdown" aria-expanded="false" style="height: 4rem;">
                                 <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
                                     <div>
                                         <h6 class="largeSearchBarTxt fw-bold mb-0">Where</h6>
-                                        <div class="smallTxt text-secondary WhereText">
-                                            Search Destinations
-                                        </div>
+                                        <input autocomplete="off" placeholder="Search Destinations" name="CityName" class="border-0 smallTxt text-secondary WhereText" style="width: 8rem;">
                                     </div>
                                     <div class="ms-5">
                                         <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
@@ -68,19 +64,22 @@
                                     </div>
                                 </div>
                                 <ul class="dropdown-menu rounded" style="width: 16.5rem;">
-                                    @foreach (var item in ViewBag.cities)
-                                    {
+                                    @foreach ( var item in ViewBag . cities )
+                                        {
                                         <li><a class="dropdown-item whereItem" href="#">@item.Name</a></li>
-                                    }
+                                        }
                                 </ul>
                             </div>
-                            <!-- Date -->
+                            <!-- Price -->
                             <div class="col-3 rounded-5 border-end d-flex align-items-center hoverStyle"
                                  style="height: 4rem;">
                                 <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
-                                    <input type="text" class="border-0 fw-semibold fs-6"
-                                           placeholder="Date:  - - - - - - - -" id="DateInput" onblur="(this.type='text')"
-                                           onfocus="(this.type='date')" onchange="handler(event)" style="width: 8rem;">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Price (EGP)</h6>
+                                        <input type="number" max="500" class="border-0 fw-semibold fs-6" name="Price"
+                                               placeholder="Write a price" id="PriceInput"
+                                               onchange="handler(event)" style="width: 8rem;">
+                                    </div>
                                     <div>
                                         <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
                                              id="xBtnDate">
@@ -88,25 +87,19 @@
                                 </div>
                             </div>
                             <!-- Who -->
-                            <div class="col-5 rounded-5  hoverStyle" style="height: 4rem;">
+                            <div class="col-5 d-flex justify-content-between align-items-center rounded-5  hoverStyle">
                                 <div class="d-flex justify-content-between align-items-center dropdown"
                                      style="height: 4rem;" data-bs-toggle="dropdown" aria-expanded="false" id="whoDiv">
                                     <div class=" text-start p-2 d-flex justify-content-between align-items-center">
                                         <div class="text-start p-2">
                                             <h6 class="largeSearchBarTxt fw-bold mb-0">Who</h6>
-                                            <div class="smallTxt text-secondary" id="whoText">Add Guests</div>
+                                            <div class="smallTxt text-secondary" id="whoText">Add Guests</div> 
+                                            <input hidden type="number" placeholder="Add Guests" name="NumberOfGuests" class="border-0 smallTxt text-secondary d-none" id="whoinput" >
                                         </div>
                                         <div class="ms-5">
                                             <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
                                                  id="xBtnWho">
                                         </div>
-                                    </div>
-                                    <div>
-                                        <a class="btn btn-lg fs-6 fw-semibold rounded-5" id="search-btn">
-                                            <img class="Logo" src="~/PropertDetails/Resources/search.svg" alt="Search"
-                                                 style="width: 1rem;">
-                                            Search
-                                        </a>
                                     </div>
                                     <div class="dropdown-menu" id="guestsDropDown">
                                         <div class="d-flex">
@@ -122,31 +115,86 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div>
+                                    <button type="submit" class="btn btn-lg fs-6 fw-semibold rounded-5" id="search-btn">
+                                        <img class="Logo" src="~/PropertDetails/Resources/search.svg" alt="Search"
+                                             style="width: 1rem;">
+                                        Search
+                                    </button>
+                                </div>
+                        </form>
                             </div>
-                        </button>
-                    </div>
+                        </div>
                     <div class="align-items-center d-inline-flex p-2 ">
-                        <a href="#" class="text-decoration-none text-black fw-semibold">
-                            Airbnb your home
-                        </a>
-                        <button class="btn border rounded-5 ms-3 d-inline-flex align-items-center shadow p-2 dropdown-center"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <div>
+                            <a href="#" class="text-decoration-none text-black fw-semibold d-flex incident-popup-content">
+                                Airbnb your home
+                            </a>
+                        </div>
+                        <div class="btn border rounded-5  d-inline-flex align-items-center shadow p-2 dropdown-center"
+                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span>
                                 <img class="px-2" src="~/PropertDetails/Resources/hamburgerlines.svg" />
                             </span>
                             <span>
-                                <img class="ps-1" src="~/PropertDetails/Resources/miniprofilelogog.svg" />
+                                @if ( User . Identity . IsAuthenticated )
+                                    {
+                                    <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag .UserProfilePic))"
+                                         style="width: 30px; height: 30px;" alt="Host_Img">
+                                    }
+                                else
+                                    {
+                                    <img class="ps-1" src="~/PropertDetails/Resources/miniprofilelogog.svg" />
+                                    }
                             </span>
-                            <ul class="dropdown-menu dropdown-menu-end rounded" style="width: 1rem;">
-                                <li><a class="dropdown-item whereItem fw-semibold smallTxt" href="#">Log in</a></li>
-                                <li><a class="dropdown-item whereItem smallTxt" href="#">Sign Up</a></li>
+                        </div>
+                        <div class="dropdown mt-5">
+                            <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                            @if ( User . Identity . IsAuthenticated )
+                                {
+                                <li class="nav-item">
+                                        <a class="dropdown-item  text-dark" asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Hosting" asp-action="Index">Hosting</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Listing" asp-action="Index">Become A Host </a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                    {
+                                    <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item  smallTxt" asp-controller="Admin" asp-action="Index">Manage</a>
+                                    </li>
+                                    }
+                                     <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="dropdown-item form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="dropdown-item nav-link btn btn-link text-dark">Logout</button>
+                                    </form>
+                                </li>
+                                }
+                            else
+                                {
+                                <li><a class="dropdown-item  fw-semibold smallTxt" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
+                                <li><a class="dropdown-item  smallTxt" asp-area="Identity" asp-page="/Account/Register">Sign Up</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item whereItem smallTxt" href="">Airbnb your home</a></li>
-                                <li><a class="dropdown-item whereItem smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                                <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                                <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                                }
                             </ul>
-                        </button>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </nav>
@@ -156,7 +204,7 @@
     <section>
         <div class="container py-4">
             <div>
-                <h3>@Model.Title</h3>
+                <h3>@Model.property.Title</h3>
             </div>
             <div class="d-flex justify-content-between">
                 <div class="">
@@ -206,15 +254,15 @@
                 </div>
                 <div class="col-lg-6 h-100">
                     <div class="row g-2">
-                        @foreach (var img in Model.PropertyImages)
-                        {
-                            if (img.URL == ViewBag.PropertyLgImg) { continue; }
+                        @foreach ( var img in Model . property . PropertyImages )
+                            {
+                            if ( img . URL == ViewBag . PropertyLgImg ) { continue; }
                             <div class="col-lg-6" style="aspect-ratio: 1.5/1;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
                                     <img src="~/Services/sample properties images/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
                                 </a>
                             </div>
-                        }
+                            }
                     </div>
                 </div>
             </div>
@@ -229,10 +277,10 @@
                     </div>
                     <div class="modal-body">
                         <div class="text-center">
-                            @foreach (var img in Model.PropertyImages)
-                            {
+                            @foreach ( var img in Model . property . PropertyImages )
+                                {
                                 <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem" />
-                            }
+                                }
                         </div>
                     </div>
                 </div>
@@ -241,22 +289,22 @@
     </section>
     <!-- Property Host & Property Info Section -->
     <section class="container">
-        <div class="row g-1 my-5 mx-0 border-bottom">
+        <div class="row g-1 my-5 mx-0 border-bottom d-flex">
             <!-- Host Name & Img -->
-            <div class="col-lg-7">
-                <div class="row pb-4 ms-0 border-bottom">
+            <div class="col-lg-6">
+                <div class="row pb-4 ms-0 me-2 border-bottom">
                     <div class="col-lg-11 ps-0">
                         <h4>
                             <span>@ViewBag.PropertyCatagory</span> hosted by <span>@ViewBag.PropertyUserName</span>
                         </h4>
                         <ul class="list-group list-group-horizontal">
-                            <li type="none"><span id="NOGuests">@Model.Capacity</span> guests</li>
+                            <li type="none"><span id="NOGuests">@Model.property.Capacity</span> guests</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBedRooms</span> bedrooms</li>
+                            <li type="none"><span>@Model.property.NumberOfBedRooms</span> bedrooms</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBeds</span> beds</li>
+                            <li type="none"><span>@Model.property.NumberOfBeds</span> beds</li>
                             <span class="ms-1 me-1">.</span>
-                            <li type="none"><span>@Model.NumberOfBathRooms</span> baths</li>
+                            <li type="none"><span>@Model.property.NumberOfBathRooms</span> baths</li>
                         </ul>
                     </div>
                     <div class="col-lg-1">
@@ -268,11 +316,11 @@
                 </div>
                 <!-- ------------------------------------------------------------End -->
                 <!-- AirBNB Cover -->
-                <div class="row mt-4 pb-4 ms-0 border-bottom">
+                <div class="  py-4 ms-0 border-bottom">
                     <div class="ps-0">
                         <img src="~/PropertDetails/Resources/AirBnbCover.webp" alt="AirCover" style="height: 26px;">
                     </div>
-                    <div class="mt-4 ps-0">
+                    <div class="my-3 ps-0">
                         Every booking includes free protection from Host cancellations, listing inaccuracies, and other
                         issues like trouble checking in.
                     </div>
@@ -352,7 +400,7 @@
                 <!-- Description -->
                 <div class="row mt-4 pb-4 ms-0 border-bottom">
                     <div class="ps-0">
-                        @Model.Description
+                        @Model.property.Description
                     </div>
                     <a href="" class="mt-3 ps-0 fs-6 text-dark fw-semibold" data-bs-toggle="modal"
                        data-bs-target="#DescripModal">
@@ -373,7 +421,7 @@
                                 <div class="ms-2">
                                     <h3 class="fw-bold">About this space</h3>
                                     <div class="mt-4">
-                                        @Model.Description
+                                        @Model.property.Description
                                     </div>
                                 </div>
                             </div>
@@ -389,215 +437,188 @@
                     <div class="d-flex ps-0 mt-3">
                         <div class="me-5">
                             <div class="row ps-0">
-                                @foreach (var ament in Model.Amentios)
-                                {
+                                @foreach ( var ament in Model . property . Amentios )
+                                    {
                                     <div class="col-6 mt-2">
                                         <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
                                         <span class="ms-2">@ament.Name</span>
                                     </div>
-                                }
+                                    }
                             </div>
                         </div>
                     </div>
-                    @*<span class="ps-0 mt-2">
-                    <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
-                    data-bs-target="#offerModal">Show all 14 amenities</a>
-                    </span>*@
                 </div>
-                @*<!-- What place offer Modal -->
-                <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
-                <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div class="ms-2">
-                <h5>What this place offers</h5>
-                <ul class="mt-3 ps-0" type="none">
-                @foreach (var ament in Model.Amentios)
-                {
-                <li class="mt-2">
-                <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
-                <span class="ms-2">@ament.Name</span>
-                </li>
-                }
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                <!-- ------------------------------------------------------------End -->*@
             </div>
             <!-- Reserve Floating Card -->
-            <div class="col-lg-5">
-                <div class="ReserveFloatCard mb-5">
-                    <div class="d-flex justify-content-end ms-5">
-                        <a name="Floating Card">
-                            <div class="border rounded-4 shadow-lg p-4" style="width: 30rem;">
-                                <div class="d-flex justify-content-between align-items-center">
+            <div class="col-lg-6 ">
+                <form>
+                    <div class="ReserveFloatCard py-3">
+                        <div class="d-flex justify-content-center  ms-5">
+                            <a name="Floating Card">
+                                <div class="border rounded-4 shadow-lg p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fs-6"><span class="fs-5 fw-bold">EGP @Model.property.Price</span> night</span>
+                                        </div>
+                                        <div class="d-flex align-items-center fs-6 fw-semibold ms-5">
+                                            <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 0.8rem;">
+                                            <span class="ms-1 me-1">@ViewBag.reviewRatings</span>.
+                                            <a href="#" class="ms-1 me-1 text-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal"><span>@ViewBag.reviewRatingsCount reviews</span> </a>
+                                        </div>
+                                    </div>
+                                    <div class="border rounded-5 mt-4 p-3">
+                                        <!-- Check in & Check Out -->
+                                        <div class="d-flex ">
+                                            <div class="fw-semibold">
+                                                <div>Check-in</div>
+                                                <div class="input-group">
+                                                    <input asp-for="reservation.CheckIn" name="reservation.CheckIn" type="text" autocomplete="off" value="" class="form-control rounded datepicker" id="check_in">
+                                                    <input type="hidden" asp-for="property.ID" />
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-th"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ms-2">
+                                                <div class="fw-semibold">Check-out</div>
+                                                <div class="input-group">
+                                                    <input asp-for="reservation.CheckOut" type="text" autocomplete="off" value="" class="form-control rounded datepicker" id="check_out">
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-th"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Number of Guests -->
+                                        <div class="d-flex align-items-center mt-3">
+                                            <div class="fw-semibold">Guests</div>
+                                            <div class="d-flex me-5">
+                                                <div id="increment-count" class="d-flex align-items-center">
+                                                    <img onclick="handleIncrement()" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span id="total-count" class="fs-5 fw-semibold me-2" ></span>
+                                                    <span id="guest-word">guest</span>
+                                                    <input id="guests" value="3"   name="reservation.NOfGuests" hidden  asp-for="reservation.NOfGuests"  />
+                                                </div>
+                                                <div id="decrement-count" class="d-flex align-items-center">
+                                                    <img onclick="handleDecrement()" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                                </div>
+                                            </div>
+                                            <div class="ms-5">
+                                                <button type="button" class="border-0 bg-white text-decoration-underline" 
+                                                        id="ClearBtn">
+                                                    Clear
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div>
-                                        <span class="fs-6"><span class="fs-5 fw-bold">$@Model.Price</span> night</span>
+                                        <button type="button" asp-action="Index" asp-controller="payment" onclick="GeustNum()" class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
+                                            Check availability
+                                        </button>
                                     </div>
-                                    <div class="d-flex align-items-center fs-6 fw-semibold ms-5">
-                                        <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 0.8rem;">
-                                        <span class="ms-1 me-1">@ViewBag.reviewRatings</span>.
-                                        <a href="#" class="ms-1 me-1 text-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal"><span>@ViewBag.reviewRatingsCount reviews</span> </a>
-                                    </div>
-                                </div>
-                                <div class="border rounded-5 mt-4 p-3">
-                                    <!-- Check in & Check Out -->
-                                    <div class="d-flex ">
-                                        <div class="fw-semibold">
-                                            <div>Check-in</div>
-                                            <div class="input-group date" data-provide="datepicker">
-                                                <input type="text" class="form-control rounded" id="CheckIn_Input"
-                                                       onchange="ReserveBtn(event)">
-                                                <div class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-th"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ms-2">
-                                            <div class="fw-semibold">Check-out</div>
-                                            <div class="input-group date" data-provide="datepicker">
-                                                <input type="text" class="form-control rounded" id="CheckIn_Output"
-                                                       onchange="CheckOutChange(event)">
-                                                <div class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-th"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Number of Guests -->
-                                    <div class="d-flex align-items-center mt-3">
-                                        <div class="fw-semibold">Guests</div>
-                                        <div class="d-flex me-5">
-                                            <div id="increment-count" class="d-flex align-items-center">
-                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <span id="total-count" class="fs-5 fw-semibold me-2"></span><span id="guest-word">guest</span>
-                                            </div>
-                                            <div id="decrement-count" class="d-flex align-items-center">
-                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
-                                            </div>
-                                        </div>
-                                        <div class="ms-5">
-                                            <button class="border-0 bg-white text-decoration-underline"
-                                                    id="ClearBtn">
-                                                Clear
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn-lg rounded-5 fs-6 fw-semibold w-100 mt-3" id="reserve-btn">
-                                        Check
-                                        availability
-                                    </button>
-                                </div>
-                                <div class="text-center text-secondary mt-3 d-none" id="notChargeYetDiv"> You won't be charged yet</div>
-                            </div>
-                        </a>
+                </form>
+                <div class="text-center text-secondary mt-3 d-none" id="notChargeYetDiv"> You won't be charged yet</div>
+            </div>
+            </a>
+        </div>
+        <div class="d-flex justify-content-center ms-5 my-3">
+            <div class="me-2 ">
+                <img src="~/PropertDetails/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
+            </div>
+            <div>
+                <a data-bs-toggle="modal" href="#ReportModalToggle" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+            </div>
+        </div>
+        </div>
+        <!-- end card-->
+        <div class="modal fade" id="ReportModalToggle" aria-hidden="true"
+             aria-labelledby="ReportModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                     </div>
-                    <div class="d-flex justify-content-center ms-5 mt-3" style="width: 30rem;">
-                        <div class="me-2">
-                            <img src="~/PropertDetails/Resources/flag-icon-png-18.jpg" alt="flag" id="flag-icon">
-                        </div>
+                    <div class="modal-body">
                         <div>
-                            <a data-bs-toggle="modal" href="#ReportModalToggle" class="text-secondary fs-6 fw-semibold">Report this listing</a>
+                            <h4 class="fw-bold">Why are you reporting this listing?</h4>
+                            <div>This won't be shared with the Host.</div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="ReportModalToggle" aria-hidden="true"
-                     aria-labelledby="ReportModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                        <div class="mt-4">
+                            <div class="form-check py-3 border-bottom">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault1" onchange="radio()">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    It's inaccurate or incorrect
+                                </label>
                             </div>
-                            <div class="modal-body">
-                                <div>
-                                    <h4 class="fw-bold">Why are you reporting this listing?</h4>
-                                    <div>This won't be shared with the Host.</div>
-                                </div>
-                                <div class="mt-4">
-                                    <div class="form-check py-3 border-bottom">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                               id="flexRadioDefault1" onchange="radio()">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            It's inaccurate or incorrect
-                                        </label>
-                                    </div>
-                                    <div class="form-check mt-2 py-3 border-bottom">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                               id="flexRadioDefault2" onchange="radio()">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            It's not a real place to stay
-                                        </label>
-                                    </div>
-                                    <div class="form-check mt-2 py-3 border-bottom">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                               id="flexRadioDefault3" onchange="radio()">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            It's a scam
-                                        </label>
-                                    </div>
-                                    <div class="form-check mt-2 py-3 border-bottom">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                               id="flexRadioDefault4" onchange="radio()">
-                                        <label class="form-check-label" for="flexRadioDefault4">
-                                            It's offensive
-                                        </label>
-                                    </div>
-                                    <div class="form-check mt-2 py-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                               id="flexRadioDefault5" onchange="radio()">
-                                        <label class="form-check-label" for="flexRadioDefault5">
-                                            It's something else
-                                        </label>
-                                    </div>
-                                </div>
+                            <div class="form-check mt-2 py-3 border-bottom">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" onchange="radio()">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    It's not a real place to stay
+                                </label>
                             </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-danger" data-bs-target="#ReportModalToggle2"
-                                        data-bs-toggle="modal" id="ReportBtn" disabled>
-                                    Report
-                                </button>
+                            <div class="form-check mt-2 py-3 border-bottom">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault3" onchange="radio()">
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    It's a scam
+                                </label>
+                            </div>
+                            <div class="form-check mt-2 py-3 border-bottom">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault4" onchange="radio()">
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    It's offensive
+                                </label>
+                            </div>
+                            <div class="form-check mt-2 py-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault5" onchange="radio()">
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    It's something else
+                                </label>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal fade" id="ReportModalToggle2" aria-hidden="true"
-                     aria-labelledby="ReportModalToggleLabel2" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h4 class="fw-bold">We got your report</h4>
-                                <div class="mt-2">
-                                    Thanks for taking the time to let us know what's going on. Reports like yours help
-                                    keep the Airbnb community safe and secure.
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-lg btn-primary" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close">
-                                    Ok
-                                </button>
-                            </div>
-                        </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-bs-target="#ReportModalToggle2"
+                                data-bs-toggle="modal" id="ReportBtn" disabled>
+                            Report
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="modal fade" id="ReportModalToggle2" aria-hidden="true"
+             aria-labelledby="ReportModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="fw-bold">We got your report</h4>
+                        <div class="mt-2">
+                            Thanks for taking the time to let us know what's going on. Reports like yours help
+                            keep the Airbnb community safe and secure.
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-lg btn-primary" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close">
+                            Ok
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
         </div>
         <!-- ------------------------------------------------------------End -->
     </section>
@@ -610,96 +631,21 @@
                     <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1rem;">
                     <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
                 </div>
-                <!-- Progress Bars -->
-                <div class="row mt-4">
-                    <div class="col-5">
-                        <!-- Left -->
-                        <div class="row me-5 mb-2">
-                            <div class="col-4">Cleanliness</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">5.0</div>
-                            </div>
-                        </div>
-                        <div class="row me-5 mb-2">
-                            <div class="col-4">Communication</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">5.0</div>
-                            </div>
-                        </div>
-                        <div class="row me-5">
-                            <div class="col-4">Check-in</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">5.0</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1"></div>
-                    <!-- Right -->
-                    <div class="col-5">
-                        <div class="row me-5 mb-2">
-                            <div class="col-4">Accuracy</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">5.0</div>
-                            </div>
-                        </div>
-                        <div class="row me-5 mb-2">
-                            <div class="col-4">Location</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">4.8</div>
-                            </div>
-                        </div>
-                        <div class="row me-5">
-                            <div class="col-4">Value</div>
-                            <div class="col-3"></div>
-                            <div class="col-5 row">
-                                <div class="progress bg-dark col-10 d-flex align-self-center" role="progressbar"
-                                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 0.25rem;">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="col-2 rating-tiny-numbers">5.0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Users Reviews -->
-                <div class="row mt-5">
-                    @foreach (var review in Model.Reviews)
-                    {
-                        if (ReviewCount == 6)
+                <div class="row my-2">
+                    @foreach ( var review in Model . property . Reviews )
                         {
+                        if ( ReviewCount == 6 )
+                            {
                             break;
-                        }
+                            }
                         <div class="col-6">
                             <div class="mt-5">
                                 <div class="d-flex">
                                     <div>
                                         <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
-                                         style="width: 40px; height: 40px;" alt="user">
+                                             style="width: 40px; height: 40px;" alt="user">
                                     </div>
                                     <div class="ms-3">
                                         <div class="fw-semibold">@review.User.First_Name</div>
@@ -712,16 +658,16 @@
                                 <a href="" class="text-dark fw-semibold mt-2">
                                     Show more
                                     <img src="~/PropertDetails/Resources/rightArrow.png" alt="rightArrow" style="width: 1.1rem;"
-                                     class="ms-1">
+                                         class="ms-1">
                                 </a>
                             </div>
                         </div>
                         ReviewCount++;
-                    }
+                        }
                 </div>
                 <div class="ms-0 ps-0 mt-4">
                     <a class="btn btn-outline-dark btn-lg fs-6 fw-semibold" data-bs-toggle="modal"
-                       data-bs-target="#reviewModal">Show all 12 reviews</a>
+                       data-bs-target="#reviewModal">Show all @ViewBag.reviewRatingsCount reviews</a>
                 </div>
             </div>
             <!-- Review Modal -->
@@ -735,100 +681,26 @@
                         <div class="modal-body">
                             <div class="ms-2 row">
                                 <!-- left -->
-                                <div class="col-5">
-                                    <div class="position-fixed" style="width: 30rem;">
+                                <div class="">
+                                    <div class="">
                                         <!-- Rating -->
                                         <div class="d-flex align-items-center fs-2 fw-bold">
                                             <img src="~/PropertDetails/Resources/star.png" alt="star" style="width: 1.4rem;">
                                             <span class="ms-2 me-2">@ViewBag.reviewRatings</span>·<span class="ms-2 me-2">@ViewBag.reviewRatingsCount</span>reviews
                                         </div>
-                                        <!-- Progress Bars -->
-                                        <div class="mt-4">
-                                            <div class="row me-0 mb-2">
-                                                <div class="col-4">Cleanliness</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
-                                                </div>
-                                            </div>
-                                            <div class="row me-0 mb-2">
-                                                <div class="col-4">Communication</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
-                                                </div>
-                                            </div>
-                                            <div class="row me-0 mb-2">
-                                                <div class="col-4">Check-in</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
-                                                </div>
-                                            </div>
-                                            <div class="row me-0 mb-2">
-                                                <div class="col-4">Accuracy</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
-                                                </div>
-                                            </div>
-                                            <div class="row me-0 mb-2">
-                                                <div class="col-4">Location</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">4.8</div>
-                                                </div>
-                                            </div>
-                                            <div class="row me-0">
-                                                <div class="col-4">Value</div>
-                                                <div class="col-3"></div>
-                                                <div class="col-5 row">
-                                                    <div class="progress bg-dark col-8 d-flex align-self-center"
-                                                         role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                         aria-valuemax="100" style="height: 0.25rem;">
-                                                        <div class="progress-bar"></div>
-                                                    </div>
-                                                    <div class="col-4 rating-tiny-numbers">5.0</div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
-                                <div class="col-1"></div>
+
                                 <!-- Right  -->
-                                <div class="col-6 mt-2 mb-2">
-                                    @foreach (var review in Model.Reviews)
-                                    {
+                                <div class="mt-2 mb-2">
+                                    @foreach ( var review in Model . property . Reviews )
+                                        {
                                         <div class="row mt-5">
                                             <div class="d-flex">
                                                 <div>
                                                     <img src="data:image/*;base64,@(Convert.ToBase64String(review.User.Profile_Picture))" class="rounded-circle object-fit-cover"
-                                                     style="width: 40px; height: 40px;" alt="user">
+                                                         style="width: 40px; height: 40px;" alt="user">
                                                 </div>
                                                 <div class="ms-3">
                                                     <div class="fw-semibold">@review.User.First_Name</div>
@@ -839,7 +711,8 @@
                                                 @review.Content
                                             </div>
                                         </div>
-                                    }
+                                        }
+
                                 </div>
                             </div>
                         </div>
@@ -855,7 +728,7 @@
                 <h4 class="ps-0 pb-1">
                     Where you'll be
                 </h4>
-                <div class="pb-3">@Model.Title</div>
+                <div class="pb-3">@Model.property.Title</div>
                 <div id="map" class="w-100 mb-5"></div>
             </div>
         </div>
@@ -867,7 +740,7 @@
             <div class="pb-4 border-bottom">
                 <div class="d-flex">
                     <div>
-                        <a href="">
+                        <a asp-controller="profile" asp-action="Index" asp-route-UserId="@Model.property.UserId">
                             <img src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.PropertyUserProfilePic))" class="rounded-circle object-fit-cover"
                                  style="width: 65px; height: 65px;" alt="user">
                         </a>
@@ -896,7 +769,7 @@
                             <div class="d-flex align-items-center">
                                 <img src="~/PropertDetails/Resources/shield.jpg" class="" style="width: 1.5rem;" alt="shield">
                             </div>
-                            <div class="ms-2 w-50 smallTxt">
+                            <div class="ms-2 smallTxt">
                                 <div>
                                     To protect your payment, never transfer money or communicate outside of the Airbnb
                                     website or app.
@@ -917,19 +790,19 @@
             </h4>
             <div class="row mt-4">
                 <!-- House rules -->
-                <div class="col-3">
+                <div class="col">
                     <h6>House rules</h6>
                     <div>
                         <ul type="none" class="ps-0">
-                            @foreach (var rule in Model.House_Rules)
-                            {
-                                if (RulesCount == 3)
+                            @foreach ( var rule in Model . property . House_Rules )
                                 {
+                                if ( RulesCount == 3 )
+                                    {
                                     break;
-                                }
+                                    }
                                 <li class="mt-2">@rule.Name</li>
                                 RulesCount++;
-                            }
+                                }
                             <li class="mt-4">
                                 <a href="" class="text-dark fw-semibold" data-bs-toggle="modal"
                                    data-bs-target="#RulesModal">
@@ -957,20 +830,19 @@
                                         Follow these rules to be a considerate guest and avoid any issues during your stay.
                                     </div>
                                     <ul class="mt-3 ms-3 ps-0" type="square">
-                                        @foreach (var rule in Model.House_Rules)
-                                        {
+                                        @foreach ( var rule in Model . property . House_Rules )
+                                            {
                                             <li class="fw-semibold mt-2">@rule.Name</li>
-                                        }
+                                            }
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-1"></div>
+
                 <!-- Cancellation policy -->
-                <div class="col-4">
+                <div class="col">
                     <h6>Cancellation policy</h6>
                     <div>
                         <ul type="none" class="ps-0">
@@ -1040,36 +912,26 @@
     <script src="~/PropertDetails/JavaScript.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="~/PropertDetails/JavaScript.js"></script>
- 
-    <script>
-        //weather
-        
-        var map, datasource, popup;
-        var currentConditionsUrl = 'https://{azMapsDomain}/weather/currentConditions/json?api-version=1.0&query={query}';
-        var weatherTemplate = {
-            //The title tag for the popup.
-            title: 'Current Conditions',
-            //HTML string template with placeholders for properties of the weather response.
-            content:
-                '<img class="weather-icon" src="/images/icons/weather-black/{iconCode}.png"/>' +
-                '<div class="weather-content">' +
-                '<div class="weather-temp">{temperature/value}&#176;</div>' +
-                'RealFeel®: {realFeelTemperature/value}&#176;C' +
-                '<div class="weather-phrase">{phrase}</div>' +
-                'Humidity: {relativeHumidity}&#37</div>',
-            //Format numbers with two decimal places.
-            numberFormat: {
-                maximumFractionDigits: 2
-            },
-            //Since we trust the data being retrieve, don't sandbox the content so that we can use CSS classes.
-            sandboxContent: false
-        };
 
+
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap 4 JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <script type="text/javascript">
         ////////////////////////
 
         function GetMap() {
-            map = new atlas.Map('map', {
-                center: [29.906334322129908, 31.19323103089259],
+            var map = new atlas.Map('map', {
+                //center: [Model.property.Cordinates.Y, Model.property.Cordinates.X],
                 zoom: 8,
                 view: 'Auto',
                 authOptions: {
@@ -1082,6 +944,8 @@
                 }
             });
 
+
+
             //Wait until the map resources are ready.
             map.events.add('ready', function () {
                 map.setStyle({
@@ -1091,105 +955,62 @@
                     style: "blue"
                 });
                 //Create a data source and add it to the map.
-                datasource = new atlas.source.DataSource();
-                map.sources.add(datasource);
+
+                var dataSource = new atlas.source.DataSource();
+                map.sources.add(dataSource);
+                //var point = new atlas.Shape(new atlas.data.Point([Model.property.Cordinates.Y, Model.property.Cordinates.X]));
+                //Add the symbol to the data source.
+                dataSource.add([point]);
+                map.layers.add(new atlas.layer.SymbolLayer(dataSource, null));
                 //Create a popup but leave it closed so we can update it and display it later.
-                popup = new atlas.Popup();
-                //Add a click event to the map.
-                map.events.add('click', getWeatherForPoint);
+
             });
-
-            map.events.add('click', function (e) {
-                var latt = document.getElementById('lat').value = e.position[1];
-                var lonn = document.getElementById('lon').value = e.position[0];
-
-                const api_key = "q2XSYj3iqbbuE6Vohdah_dzaPinj1cCtSMUdl9GnJFs";
-
-                const url = `https://atlas.microsoft.com/search/address/reverse/json?subscription-key=${api_key}&api-version=1.0&query=${latt},${lonn}`;
-                // $.get({ url: `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latt},${lonn}&sensor=false`, success(data) {
-                //     console.log(data.results[0]);
-                // }});
-                fetch(url)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data.addresses[0].address)
-                        if (data.addresses[0].address.country == "Egypt" || data.addresses[0].address.country == "egypt")
-                            document.getElementById("addr").value = data.addresses[0].address.municipalitySubdivision + ' , ' + data.addresses[0].address.countrySubdivision;
-                        else
-                            document.getElementById("addr").value = "place must be inside egypt";
-                    })
-                    .catch(error => console.log(error));
-            });
-
 
         }
-        window.GetMap = GetMap;
-        function updateLanguage() {
-            var langOptions = document.getElementById('langOptions');
-            var lang = langOptions.options[langOptions.selectedIndex].value;
-            //Update the language of the map instance.
-            map.setStyle({
-                language: lang,
-            });
-        }
 
-        //weather functions
-        function getWeatherForPoint(e) {
-            //Close the popup if it is open.
-            popup.close();
+        ////////////////////////////////
+        var datesForDisable = [@foreach ( var item in Model . property . UnavailableDays )
+            {
+            @:'@item.UnavailableDay?.ToShortDateString()',
+            }]
 
-            //Request the current conditions weather data and show it in the pop up.
-            var requestUrl = currentConditionsUrl.replace('{query}', e.position[1] + ',' + e.position[0]);
+        $('#check_in').datepicker({
+            format: 'mm-dd-yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            datesDisabled: datesForDisable,
+            startDate: new Date()
+        }).on('changeDate', function (selected) {
+            var minDate = new Date(selected.date.valueOf());
+            minDate.setDate(minDate.getDate() + 1);
+            if (datesForDisable.filter(function (item) { return new Date(item) > new Date(selected.date.valueOf()) }).length > 0) {
+                var maxDate = datesForDisable.filter(function (item) { return new Date(item) > new Date(selected.date.valueOf()) })[0];
+                $('#check_out').datepicker('setEndDate', maxDate);
+            }
+            else {
+                $('#check_out').datepicker('setEndDate', Infinity);
+            }
+            $('#check_out').datepicker('setStartDate', minDate);
+            $('#check_out').datepicker('setDate', null);
+            $('#check_out').datepicker('setDatesDisabled', datesForDisable);
 
-            processRequest(requestUrl).then(response => {
-                var content;
+        });
 
-                if (response && response.results && response.results[0]) {
-                    //Use the weatherTemplate settings to create templated content for the popup.
-                    content = atlas.PopupTemplate.applyTemplate(response.results[0], weatherTemplate);
-                } else {
-                    content = '<div style="padding:10px;">Weather data not available for this location.</div>';
-                }
+        $('#check_out').datepicker().on('change', function (selected) {
+            if (document.getElementById("check_out").value.trim() != '')
+                ReserveBtn();
+        })
+                                            //function GetDate() {
+                                            //    $('#check_out').datepicker({
+                                            //        'update':'',
+                                            //        format: 'mm-dd-yyyy',
+                                            //        autoclose: true,
 
-                popup.setOptions({
-                    content: content,
-                    position: e.position
-                });
-
-                popup.open(map);
-            });
-        }
-
-        function processRequest(url) {
-            //This is a reusable function that sets the Azure Maps platform domain, sings the request, and makes use of any transformRequest set on the map.
-            return new Promise((resolve, reject) => {
-                //Replace the domain placeholder to ensure the same Azure Maps cloud is used throughout the app.
-                url = url.replace('{azMapsDomain}', atlas.getDomain());
-
-                //Get the authentication details from the map for use in the request.
-                var requestParams = map.authentication.signRequest({ url: url });
-
-                //Transform the request.
-                var transform = map.getServiceOptions().tranformRequest;
-                if (transform) {
-                    requestParams = transform(url);
-                }
-
-                fetch(requestParams.url, {
-                    method: 'GET',
-                    mode: 'cors',
-                    headers: new Headers(requestParams.headers)
-                })
-                    .then(r => r.json(), e => reject(e))
-                    .then(r => {
-                        resolve(r);
-                    }, e => reject(e));
-            });
-        }
-        /////////////////////////////////////////////////////////////////////////////////////
-
+                                            //        todayHighlight: true,
+                                            //        datesDisabled: datesForDisable
+                                            //        //startDate: new Date(document.getElementById("check_in").value)
+                                            //    });
+                                            //    }
     </script>
 </body>
-
-
 </html>

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using AirBNB.Data;
+using AirBNB . Data . Migrations;
 using AirBNB.Models;
+using Microsoft . AspNetCore . Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +11,7 @@ using NetTopologySuite.Geometries;
 
 namespace AirBNB.Controllers
 {
+
     public class CreatePropertyViewModel
     {
         public int NumberOfBedRooms { get; set; } = 1;
@@ -34,6 +37,7 @@ namespace AirBNB.Controllers
         public Coordinate coordinate { get; set; }
 
     }
+    [Authorize ( Roles = "User" )]
     public class ListingController : Controller
     {
         private readonly ApplicationDbContext _db;

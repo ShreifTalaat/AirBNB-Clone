@@ -156,7 +156,7 @@ namespace AirBNB.Areas.Identity.Pages.Account
                     using (var datastream = new MemoryStream())
                     {
                         await file.CopyToAsync(datastream);
-                        user.Profile_Picture =resize.ResizeImage(datastream.ToArray(),600,600);
+                        user.Profile_Picture =resize.ResizeImage(datastream.ToArray(),300,300);
                         //user.Profile_Picture = datastream.ToArray();
                     }
                     await _userManager.UpdateAsync(user);

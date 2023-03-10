@@ -21,26 +21,30 @@ const guestWordSearch = document.getElementById("guest-word-search");
 // Select total count
 const totalCount = document.getElementById("total-count");
 const totalCountSearch = document.getElementById("total-count-search");
-
 // Variable to track count
 var count = 1;
 var countSearch = 0;
-
 // Display initial count value
 totalCount.innerHTML = count;
 totalCountSearch.innerHTML = countSearch;
+//pass guest to payment
+function GeustNum() {
+    let guest = document.getElementById("guests");
+    guest.value = totalCount.innerText;
 
+}
 // Function to increment count
-const handleIncrement = () => {
+function handleIncrement() {
     if (count < numberOfGuests) {
         count++;
         totalCount.innerText = count;
-        guestWord.innerText = "guests"
+        guestWord.innerText = "guests";
+        console.log(count);
     }
 };
 
 // Function to decrement count
-const handleDecrement = () => {
+function  handleDecrement() {
     if (count >= 2) {
         count--;
         if (count == 1) {
@@ -52,10 +56,14 @@ const handleDecrement = () => {
 
 
 // Add click event to buttons
-incrementCount.addEventListener("click", handleIncrement);
-decrementCount.addEventListener("click", handleDecrement);
+/*incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);*/
 
 //Map
+//weather
+
+
+        /////////////////////////////////////////////////////////////////////////////////////
 // Initialize and add the map
 //function initMap() {
 //    map = new atlas.Map('map', {
@@ -99,6 +107,7 @@ incrementCountSearch.addEventListener("click", () => {
     }
     else { guestWordSearch.innerText = "guests" }
     whoText.innerText = totalCountSearch.innerText + " " + guestWordSearch.innerText;
+    whoinput.value = totalCountSearch.innerText;
     whoText.classList.add("fs-6", "fw-semibold");
     xBtnWho.classList.remove("d-none");
     xBtnWho.classList.add("d-block");
@@ -111,6 +120,7 @@ decrementCountSearch.addEventListener("click", () => {
         }
         totalCountSearch.innerText = countSearch;
         whoText.innerText = totalCountSearch.innerText + " " + guestWordSearch.innerText;
+        whoinput.value = totalCountSearch.innerText;
         whoText.classList.add("fs-6", "fw-semibold");
     }
 });
@@ -135,7 +145,8 @@ let whereText = document.querySelector(".WhereText");
 let dropdownMenu = document.querySelector(".dropdown-menu");
 for (const item of whereItems) {
     item.addEventListener("click", () => {
-        whereText.innerText = item.innerText;
+        whereText.value = item.innerText;
+
         whereText.classList.add("fs-6", "fw-semibold");
         xBtnWhere.classList.remove("d-none");
         xBtnWhere.classList.add("d-block");
@@ -146,6 +157,7 @@ for (const item of whereItems) {
 let xBtnWhere = document.getElementById("xBtnWhere");
 xBtnWhere.addEventListener("click", () => {
     whereText.innerText = "Search Destinations"
+    whereText.value = "";
     whereText.classList.remove("fs-6", "fw-semibold");
     xBtnWhere.classList.remove("d-block");
     xBtnWhere.classList.add("d-none");
@@ -153,13 +165,13 @@ xBtnWhere.addEventListener("click", () => {
 
 //X Button Date
 let xBtnDate = document.getElementById("xBtnDate");
-let DateInput = document.getElementById("DateInput");
+let PriceInput = document.getElementById("PriceInput");
 function handler(e) {
     xBtnDate.classList.remove("d-none");
     xBtnDate.classList.add("d-block");
 }
 xBtnDate.addEventListener("click", () => {
-    $("input[type=text]").val("");
+    PriceInput.value = "";
     xBtnDate.classList.add("d-none")
 })
 
@@ -169,6 +181,7 @@ xBtnWho.addEventListener("click", () => {
     whoText.innerText = "Add Guests"
     whoText.classList.remove("fs-6", "fw-semibold");
     totalCountSearch.innerText = "0";
+    whoinput.value = "";
     guestWordSearch.innerText = "guest"
     xBtnWho.classList.remove("d-block");
     xBtnWho.classList.add("d-none");
@@ -204,11 +217,13 @@ ClearBtn.addEventListener("click", () => {
 var CheckIn_Input = document.getElementById("CheckIn_Input");
 var reserve_btn = document.getElementById("reserve-btn");
 var notChargeYetDiv = document.getElementById("notChargeYetDiv");
-function ReserveBtn(e) {
-    reserve_btn.innerText = "Reserve"
-    reserve_btn.type = "submit"
-    notChargeYetDiv.classList.remove("d-none");
-    notChargeYetDiv.classList.add("d-block");
+function ReserveBtn() {
+    if (document.getElementById("check_out").value.trim()!='') {
+        reserve_btn.innerText = "Reserve"
+        reserve_btn.type = "submit"
+        notChargeYetDiv.classList.remove("d-none");
+        notChargeYetDiv.classList.add("d-block");
+    }
 }
 
 //CheckIn_Output
@@ -219,6 +234,7 @@ function CheckOutChange(e) {
     CancellationText.innerText = "Free cancellation for 48 hours."
     CancellationAddDatesBtn.classList.remove("d-block");
     CancellationAddDatesBtn.classList.add("d-none");
+
 }
 
 //ReportBtn
@@ -228,6 +244,27 @@ var ReportBtn = document.getElementById("ReportBtn");
 function radio() {
     ReportBtn.disabled = false;
 }
+
+//Search Handling
+var search_btn = document.getElementById("search-btn");
+search_btn.addEventListener("click", (event) => {
+    if (whoinput.value == "" && whereText.value == "" && PriceInput.value == "") {
+        alert("Pleaze Enter data to search");
+        event.stopImmediatePropagation();
+        search_btn.type = "button";
+    }
+    else if (PriceInput.value < 0) {
+        alert("Invalid Price !");
+        event.stopImmediatePropagation();
+        PriceInput.value = "";
+        search_btn.type = "button";
+    }
+    else {
+        search_btn.type = "submit"
+    }
+})
+
+
 
 
 
