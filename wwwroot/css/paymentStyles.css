@@ -70,3 +70,8 @@ input::-webkit-inner-spin-button {
     font-size: 12px !important
 }
 
+.airBnbButton {
+    color: white !important;
+    background-color: #F32B57 !important;
+    border-color: #F32B57 !important;
+}

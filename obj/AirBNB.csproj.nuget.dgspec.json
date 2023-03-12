@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {}
+    "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj": {
+    "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
+        "projectUniqueName": "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\AirBNB.csproj",
+        "projectPath": "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj",
         "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kimo Store\\source\\Git-Clone\\obj\\",
+        "outputPath": "C:\\Users\\Kimo Store\\Git-Clone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
