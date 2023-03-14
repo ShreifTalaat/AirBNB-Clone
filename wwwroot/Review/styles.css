@@ -20,9 +20,10 @@ div.stars {
 
 input.star { display: none; }
 
-.air-logo {
-    color: #fd0b0b;
-    font-size: 35px;
+
+.fa-airbnb:before {
+    color: #fd0b0b !important;
+    font-size: 35px !important;
 }
 
 label.star {

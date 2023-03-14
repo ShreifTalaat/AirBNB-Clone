@@ -39,9 +39,11 @@
         <div class="container   d-flex flex-nowrap justify-content-between ">
             <!-- Start Logo -->
             <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
-            <div class="d-flex align-items-center">
-                <i class="fa-brands fa-airbnb air-logo"></i>
-            </div></a>
+                <div class="d-flex align-items-center">
+                    <i style=" color: #fd0b0b;
+                        font-size: 35px;" class="fa-brands fa-airbnb air-logo"></i>
+                </div>
+            </a>
             <!-- End Logo -->
             <!-- Start Search -->
             <div class="d-flex align-items-center ">
@@ -75,7 +77,7 @@
                 <div class="class=" dropdown"">
                     <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
                         <li class="nav-item">
-                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                            <a class="smallTxt dropdown-item"  asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
                         </li>
                         <li>
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -137,7 +139,7 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active text-black" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Checking Out</button>
                 <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Currently hosting</button>
-                <button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Arriving soon</button>
+                <button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Last checkout</button>
                 <button class="nav-link text-black" id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="false">Upcoming</button>
             </div>
         </nav>  
@@ -168,7 +170,7 @@
                                 <th scope="col">CHECK IN</th>
                                 <th scope="col">CHECK OUT</th>
                                 <th scope="col">DATE</th>
-                                <th scope="col">GUESTUS NUMBER</th>
+                                <th scope="col">GUESTES NUMBER</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -188,7 +190,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>
@@ -268,7 +270,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>
@@ -346,7 +348,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>
@@ -426,7 +428,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>

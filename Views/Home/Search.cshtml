@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Property>
+@{
+    ViewData["Title"] = "Search Page";
+     int counter = 0;
+}
+
+<body>
+    <div style="min-height: 100vh; display: flex; flex-direction: column">
+        <!-- Start Nav -->
+       
+        <!-- End Nav -->
+        <!-- start page content -->
+        @if (Model.Count() != 0)
+        {
+            <div class="container-lg">
+                <!-- start Property cards -->
+                <!-- 1st row -->
+                <div class="mt-5">
+                    <div class="row">
+                        @foreach (var prop in Model)
+                        {
+                            if (prop.Accepted)
+                            {
+                                counter++;
+                                <div class="col-sm-6 col-lg-3 mb-4">
+                                    <a asp-action="PropertyDetails" asp-route-id="@prop.ID" ; class="text-decoration-none text-black">
+                                        <div class="card">
+                                            <div id="carouselExampleIndicator@(counter)" class="carousel slide" data-bs-interval="false">
+                                                <div class="carousel-indicators">
+
+                                                    <button type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide-to="0"
+                                                class="active"
+                                                aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                                    <button type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                                    <button type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                                    <button type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide-to="3"
+                                                aria-label="Slide 4"></button>
+                                                    <button type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide-to="4"
+                                                aria-label="Slide 5"></button>
+                                                </div>
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img class="card-img-top mb-3 rounded w-100"
+                                                 src="~/Prop.Image/Prop1/@prop.PropertyImages.First().URL"
+                                                 alt="Property image" style="aspect-ratio:1/1;" />
+                                                    </div>
+                                                    @foreach (var img in prop.PropertyImages)
+                                                    {
+                                                        if (img.URL == prop.PropertyImages.First().URL) { continue; }
+                                                        <div class="carousel-item">
+                                                            <img class="card-img-top mb-3 rounded w-100"
+                                                 src="~/Prop.Image/Prop1/@img.URL"
+                                                 alt="Property image" style="aspect-ratio:1/1;" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <button class="carousel-control-prev"
+                                            type="button"
+                                            data-bs-target="#carouselExampleIndicator@(counter)"
+                                            data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon"
+                                              aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next"
+                                            type="button"
+                                            data-bs-target="#carouselExampleIndicator@(counter)"
+                                            data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon"
+                                              aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0 d-flex">
+                                                    @prop.Region.Name , @prop.Region.City.Name
+                                                  @*  <img class="ms-auto" src="./Services/SVG/star.svg" />*@
+                                                </h5>
+                                                <p class="card-text mb-0">@prop.Title</p>
+                                                <p class="card-text mb-0">@prop.Date</p>
+                                                <p class="card-text mb-0">@prop.Price</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+
+
+                <!-- end property cards -->
+            </div>
+            <!-- end page content -->
+        }
+        else{
+            <h3>No results found </h3>
+        }
+      @*  <!-- Start footer -->
+        <div class="footer pt-4 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-group list-group-horizontal">
+                            <li type="none">© 2023 Airbnb, Inc.</li>
+                            <span class="ms-2 me-2">·</span>
+                            <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                            <li type="none">Terms</li>
+                            </a>
+                            <span class="ms-2 me-2">·</span>
+                            <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                            <li type="none">Privacy</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        <div>
+                            <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                                <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                            </a>
+                            <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                                <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                            </a>
+                            <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                                <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+     *@   @*</div>*@
+
+        <!-- End footer -->
+    </div>
+    <script src="~/script.js"></script>
+</body>
+
+

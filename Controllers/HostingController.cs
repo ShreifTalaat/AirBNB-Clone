@@ -49,10 +49,26 @@ namespace AirBNB.Controllers
             {
 
             var reserve = _dbcontext.Reservations.FirstOrDefault(r => r.Id == id);
+            var checkin = reserve.CheckIn;
+            var checkout = reserve.CheckOut;
+            var unavalableDays = (checkout - checkin).TotalDays;
+            for (int i = 0; i <= unavalableDays; i++)
+            {
 
+                _dbcontext.PropertyUnavailableDays.Remove(new PropertyUnavailableDay
+                {
+                    UnavailableDay= checkin.AddDays(i),
+                    PropertyId=reserve.PropertyId
+                 });
+                _dbcontext.SaveChanges();
+
+            }
+         
             _dbcontext.Reservations.Remove(reserve);
             _dbcontext.SaveChanges();
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = _dbcontext.Users.FirstOrDefault(a => a.Id == userid);
+            ViewBag.PropertyUserProfilePic = user.Profile_Picture;
             var reservations = _dbcontext.Reservations.Include(a => a.Property).ThenInclude(a => a.PropertyImages).Where(a => a.UserId == userid).ToList();
             return View(reservations);
             }

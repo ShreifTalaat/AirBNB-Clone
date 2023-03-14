@@ -29,11 +29,11 @@ namespace AirBNB.Controllers
 		public IActionResult Index(int id)
         {
 			TempData["propid"] = id;
-            var propertyId = (int)TempData["propid"];
+           
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var user = _db.Users.FirstOrDefault(a => a.Id == userid);
             ViewBag.PropertyUserProfilePic = user.Profile_Picture;
-            var userReviewed = _db.Reviews.Where(a => a.PropertyId == propertyId).Select(a => a.UserId).ToList();
+            var userReviewed = _db.Reviews.Where(a => a.PropertyId == id).Select(a => a.UserId).ToList();
             bool flag = userReviewed.Contains(User.FindFirstValue(ClaimTypes.NameIdentifier));
             ViewBag.flag = flag;
             return View(); 

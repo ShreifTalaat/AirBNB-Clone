@@ -55,11 +55,14 @@ namespace AirBNB . Controllers
             ViewBag . PropertyUserJoinedDate = PropertyUserName . Join_Date . Year;
             ViewBag . PropertyUserEmail = PropertyUserName . Email;
             //Property Review
-            //double? reviewRatings = db.Reviews.Where(r => r.PropertyId == Property.ID)?.Select(r => r.Rating).Average();
+            var reviewRatings = db.Reviews.Where( r => r . PropertyId == Property . ID )?.Select ( r => r . Rating ).ToList();
             var user = User . FindFirstValue ( ClaimTypes . NameIdentifier );
             if ( user != null )
                 ViewBag . UserProfilePic = db . Users . FirstOrDefault ( a => a . Id == user ) . Profile_Picture;
-            //ViewBag.reviewRatings = reviewRatings.Value.ToString("0.00");
+            if ( reviewRatings.Count>0 )
+                ViewBag . reviewRatings = reviewRatings.Average().ToString ( "0.00" );
+            else
+                ViewBag . reviewRatings = "0.00";
             int? reviewRatingsCount = db . Reviews . Where ( r => r . PropertyId == Property . ID ) . Select ( r => r . Rating ) . Count ();
             ViewBag . reviewRatingsCount = reviewRatingsCount;
 

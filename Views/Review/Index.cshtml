@@ -40,7 +40,8 @@
             <!-- Start Logo -->
             <a asp-action="Index" asp-controller="Home" class="text-decoration-none">
                 <div class="d-flex align-items-center">
-                    <i class="fa-brands fa-airbnb air-logo"></i>
+                    <i style=" color: #fd0b0b;
+                        font-size: 35px;" class="fa-brands fa-airbnb air-logo"></i>
                 </div>
             </a>
             <!-- End Logo -->
@@ -67,7 +68,7 @@
                 <div class="class=" dropdown"">
                     <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
                         <li class="nav-item">
-                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                            <a class="smallTxt dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
                         </li>
                         <li>
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">

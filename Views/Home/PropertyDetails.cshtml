@@ -249,7 +249,7 @@
             <div class="row g-2 h-100">
                 <div class="col-lg-6 h-100" style="aspect-ratio: 1.47/1; ">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
-                        <img src="~/Services/sample properties images/@ViewBag.PropertyLgImg" class="w-100 h-100 shadow-1-strong rounded-start-3" />
+                        <img src="~/Prop.Image/Prop1/@ViewBag.PropertyLgImg" class="w-100 h-100 shadow-1-strong rounded-start-3" />
                     </a>
                 </div>
                 <div class="col-lg-6 h-100">
@@ -259,7 +259,7 @@
                             if ( img . URL == ViewBag . PropertyLgImg ) { continue; }
                             <div class="col-lg-6" style="aspect-ratio: 1.5/1;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#ImgModal">
-                                    <img src="~/Services/sample properties images/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
+                                    <img src="~/Prop.Image/Prop1/@img.URL" class="w-100 h-100 shadow-1-strong rounded-top-3 rounded-start-0" />
                                 </a>
                             </div>
                             }
@@ -279,7 +279,7 @@
                         <div class="text-center">
                             @foreach ( var img in Model . property . PropertyImages )
                                 {
-                                <img src="~/Services/sample properties images/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem" />
+                                <img src="~/Prop.Image/Prop1/@img.URL" class="w-75 shadow-l rounded-4 mt-2 mb-5" style="height:35rem" />
                                 }
                         </div>
                     </div>
@@ -440,7 +440,7 @@
                                 @foreach ( var ament in Model . property . Amentios )
                                     {
                                     <div class="col-6 mt-2">
-                                        <img src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
+                                        <img style="width:45px; aspect-ratio:1/1;" src="~/PropertDetails/Resources/@ament.Icon" alt="@ament.Name">
                                         <span class="ms-2">@ament.Name</span>
                                     </div>
                                     }
@@ -507,7 +507,7 @@
                                             </div>
                                             <div class="ms-5">
                                                 <button type="button" class="border-0 bg-white text-decoration-underline" 
-                                                        id="ClearBtn">
+                                                        id="ClearBtn" hidden>
                                                     Clear
                                                 </button>
                                             </div>
@@ -763,7 +763,10 @@
                             </div>
                         </div>
                         <div class="mt-4">
-                            <a href="mailto:@ViewBag.PropertyUserEmail" class="btn btn-outline-dark btn-lg fs-6 fw-semibold">Contact Host</a>
+                            @if(User.Identity.IsAuthenticated)
+                                {
+                                 <a href="mailto:@ViewBag.PropertyUserEmail" class="btn btn-outline-dark btn-lg fs-6 fw-semibold">Contact Host</a>
+                                }
                         </div>
                         <div class="d-flex mt-4">
                             <div class="d-flex align-items-center">
@@ -931,7 +934,7 @@
 
         function GetMap() {
             var map = new atlas.Map('map', {
-                //center: [Model.property.Cordinates.Y, Model.property.Cordinates.X],
+                center: [@Model.property.Cordinates.Y, @Model.property.Cordinates.X],
                 zoom: 8,
                 view: 'Auto',
                 authOptions: {
@@ -958,7 +961,7 @@
 
                 var dataSource = new atlas.source.DataSource();
                 map.sources.add(dataSource);
-                //var point = new atlas.Shape(new atlas.data.Point([Model.property.Cordinates.Y, Model.property.Cordinates.X]));
+                var point = new atlas.Shape(new atlas.data.Point([@Model.property.Cordinates.Y, @Model.property.Cordinates.X]));
                 //Add the symbol to the data source.
                 dataSource.add([point]);
                 map.layers.add(new atlas.layer.SymbolLayer(dataSource, null));
@@ -975,7 +978,7 @@
             }]
 
         $('#check_in').datepicker({
-            format: 'mm-dd-yyyy',
+            format: 'mm/dd/yyyy',
             autoclose: true,
             todayHighlight: true,
             datesDisabled: datesForDisable,

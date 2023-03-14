@@ -72,7 +72,7 @@
                 <div class="class=" dropdown"">
                     <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
                         <li class="nav-item">
-                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                            <a class="smallTxt dropdown-item"  asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
                         </li>
                         <li>
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -135,7 +135,7 @@
         <!--start guests Details-->
         @if (Model.Count() != 0)
         {
-            <table class="table">
+            <table class="table text-center table-bordered mt-3">
                 <thead>
                    <tr>
                         <th scope="col">LISTING</th>
@@ -148,11 +148,11 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="text-center">
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td class="d-flex" style="align-items: baseline;">
+                            <td class="d-flex " style="align-items: baseline;">
                                 <div>
                                     @foreach (var img in item.PropertyImages)
                                     {
@@ -225,7 +225,6 @@
         <!-- Start footer -->
 
         </div>
-    <!-- Footer -->
     <div class="footer pt-4 pb-4">
         <div class="container">
             <div class="row">

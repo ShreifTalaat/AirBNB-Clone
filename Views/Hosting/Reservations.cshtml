@@ -71,7 +71,7 @@
                 <div class="class=" dropdown"">
                     <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
                         <li class="nav-item">
-                            <a class="smallTxt dropdown-item" href="~/Identity/Account/Manage">Profile</a>
+                            <a class="smallTxt dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
                         </li>
                         <li>
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -169,7 +169,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>
@@ -252,7 +252,7 @@
                                                 }
 
                                             </div>
-                                            <div><p class="p-2">@item.Property.Description</p></div>
+                                            <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                         </td>
@@ -339,7 +339,7 @@
                                             }
 
                                         </div>
-                                        <div><p class="p-2">@item.Property.Description</p></div>
+                                        <div><p class="p-2">@item.Property.Title</p></div>
 
 
                                     </td>

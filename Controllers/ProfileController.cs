@@ -37,7 +37,7 @@ namespace AirBNB.Controllers
             ViewBag.Loggedid = loggedid;
             //AplicationUser user =_dbcontext.Users.Include(a=>a.Properties).FirstOrDefault(a=>a.Id== UserId);
 
-            var proprities = _dbcontext.Properties.Include(a => a.PropertyImages).Include(a=>a.Catogery).Include(a => a.Reviews).Where(a=>a.UserId==UserId) .ToList();
+            var proprities = _dbcontext.Properties.Include(a => a.PropertyImages).Include(a=>a.Catogery).Include(a => a.Reviews).Where(a=>a.UserId==UserId&&a.Accepted==true).ToList();
             var userprofile = new profileViewModel
             {
                 user = _dbcontext.Users.Include(a => a.Properties).FirstOrDefault(a => a.Id == UserId),
@@ -69,7 +69,7 @@ namespace AirBNB.Controllers
 
 			ViewBag.Loggedid = loggedid;
 			AplicationUser currentuser= _dbcontext.Users.Include(a => a.Properties).FirstOrDefault(a => a.Id == user.Id);
-			var proprities = _dbcontext.Properties.Include(a => a.PropertyImages).Include(a => a.Catogery).Include(a => a.Reviews).Where(a => a.UserId == user.Id).ToList();
+			var proprities = _dbcontext.Properties.Include(a => a.PropertyImages).Include(a => a.Catogery).Include(a => a.Reviews).Where(a => a.UserId == user.Id && a.Accepted == true).ToList();
 			var userprofile = new profileViewModel
 			{
 				user = currentuser,

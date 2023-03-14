@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git-Clone\\AirBNB.csproj": {}
+    "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj": {}
   },
   "projects": {
-    "E:\\Git-Clone\\AirBNB.csproj": {
+    "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-Clone\\AirBNB.csproj",
+        "projectUniqueName": "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj",
         "projectName": "AirBNB",
-        "projectPath": "E:\\Git-Clone\\AirBNB.csproj",
-        "packagesPath": "C:\\Users\\a7med\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-Clone\\obj\\",
+        "projectPath": "C:\\Users\\Kimo Store\\Git-Clone\\AirBNB.csproj",
+        "packagesPath": "C:\\Users\\Kimo Store\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kimo Store\\Git-Clone\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\a7med\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Users\\Kimo Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
