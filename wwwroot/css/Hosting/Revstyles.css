@@ -1,6 +1,4 @@
-* {
-  font-family: Airbnb Cereal App Medium;
-}
+
 
 .text-area textarea{
   resize: none;
@@ -134,18 +132,12 @@ label.star:before {
 
 
 }
-.nav-item.active {
-  border-bottom: 2px solid #f00;
-}
+
 .nav-link{
   font-size: large;
 }
-.active{
-  border-bottom: 2px solid rgb(17, 17, 17);;
-}
-.navbar-expand-lg {
-  border-bottom: 1px solid #ddd;
-}
+
+
 .nav-body{
   margin-top: 50px;
 }

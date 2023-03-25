@@ -1,215 +1,382 @@
 ﻿@model IEnumerable<Property>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData [ "Title" ] = "Home Page";
+    int counter = 0;
+    Layout = null;
 }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5b61638241.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Homepage/styles.css" />
+    <link rel="stylesheet" href="~/PropertDetails/styles.css"/>
+@*<style>
+        #fade {
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(100, 100, 100, 0.1);
+        }
+
+        #largeSearchBar {
+            width: 0rem;
+            transition: width 0.05s;
+        }
+
+        .largeSearchBarTxt {
+            font-size: 14px;
+        }
+
+        #search-btn {
+            color: white;
+            background-color: #F32B57;
+            border-color: #F32B57;
+        }
+
+        ::placeholder {
+            color: rgb(39, 38, 38) !important;
+            font-size: 14px;
+            font-weight: bold !important;
+        }
+
+        .hoverStyle:hover {
+            background-color: rgba(100, 100, 100, 0.1);
+        }
+
+        #up-arrow, #down-arrow {
+            width: 50px;
+            height: 20px;
+        }
+
+        .Logo {
+            height: 30px;
+            width: auto;
+        }
+
+</style>*@
+    <title>Home Page</title>
+</head>
 
 <body>
-    <div style="min-height: 100vh; display: flex; flex-direction: column">
-        <!-- Start Nav -->
-        <nav class="navbar navbar-expand-lg bg-white sticky-top">
-            <!-- Start div tha t contain the items in nav -->
-            <div class="container-lg d-flex flex-row justify-content-between">
-                <!-- Start Logo -->
-                <a asp-action="Index" asp-controller="Home" class="d-flex align-items-center desktop navbar-brand">
-                    <img src="./Services/SVG/logo.svg">
-                </a>
-
-                <!-- End Logo -->
-                <!-- Start Search -->
-                <div class="d-flex align-items-center desktop">
-                    <div class="container-fluid">
-                        <a href="#"
-                           class="bg-white d-flex align-items-center justify-content-between rounded-pill navigation_btn navbar-brand">
-                            <div>Any where |</div>
-                            <div>Any Week |</div>
-                            <div>Add Guest</div>
-                            <div>
-                                <img src="./Services/SVG/Frame 2.svg" alt="search" />
-                            </div>
-                        </a>
-                        <!-- Start Filter -->
-                    </div>
-                    <a href="#" d-flex>
-                        <img src="./Services/SVG/Filter.svg"
-                             alt="filter"
-                             style="margin-top: 22px" />
+    <div id="fade"></div>
+    <!-- Navigation Bar -->
+    <section id="navBarSection" class="border-bottom">
+        <header class="py-1">
+            <nav class="navbar navbar-light flex-xl-nowrap">
+                <div class="container d-flex justify-content-between align-items-center ">
+                    <a asp-action="Index" class="navbar-brand">
+                        <img src="~/PropertDetails/Resources/logoLogo.svg" alt="logo">
                     </a>
-                </div>
-                <!-- End Filter -->
-                <!-- End Search -->
-                <!-- Start Search for small screens -->
-                <div class="mobile">
-                    <div class="container-fluid">
-                        <div href="#"
-                             class="bg-white d-flex align-items-center rounded-pill justify-content-end navigation_btn_mobile">
-                            <div class="text-end">
-                                <img src="./Services/SVG/Frame 2.svg" alt="search" />
+                    <!-- Small Search Bar -->
+                    <div class="justify-content-between" id="smallSearchBar">
+                        <button class="btn border rounded-5 d-inline-flex shadow py-2" type="submit">
+                            <div class="ps-2 me-5 align-self-center fw-semibold">
+                                Start your search
                             </div>
-                        </div>
+                            <span class="ms-4 me-4"></span>
+                            <span class="ms-5 me-4"></span>
+                            <div>
+                                <a>
+                                    <img class="Logo" src="~/PropertDetails/Resources/Frame 2Search .svg" alt="Search">
+                                </a>
+                            </div>
+                        </button>
                     </div>
-                    <div class="small-mobile">
-                        <img src="./Services/SVG/Filter.svg"
-                             alt="filter"
-                             style="margin-top: 22px" />
-                    </div>
-
-                </div>
-                <!-- Start person -->
-                <div class="small-mobile">
-                    <div class="d-flex justify-content-between align-items-center right_section_nav ">
-                        <span>
-                            <a href="#" class="navbar-brand w-25">Airbnb Your Home</a>
-                        </span>
-                        <div class="dropdown">
-                            <a href="#"
-                               id="dropdownMenuLink"
-                               data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                <img src="./Services/SVG/middle.svg" />
-                            </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink ">
-                                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Sign up</a></li>
-                                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- End person -->
-                </div>
-            </div>
-            <!-- End div tha t contain the items in nav -->
-        </nav>
-        <!-- End Nav -->
-        <!-- start page content -->
-        <div class="container-lg">
-            <!-- start Property cards -->
-            <!-- 1st row -->
-            <div class="mt-5">
-                <div class="row">
-                    @foreach (var prop in Model)
-                    {
-                        if (prop.Accepted)
-                        {
-
-
-                            <div class="col-sm-6 col-lg-3 mb-4">
-                                <a asp-action="PropertyDetails" asp-route-id="@prop.ID" class="text-decoration-none text-black">
-                                    <div class="card">
-                                        <div id="carouselExampleIndicator1" class="carousel slide" data-bs-interval="false">
-                                            <div class="carousel-indicators">
-                                                <button type="button"
-                                                data-bs-target="#carouselExampleIndicator1"
-                                                data-bs-slide-to="0"
-                                                class="active"
-                                                aria-current="true"
-                                                aria-label="Slide 1"></button>
-                                                <button type="button"
-                                                data-bs-target="#carouselExampleIndicator1"
-                                                data-bs-slide-to="1"
-                                                aria-label="Slide 2"></button>
-                                                <button type="button"
-                                                data-bs-target="#carouselExampleIndicator1"
-                                                data-bs-slide-to="2"
-                                                aria-label="Slide 3"></button>
-                                            </div>
-
-                                            <div class="carousel-inner">
-                                                @foreach (var img in prop.PropertyImages)
-                                                {
-                                                    <div class="carousel-item active">
-                                                        <img class="card-img-top mb-3 rounded w-100"
-                                                 src="~/Prop.Image/Prop1/@img.URL"
-                                                 alt="Property image" style="aspect-ratio:1/1;" />
-                                                    </div>
-                                                }
-                                            </div>
-                                            <button class="carousel-control-prev"
-                                            type="button"
-                                            data-bs-target="#carouselExampleIndicator1"
-                                            data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon"
-                                              aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next"
-                                            type="button"
-                                            data-bs-target="#carouselExampleIndicator1"
-                                            data-bs-slide="next">
-                                                <span class="carousel-control-next-icon"
-                                              aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button>
+                    <!-- Large Search Div -->
+                    <div class="d-none justify-content-center  " id="largeSearchBar">
+                        <form asp-action="Search" asp-controller="Home" method="post" class="btn d-flex border rounded-5 row shadow p-0  mx-4" type="submit"
+                              style="width:50rem; height: 4rem;" id="LargeSearchBtn">
+                            <!-- Where -->
+                            <div class="col-4 rounded-5 border-end dropdown d-flex align-items-center hoverStyle"
+                                 data-bs-toggle="dropdown" aria-expanded="false" style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Where</h6>
+                                        <input autocomplete="off" placeholder="Search Destinations" name="CityName" class="border-0 smallTxt text-secondary WhereText" style="width: 8rem;">
+                                    </div>
+                                    <div class="ms-5">
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnWhere">
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu rounded" style="width: 16.5rem;">
+                                    @foreach ( var item in ViewBag . cities )
+                                        {
+                                        <li><a class="dropdown-item whereItem" href="#">@item.Name</a></li>
+                                        }
+                                </ul>
+                            </div>
+                            <!-- Price -->
+                            <div class="col-3 rounded-5 border-end d-flex align-items-center hoverStyle"
+                                 style="height: 4rem;">
+                                <div class=" text-start p-2 d-flex justify-content-between align-items-center container-fluid">
+                                    <div>
+                                        <h6 class="largeSearchBarTxt fw-bold mb-0">Price (EGP)</h6>
+                                        <input type="number" max="500" class="border-0 fw-semibold fs-6" name="Price"
+                                               placeholder="Write a price" id="PriceInput"
+                                               onchange="handler(event)" style="width: 8rem;">
+                                    </div>
+                                    <div>
+                                        <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                             id="xBtnDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Who -->
+                            <div class="col-5 d-flex justify-content-between align-items-center rounded-5  hoverStyle">
+                                <div class="d-flex justify-content-between align-items-center dropdown"
+                                     style="height: 4rem;" data-bs-toggle="dropdown" aria-expanded="false" id="whoDiv">
+                                    <div class=" text-start p-2 d-flex justify-content-between align-items-center">
+                                        <div class="text-start p-2">
+                                            <h6 class="largeSearchBarTxt fw-bold mb-0">Who</h6>
+                                            <div class="smallTxt text-secondary" id="whoText">Add Guests</div>
+                                            <input hidden type="number" placeholder="Add Guests" name="NumberOfGuests" class="border-0 smallTxt text-secondary d-none" id="whoinput">
                                         </div>
-                                        <img class="fav-icon" src="./Services/SVG/fav.svg" />
-                                        <div>
-                                            <h5 class="card-title mb-0 d-flex">
-                                                @prop.Region.Name , @prop.Region.City.Name
-                                                <img class="ms-auto" src="./Services/SVG/star.svg" />
-                                            </h5>
-                                            <p class="card-text mb-0">@prop.Title</p>
-                                            <p class="card-text mb-0">@prop.Date</p>
-                                            <p class="card-text mb-0">@prop.Price</p>
+                                        <div class="ms-5">
+                                            <img src="~/PropertDetails/Resources/x.png" alt="x" style="width: 1rem;" class="d-none"
+                                                 id="xBtnWho">
                                         </div>
                                     </div>
-                                </a>
-                            </div>
+                                    <div class="dropdown-menu" id="guestsDropDown">
+                                        <div class="d-flex">
+                                            <div id="increment-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="up-arrow" src="~/PropertDetails/Resources/plus.svg" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span id="total-count-search" class="fs-5 fw-semibold me-2"></span><span id="guest-word-search">guest</span>
+                                            </div>
+                                            <div id="decrement-count-search" class="d-flex align-items-center">
+                                                <input type="image" id="down-arrow" src="~/PropertDetails/Resources/minus.svg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-lg fs-6 fw-semibold rounded-5" id="search-btn">
+                                        <img class="Logo" src="~/PropertDetails/Resources/search.svg" alt="Search"
+                                             style="width: 1rem;">
+                                        Search
+                                    </button>
+                                </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="align-items-center d-inline-flex p-2 ">
+                    <div>
+                        <a href="#" class="text-decoration-none text-black fw-semibold d-flex incident-popup-content me-2">
+                            Airbnb your home
+                        </a>
+                    </div>
+                    <div class="btn border rounded-5  d-inline-flex align-items-center shadow p-2 dropdown-center"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>
+                            <img class="px-2" src="~/PropertDetails/Resources/hamburgerlines.svg" />
+                        </span>
+                        <span>
+                            @if ( User . Identity . IsAuthenticated )
+                                {
+                                <img class="rounded-circle object-fit-cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag .UserProfilePic))"
+                                     style="width: 30px; height: 30px;" alt="Host_Img">
+                                }
+                            else
+                                {
+                                <img class="ps-1" src="~/PropertDetails/Resources/miniprofilelogog.svg" />
+                                }
+                        </span>
+                    </div>
+                    <div class="dropdown mt-5">
+                        <ul class="dropdown-menu dropdown-menu-end rounded" aria-labelledby="dropdownMenuLink " style="width: 1rem;">
+                            @if ( User . Identity . IsAuthenticated )
+                                {
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-area="Identity" asp-page="/Account/Manage/Accountsettings">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Hosting" asp-action="Index">Hosting</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  text-dark" asp-controller="Listing" asp-action="Index">Become A Host </a>
+                                </li>
+                                @if ( User . IsInRole ( "Admin" ) )
+                                    {
+                                    <li class="nav-item">
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item  smallTxt" asp-controller="Admin" asp-action="Index">Manage</a>
+                                    </li>
+                                    }
+                                <li class="nav-item">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="dropdown-item form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="dropdown-item nav-link btn btn-link text-dark">Logout</button>
+                                    </form>
+                                </li>
+                                }
+                            else
+                                {
+                                <li><a class="dropdown-item  fw-semibold smallTxt" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
+                                <li><a class="dropdown-item  smallTxt" asp-area="Identity" asp-page="/Account/Register">Sign Up</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item  smallTxt" href="">Airbnb your home</a></li>
+                                <li><a class="dropdown-item  smallTxt" href="https://www.airbnb.com/help?audience=guest">Help</a></li>
+                                }
+                        </ul>
+                    </div>
+                </div>
+               
+            </nav>
+        </header>
+    </section>
+    <!-- End Nav -->
+    <!-- start page content -->
+    <div class="container-lg">
+        <!-- start Property cards -->
+        <!-- 1st row -->
+        <div class="mt-5">
+            <div class="row">
+                @foreach ( var prop in Model )
+                    {
+                    if ( prop . Accepted )
+                        {
+                        counter++;
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <a asp-action="PropertyDetails" asp-route-id="@prop.ID" ; class="text-decoration-none text-black">
+                                <div class="card">
+                                    <div id="carouselExampleIndicator@(counter)" class="carousel slide" data-bs-interval="false">
+                                        <div class="carousel-indicators">
+
+                                            <button type="button"
+                                                    data-bs-target="#carouselExampleIndicator@(counter)"
+                                                    data-bs-slide-to="0"
+                                                    class="active"
+                                                    aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                            <button type="button"
+                                                    data-bs-target="#carouselExampleIndicator@(counter)"
+                                                    data-bs-slide-to="1"
+                                                    aria-label="Slide 2"></button>
+                                            <button type="button"
+                                                    data-bs-target="#carouselExampleIndicator@(counter)"
+                                                    data-bs-slide-to="2"
+                                                    aria-label="Slide 3"></button>
+                                            <button type="button"
+                                                    data-bs-target="#carouselExampleIndicator@(counter)"
+                                                    data-bs-slide-to="3"
+                                                    aria-label="Slide 4"></button>
+                                            <button type="button"
+                                                    data-bs-target="#carouselExampleIndicator@(counter)"
+                                                    data-bs-slide-to="4"
+                                                    aria-label="Slide 5"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="card-img-top mb-3 rounded w-100"
+                                                     src="~/Prop.Image/Prop1/@prop.PropertyImages.First().URL"
+                                                     alt="Property image" style="aspect-ratio:1/1;" />
+                                            </div>
+                                            @foreach ( var img in prop . PropertyImages )
+                                                {
+                                                if ( img . URL == prop . PropertyImages . First () . URL ) { continue; }
+                                                <div class="carousel-item">
+                                                    <img class="card-img-top mb-3 rounded w-100"
+                                                         src="~/Prop.Image/Prop1/@img.URL"
+                                                         alt="Property image" style="aspect-ratio:1/1;" />
+                                                </div>
+                                                }
+                                        </div>
+                                        <button class="carousel-control-prev"
+                                                type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"
+                                                  aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next"
+                                                type="button"
+                                                data-bs-target="#carouselExampleIndicator@(counter)"
+                                                data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"
+                                                  aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <h5 class="card-title mb-0 d-flex">
+                                            @prop.Region.Name , @prop.Region.City.Name
+                                            <img class="ms-auto" src="./Services/SVG/star.svg" />
+                                        </h5>
+                                        <p class="card-text mb-0">@prop.Title</p>
+                                        <p class="card-text mb-0">@prop.Date</p>
+                                        <p class="card-text mb-0">@prop.Price</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                         }
                     }
-
-                </div>
             </div>
-
-
-
-            <!-- end property cards -->
         </div>
-        <!-- end page content -->
-        <!-- Start footer -->
-        <footer class="bg-white border-top py-3">
-            <div class="container-lg">
-                <div class="row d-flex height-footer">
-                    <div class="d-flex col-lg-6 main-footer">
-                        <ul class="list-inline d-flex justify-content-start">
-                            <li class="d-flex">
-                                &copy;2023 Airbnb, Inc.<span class="footer-point">.</span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#" class="text-decoration-none text-black">Privacy</a><span class="footer-point">.</span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#" class="text-decoration-none text-black">Terms</a><span class="footer-point">.</span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#" class="text-decoration-none text-black">Sitemap</a><span class="footer-point">.</span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#" class="text-decoration-none text-black">Company details</a><span class="footer-point">.</span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#" class="text-decoration-none text-black">Destinations</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-end desktop col-md-auto">
-                        <ul class="list-inline d-flex">
-                            <li class="d-flex">
-                                <a href="#"
-                                   class="d-flex align-items-center text-decoration-none text-black">INR</a><span class="footer-point"></span>
-                            </li>
-                            <li class="d-flex">
-                                <a href="#"
-                                   class="d-flex align-items-center text-decoration-none text-black">
-                                    Support& resources <img src="./Services/SVG/Group.svg" />
-                                </a>
-                            </li>
-                        </ul>
+        <!-- end property cards -->
+    </div>
+    <!-- end page content -->
+    <!-- Start footer -->
+    <div class="footer pt-4 pb-4 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal">
+                        <li type="none">© 2023 Airbnb, Inc.</li>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2908" class="text-dark">
+                        <li type="none">Terms</li>
+                        </a>
+                        <span class="ms-2 me-2">·</span>
+                        <a href="https://www.airbnb.com/help/article/2855" class="text-dark">
+                        <li type="none">Privacy</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <div>
+                        <a href="https://www.facebook.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/facebook-logo.png" alt="facebook" style="width: 1.5rem;">
+                        </a>
+                        <a href="https://twitter.com/airbnb" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/twitter-icon.png" alt="twitter" style="width: 1.5rem;" class="ms-4">
+                        </a>
+                        <a href="https://www.instagram.com/airbnb/" class="text-decoration-none">
+                            <img src="~/PropertDetails/Resources/instagram-icon.png" alt="instagram" style="width: 1.5rem;" class="ms-4">
+                        </a>
+
                     </div>
                 </div>
             </div>
-        </footer>
-
-        <!-- End footer -->
+        </div>
     </div>
-    <script src="./script.js"></script>
+    <!-- End footer -->
+
+     <!-- Scripts -->
+    <script src="~/Homepage/JavaScript.js"></script>
 </body>
+
+
+

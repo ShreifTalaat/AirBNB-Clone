@@ -30,10 +30,10 @@
             <!-- Start person -->
             <div>
                 <div class="d-flex justify-content-between align-items-center">
-                    <button class="btn text-decoration-none rounded-pill"
+                    <a asp-controller="Home" asp-action="Index" class="btn text-decoration-none rounded-pill"
                             style="   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
                         Exit
-                    </button>
+                    </a>
                 </div>
                 <!-- End person -->
             </div>
@@ -134,11 +134,10 @@
             </div>
 
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
-                    <button type="button" name="catId" id="categorycheck" class="btn btn-dark  step-next-btn fw-semibold" disabled onclick="catpass(this)">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                    <button type="button" name="catId" id="categorycheck" class="btn btn-dark  step-next-btn fw-semibold" disabled>Next</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
-    
         <div class="step-container d-none">
             <div class="col-lg-7 d-flex flex-column m-auto">
                 <div class="p-2 mb-3 text-start">
@@ -291,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
+             @*   <div class="d-grid gap-2 m-1 h4 pb-2 mb-4 border-bottom border-dark-subtle">
                         <div class="d-flex">
                             <div class="me-auto">Minimum Stay</div>
                             <div class="p-2">
@@ -364,11 +363,11 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
             </div>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="GetMap()">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
         <div class="step-container d-none">
@@ -404,7 +403,7 @@
         
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button id="mapchecking" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="pass(this)" disabled>Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                    <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
         <!-- step 2 -->
@@ -430,10 +429,10 @@
 
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                    <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
-            <div class="step-container d-none">
+        <div class="step-container d-none">
                 <div class="d-flex flex-column p-lg-5 margin-edit h-75" style="width: 730px; margin: auto;">
                     <div class="p-2 mb-3">
                         <h2>Tell guests what your place has to offer</h2>
@@ -545,7 +544,7 @@
                     <div class="container text-center mb-3">
                         <div class="row">
                             <div class="col">
-                                <input   name="amenties" type="checkbox" class="btn-check" id="btn-check-outlined3" autocomplete="off" value="Washer">
+                                <input name="amenteis" type="checkbox" class="btn-check" id="btn-check-outlined3" autocomplete="off" value="Washer">
                                 <label class=" btn btn-outline-secondary container-padding border border-dark-subtle rounded"
                                        for="btn-check-outlined3">
                                     <div>
@@ -750,7 +749,7 @@
                 </div>
                 <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold" >Next</button>
-                    <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                    <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
                 </div>
 
             </div>
@@ -765,7 +764,7 @@
                         </p>
                         <div id="image" class="align-items-center border d-flex justify-content-center flex-column">
 
-                            <button id="deleteimg" class="postion-edit btn btn-light rounded-4 position-absolute d-none">
+                            <button type="button" id="deleteimg" class="postion-edit btn btn-light rounded-4 position-absolute d-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
                                      focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                     <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
@@ -800,7 +799,7 @@
                                         <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
                                         </path>
                                     </svg>
-                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                    <button type="button" class="btn btn-light rounded-4 position-absolute d-none">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
                                              focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                             <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
@@ -821,7 +820,7 @@
                                         <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
                                         </path>
                                     </svg>
-                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                    <button type="button" class="btn btn-light rounded-4 position-absolute d-none">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
                                              focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                             <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
@@ -842,7 +841,7 @@
                                         <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
                                         </path>
                                     </svg>
-                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                    <button type="button" class="btn btn-light rounded-4 position-absolute d-none">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
                                              focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                             <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
@@ -863,7 +862,7 @@
                                         <path d="m27 3c2.209139 0 4 1.790861 4 4v18c0 2.209139-1.790861 4-4 4h-22c-2.209139 0-4-1.790861-4-4v-18c0-2.209139 1.790861-4 4-4zm-18.11289944 16.0381317-.09420734.0831886-5.79289322 5.7926797v.086c0 1.0543618.81587779 1.9181651 1.85073766 1.9945143l.14926234.0054857h13.085l-7.8778932-7.8786797c-.36048398-.3604839-.92771504-.3882135-1.32000624-.0831886zm12.50000004-6-.0942074.0831886-7.1288932 7.1286797 6.751 6.75h6.085c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-5.585l-6.2928932-6.2936797c-.360484-.3604839-.927715-.3882135-1.3200062-.0831886zm5.6128994-8.0381317h-22c-1.1045695 0-2 .8954305-2 2v15.084l4.37867966-4.3768932c1.12470996-1.12471 2.92027284-1.1696984 4.09865104-.1349652l.1439896.1349652 1.1276797 1.1278932 7.1296797-7.1278932c1.1247099-1.12471 2.9202728-1.1696984 4.098651-.1349652l.1439896.1349652 4.8786797 4.8778932v-9.585c0-1.0543618-.8158778-1.91816512-1.8507377-1.99451426zm-19 2c1.65685425 0 3 1.34314575 3 3 0 1.6568542-1.34314575 3-3 3s-3-1.3431458-3-3c0-1.65685425 1.34314575-3 3-3zm0 2c-.55228475 0-1 .44771525-1 1 0 .5522847.44771525 1 1 1s1-.4477153 1-1c0-.55228475-.44771525-1-1-1z">
                                         </path>
                                     </svg>
-                                    <button class="btn btn-light rounded-4 position-absolute d-none">
+                                    <button type="button" class="btn btn-light rounded-4 position-absolute d-none">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
                                              focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
                                             <path d="M10 .375c.314 0 .574.231.618.533l.007.092v1.499L14 2.5v2l-1.001-.001L13 14a1 1 0 0 1-.883.993L12 15H4a1 1 0 0 1-.993-.883L3 14l-.001-9.501L2 4.5v-2l3.375-.001V1c0-.314.231-.574.533-.618L6 .375h4zM6.125 4.5h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm2.5 0h-1.25v9h1.25v-9zm-1.75-2.875h-2.75v.874h2.75v-.874z">
@@ -879,7 +878,7 @@
             </section>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button id="uploadimg" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" onclick="passimage()" disabled>Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
         <div class="step-container d-none">
@@ -894,7 +893,7 @@
             </div>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                 <button id="titlecheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" disabled>Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
 
         </div>
@@ -909,7 +908,7 @@
             </div>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button id="desccheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
 
         </div>
@@ -936,7 +935,7 @@
 
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
         <div class="step-container d-none">
@@ -971,79 +970,80 @@
                 </div>
             </section>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
-                <button id="desccheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold">Next</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                    <button id="desccheck" type="button" class="btn btn-dark float-end step-next-btn fw-semibold" >Next</button>
+                    <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
 
         </div>
         <div class="step-container d-none">
-            <section style="max-width: 850px; margin-left: auto; margin-right: auto;">
+            <section class="h-75" style="max-width: 850px; margin-left: auto; margin-right: auto;">
                 <!--  -->
                 <header style="margin-bottom: 32px;">
                     <h1 style="margin-bottom: 16px;">Yay! It's time to publish.</h1>
                     <h6>Here's what we'll show to guests. Before you publish, make sure to review the details.</h6>
                 </header>
                 <!-- Content -->
-                <div class="d-flex " style="height: 400px; margin-bottom: 300px;">
-                    <!-- card -->
-                    <div>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#Preview" class="text-decoration-none text-black ">
-                            <div class="card " style="width: 300px;height: 100%;border: none;">
-                                <img id="previewimg" class=" card-img-top mb-3 rounded" src=""
-                                     alt="Property image">
-                                <div>
-                                    <h5 class="card-title mb-0  d-flex">
-                                        Descrtiption <img class="ms-auto" src="./listing/SVG/star.svg">
-                                    </h5>
-                                    <p class="card-text mb-0 d-flex">Price</p>
+                    <div class="d-flex " style="height: 400px; margin-bottom: 300px;">
+                        <!-- card -->
+                        <div>
+                            <a  class="text-decoration-none text-black ">
+                                <div class="card " style="width: 300px;height: 100%;border: none;">
+                                    <img id="previewimg" style="aspect-ratio:1/1;" class=" card-img-top mb-3 rounded" src=""
+                                         alt="Property image">
+                                  @*  <div>
+                                        <h5 class="card-title mb-0  d-flex">
+                                            Descrtiption <img class="ms-auto" src="./listing/SVG/star.svg">
+                                        </h5>
+                                        <p class="card-text mb-0 d-flex">Price</p>
+                                    </div>*@
                                 </div>
-                            </div>
-                        </a>
-                        <!-- Modal -->
-                        <div class="modal fade" id="Preview" data-bs-keyboard="false"
-                             tabindex="-1" aria-labelledby="Preview" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5 " id="Preview">
-                                            Full Preview
-                                        </h1>
-                                    </div>
-                                    <div class="modal-body container-lg ">
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="Preview" data-bs-keyboard="false"
+                                 tabindex="-1" aria-labelledby="Preview" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 " id="Preview">
+                                                Full Preview
+                                            </h1>
+                                        </div>
+                                        <div class="modal-body container-lg ">
 
-                                        <div class="d-flex ">
-                                            <img id="imagepreview" class=" mb-3 rounded" style="height: 500px; width: 600px;" src=""
-                                                 alt="Property image">
-                                            <div style="padding-left: 60px; ">
-                                                <h4>Description</h4>
-                                                <br>
-                                                <div class="d-flex border-bottom ">
+                                            <div class="d-flex ">
+                                                <img id="imagepreview" class=" mb-3 rounded" style="height: 500px; width: 600px;" src=""
+                                                     alt="Property image">
+                                                <div style="padding-left: 60px; ">
+                                                    <h4 id="titlesub">Title</h4>
+                                                    <br>
+                                                    <div class="d-flex border-bottom ">
 
+                                                        <div>
+                                                            <h4>Home hosted by sherif</h4>
+                                                            <p><span id="guestsub"></span> guests . <span id="guestbedroom">4</span> bedroom .<span id="guestbed">4</span> bed .<span id="guestbath">4</span> bath</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <img class="rounded rounded-circle" src="./listing/My personal photo.jpg" style="width: 40px; margin-right: 15px;">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <div class=border-bottom>
+                                                        <div>
+                                                            <p id="descsub">You’ll treasure your time at this memorable place.</p>
+                                                            <br>
+
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <br>
                                                     <div>
-                                                        <h4>Home hosted by sherif</h4>
-                                                        <p>4 guests . 1bedroom . 1 bed .1 bath</p>
-                                                    </div>
-                                                    <div class="ms-auto">
-                                                        <img class="rounded rounded-circle" src="./listing/My personal photo.jpg" style="width: 40px; margin-right: 15px;">
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <br>
-                                                <div class=border-bottom>
-                                                    <div>
-                                                        <p>You’ll treasure your time at this memorable place.</p>
-                                                        <br>
+                                                        <div>
+                                                            <h6>Location</h6>
+                                                            <p id="locationsub">Smouha,Alexandria ,Egypt</p>
+                                                        </div>
 
                                                     </div>
-                                                </div>
-                                                <br>
-                                                <br>
-                                                <div>
-                                                    <div>
-                                                        <h6>Location</h6>
-                                                        <p>Smouha,Alexandria ,Egypt</p>
-                                                    </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -1051,46 +1051,45 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Content -->
-                    <div style="padding-left: 50px; padding-top: 30px;">
-                        <h4>What's next?</h4>
-                        <br>
-                        <div class="d-flex ">
-                            <div>
-                                <img src="./listing/SVG/calendar.svg" style="width: 40px; margin-right: 15px;">
-                            </div>
-                            <div>
-                                <h4>Set up your calendar</h4>
-                                <p>Choose which dates are available. Guests can start booking 24 hours after you publish.</p>
-                            </div>
+                        <!-- Content -->
+                        <div style="padding-left: 50px; padding-top: 30px;">
+                            <h4>What's next?</h4>
+                            <br>
+                            <div class="d-flex ">
+                                <div>
+                                    <img src="./listing/SVG/calendar.svg" style="width: 40px; margin-right: 15px;">
+                                </div>
+                                <div>
+                                    <h4>Set up your calendar</h4>
+                                    <p>Choose which dates are available. Guests can start booking 24 hours after you publish.</p>
+                                </div>
 
+                            </div>
+                            <div class="d-flex ">
+                                <div>
+                                    <img src="./listing/SVG/Settings.svg" style="width: 40px; margin-right: 15px;">
+                                </div>
+                                <div>
+                                    <h4>Adjust your settings</h4>
+                                    <p>Set house rules, select a cancellation policy, choose how guests can book, and more.</p>
+                                </div>
+
+                            </div><div class="d-flex ">
+                                <div>
+                                    <img src="./listing/SVG/guest.svg" style="width: 40px; margin-right: 15px;">
+                                </div>
+                                <div>
+                                    <h4>Prepare for your first guest</h4>
+                                    <p>Find tips in our Resource Center and access customer support.</p>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="d-flex ">
-                            <div>
-                                <img src="./listing/SVG/Settings.svg" style="width: 40px; margin-right: 15px;">
-                            </div>
-                            <div>
-                                <h4>Adjust your settings</h4>
-                                <p>Set house rules, select a cancellation policy, choose how guests can book, and more.</p>
-                            </div>
-
-                        </div><div class="d-flex ">
-                            <div>
-                                <img src="./listing/SVG/guest.svg" style="width: 40px; margin-right: 15px;">
-                            </div>
-                            <div>
-                                <h4>Prepare for your first guest</h4>
-                                <p>Find tips in our Resource Center and access customer support.</p>
-                            </div>
-
-                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             <div class="d-flex justify-content-between container flex-row-reverse pb-5">
                     <button type="submit"  class="btn btn-danger step-next-btn float-end fw-semibold">Submit</button>
-                <button class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
+                <button type="button" class="step-back-btn btn btn-link text-black fw-semibold" onclick="back(this)">Back</button>
             </div>
         </div>
         </div>
